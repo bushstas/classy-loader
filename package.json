@@ -1,0 +1,16 @@
+{
+  "name": "classy-loader",
+  "author": {
+    "name": "Bushmakin Stas",
+    "email": "bushstas@mail.ru"
+  },
+  "main": "lib/index.js",
+  "version": "0.0.1",
+  "bugs": {
+    "url": "https://github.com/bushstas/classy-loader/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bushstas/classy-loader.git"
+  }
+}
