@@ -741,8 +741,8 @@ render() {
 
 ### $name
 Merge a class name or an array of class names from a variable.<br>
-Loader automatically adds import of required module for class merging.<br>
-The variable should already contain classes with prefixes
+The loader automatically adds import of required module for class merging.<br>
+The variable should already contain classes with prefixes or be already obfuscated.
 ```javascript
 render() {
   return (
