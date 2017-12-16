@@ -501,7 +501,6 @@ will give the same result
 }
 ```
 
-
 ## Directives
 
 ### JS directives
@@ -510,8 +509,10 @@ will give the same result
   <li>
     <h4>with prefix 'some-prefix';</h4>
     Overrides the global prefix that defined in config
+  </li>
+</ul>
 
-    ```javascript
+  ```javascript
     // none-automatic mode
     // prefixAutoResolve: "content"
     // ...imports
@@ -552,8 +553,6 @@ will give the same result
       }
     }
     ```
-  </li>
-</ul>
 
 ### CSS directives
 
