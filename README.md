@@ -789,7 +789,7 @@ render() {
   )
 }
 ```
-in the Icon import will be automatically added
+in the Icon "import" will be automatically added
 ```javascript
 import classy from 'classy-loader/classy';
 
