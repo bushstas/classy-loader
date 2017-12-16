@@ -1193,6 +1193,16 @@ can be also with spaces, should end with a semicolon or a new line
   opacity: 0.3;
 }
 ```
+### Full list of shorcuts
+<ul>
+<li><b>lt</b>: text-align: left;</li>
+<li><b>rt</b>: text-align: right;</li>
+<li><b>cen</b>: text-align: center;</li>
+<li><b>just</b>: text-align: justify;</li>
+</ul>
+
+
+
 ## License
 
 Enjoy my dear friends, all for you
