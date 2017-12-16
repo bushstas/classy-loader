@@ -106,7 +106,7 @@ render() {
   )
 }
 ```
-So **bold**"self"**bold** is a keyword that means your global or local prefix.<br>
+So **"self"** is a keyword that means your global or local prefix.<br>
 In this case we don't have a local prefix, so it will be our globalPrefix from the config we set up above.
 
 ### extraAttributeName
@@ -210,20 +210,20 @@ render() {
 ### prefixAutoResolving
 
 If this is not false the loader will try to resolve the local prefix by itself.<br>
-Works only if **bold**"autoPrefixMode"**bold** is set to true.<br>
+Works only if **"autoPrefixMode"** is set to true.<br>
 By default, it has value false.<br>
 There are three variants:<br>
 <ol>
   <li>
-    prefixAutoResolving: <big>**bold**"content"**bold**</big><br><br>
+    prefixAutoResolving: <big>**"content"**</big><br><br>
     At first the loader will try to find a line with:<br>
-    **bold**export default (class|function) MySuperClassName**bold**<br><br>
+    **export default (class|function) MySuperClassName**<br><br>
     Then try with:<br>
-    **bold**export default connect(...)(MySuperClassName)**bold**<br><br>
+    **export default connect(...)(MySuperClassName)**<br><br>
     Then try with:<br>
-    **bold**class MySuperClassName**bold**<br><br>
+    **class MySuperClassName**<br><br>
     And at last it will get the first line with:<br>
-    **bold**function MySuperClassName**bold**<br><br>
+    **function MySuperClassName**<br><br>
     so "MySuperClassName" will be parsed to "my" + delimiter + "super" + delimiter + "class" + delimiter + "name".  
 
 ```javascript
@@ -262,14 +262,14 @@ More about js/css directives see below.
   </li>
 
   <li>
-    prefixAutoResolving: <big>**bold**"file"**bold**</big><br>
+    prefixAutoResolving: <big>**"file"**</big><br>
     The loader will try to form local prefixes from js/css file names:<br>
     "SuperItem.js" or "super-item.js" or "super_item.js"
     to prefix "super" + delimiter + "item"
   </li>
 
   <li>
-    prefixAutoResolving: <big>**bold**"folder"**bold**</big><br>
+    prefixAutoResolving: <big>**"folder"**</big><br>
     The loader will try to form local prefixes from js/css folder names:<br>
     "SuperItem/index.js" or "super-item/some.js" or "super_item/any.js"
     to prefix "super" + delimiter + "item"
@@ -279,8 +279,8 @@ More about js/css directives see below.
 ### obfuscation
 
 If true the loader will obfuscate class names in both JS and CSS files.<br>
-Be careful, you should check that all class names in JS defined with classy **bold**"attributeName"**bold** and **bold**extraAttributeName**bold**<br>
-or special **bold**$classy**bold** syntax (see below).<br>
+Be careful, you should check that all class names in JS defined with classy **"attributeName"** and **extraAttributeName**<br>
+or special **$classy** syntax (see below).<br>
 By default, it has value false.<br>
 
 ```javascript
@@ -308,7 +308,7 @@ render() {
 
 Length of obfuscated class names.<br>
 By default, it has value "7".<br>
-So if you have **bold**"obfuscatedLength"**bold** equal 4
+So if you have **"obfuscatedLength"** equal 4
 
 ```javascript
 render() {
@@ -557,7 +557,7 @@ will give the same result
     }
   ```
 
-  the result when **bold**"prefixAutoResolving"**bold** set to false, so we don't have additional local prefix,<br>just overrided global
+  the result when **"prefixAutoResolving"** set to false, so we don't have additional local prefix,<br>just overrided global
 
   ```javascript
     // ...imports
@@ -588,7 +588,7 @@ will give the same result
   <li>
     <h3>with addedPrefix 'some-additional-prefix';</h3>
     Sets an additional prefix for local use.<br>
-    This directive do the same thing like param **bold**"prefixAutoResolving"**bold** so it will cancel auto detecting.
+    This directive do the same thing like param **"prefixAutoResolving"** so it will cancel auto detecting.
   </li>
 </ul>
 
@@ -754,7 +754,7 @@ render() {
 ```
 an example how to make it work:<br>
 
-in a parent using **bold**extraAttributeName: "classes"**bold**<br><br>
+in a parent using **extraAttributeName: "classes"**<br><br>
 ```javascript
 render() {
   return (
@@ -916,7 +916,7 @@ export default class Button extends React.Component {
 }
 ```
 
-It's impossible to obfuscate dynamical class names so there are special fake **bold**$classy**bold** functions to make roadmaps for obfuscation.<br>
+It's impossible to obfuscate dynamical class names so there are special fake **$classy** functions to make roadmaps for obfuscation.<br>
 Here is the an example.
 ```javascript
 let className = $classy(colorValue, '..color', ['red', 'green', 'blue', 'yellow', 'orange' ...]);
@@ -959,7 +959,7 @@ let className = {
   ...
 }[colorValue];
 ```
-Also there is the third way to use **bold**$classy**bold**:
+Also there is the third way to use **$classy**:
 ```javascript
 with addedPrefix 'catalog';
 // ....
@@ -1112,7 +1112,7 @@ render() {
 One point for real class name without prefix.<br>
 Two points for class names with local prefix.<br>
 Three points for class names with global prefix.<br>
-**bold**"Self"**bold** is a keywords that means local prefix itself or global if local one not defined
+**"Self"** is a keywords that means local prefix itself or global if local one not defined
 
 ```scss
 ..self {
@@ -1195,206 +1195,206 @@ can be also with spaces, should end with a semicolon or a new line
 ```
 ### Full list of shorcuts
 
-**bold**l**bold** = left: 0;<br>
-**bold**l10**bold** = left: 10px;<br>
-**bold**l-10**bold** = left: -10px;<br>
-**bold**l50p**bold** = left: 50%;<br>
-**bold**l-50p**bold** = left: -50%;<br>
+**l** = left: 0;<br>
+**l10** = left: 10px;<br>
+**l-10** = left: -10px;<br>
+**l50p** = left: 50%;<br>
+**l-50p** = left: -50%;<br>
 
-**bold**r**bold** = right: 0;<br>
-**bold**r10**bold** = right: 10px;<br>
-**bold**r-10**bold** = right: -10px;<br>
-**bold**r50p**bold** = right: 50%;<br>
-**bold**r-50p**bold** = right: -50%;<br>
+**r** = right: 0;<br>
+**r10** = right: 10px;<br>
+**r-10** = right: -10px;<br>
+**r50p** = right: 50%;<br>
+**r-50p** = right: -50%;<br>
 
-**bold**t**bold** = top: 0;<br>
-**bold**t10**bold** = top: 10px;<br>
-**bold**t-10**bold** = top: -10px;<br>
-**bold**t50p**bold** = top: 50%;<br>
-**bold**t-50p**bold** = top: -50%;<br>
+**t** = top: 0;<br>
+**t10** = top: 10px;<br>
+**t-10** = top: -10px;<br>
+**t50p** = top: 50%;<br>
+**t-50p** = top: -50%;<br>
 
-**bold**b**bold** = botton: 0;<br>
-**bold**b10**bold** = botton: 10px;<br>
-**bold**b-10**bold** = botton: -10px;<br>
-**bold**b50p**bold** = botton: 50%;<br>
-**bold**b-50p**bold** = botton: -50%;<br>
+**b** = botton: 0;<br>
+**b10** = botton: 10px;<br>
+**b-10** = botton: -10px;<br>
+**b50p** = botton: 50%;<br>
+**b-50p** = botton: -50%;<br>
 
-**bold**z10**bold** = z-index: 10;<br>
+**z10** = z-index: 10;<br>
 
-**bold**w**bold** = width: 100%;<br>
-**bold**w100**bold** = width: 100px;<br>
-**bold**w50p**bold** = width: 50%;<br>
+**w** = width: 100%;<br>
+**w100** = width: 100px;<br>
+**w50p** = width: 50%;<br>
 
-**bold**h**bold** = height: 100%;<br>
-**bold**h150**bold** = height: 150px;<br>
-**bold**h20p**bold** = height: 20%;<br>
+**h** = height: 100%;<br>
+**h150** = height: 150px;<br>
+**h20p** = height: 20%;<br>
 
-**bold**wh20**bold** = width: 20px; height: 20px;<br>
-**bold**wh20p**bold** = width: 20%; height: 20%;<br>
+**wh20** = width: 20px; height: 20px;<br>
+**wh20p** = width: 20%; height: 20%;<br>
 
-**bold**mnw**bold** = min-width: 0;<br>
-**bold**mnw100**bold** = min-width: 100px;<br>
-**bold**mnh**bold** = min-height: 0;<br>
-**bold**mnh100**bold** = min-height: 100px;<br>
-**bold**mxw**bold** = max-width: none;<br>
-**bold**mxw100**bold** = max-width: 100px;<br>
-**bold**mxh**bold** = max-height: none;<br>
-**bold**mxh100**bold** = max-height: 100px;<br>
+**mnw** = min-width: 0;<br>
+**mnw100** = min-width: 100px;<br>
+**mnh** = min-height: 0;<br>
+**mnh100** = min-height: 100px;<br>
+**mxw** = max-width: none;<br>
+**mxw100** = max-width: 100px;<br>
+**mxh** = max-height: none;<br>
+**mxh100** = max-height: 100px;<br>
 
-**bold**auto**bold** = margin: auto;<br>
-**bold**m**bold** = margin: 0;<br>
-**bold**m5**bold** = margin: 5px;<br>
-**bold**m10-5**bold** = margin: 10px 5px;<br>
-**bold**m10-5-10-5**bold** = margin: 10px 5px 10px 5px;<br>
+**auto** = margin: auto;<br>
+**m** = margin: 0;<br>
+**m5** = margin: 5px;<br>
+**m10-5** = margin: 10px 5px;<br>
+**m10-5-10-5** = margin: 10px 5px 10px 5px;<br>
 
-**bold**ml**bold** = margin-left: 0;<br>
-**bold**ml5**bold** = margin-left: 5px;<br>
-**bold**ml-5**bold** = margin-left: -5px;<br>
-**bold**ml5p**bold** = margin-left: 5%;<br>
-**bold**ml-5p**bold** = margin-left: -5%;<br>
+**ml** = margin-left: 0;<br>
+**ml5** = margin-left: 5px;<br>
+**ml-5** = margin-left: -5px;<br>
+**ml5p** = margin-left: 5%;<br>
+**ml-5p** = margin-left: -5%;<br>
 
-**bold**mr**bold** = margin-right: 0;<br>
-**bold**mr5**bold** = margin-right: 5px;<br>
-**bold**mr-5**bold** = margin-right: -5px;<br>
-**bold**mr5p**bold** = margin-right: 5%;<br>
-**bold**mr-5p**bold** = margin-right: -5%;<br>
+**mr** = margin-right: 0;<br>
+**mr5** = margin-right: 5px;<br>
+**mr-5** = margin-right: -5px;<br>
+**mr5p** = margin-right: 5%;<br>
+**mr-5p** = margin-right: -5%;<br>
 
-**bold**mt**bold** = margin-top: 0;<br>
-**bold**mt5**bold** = margin-top: 5px;<br>
-**bold**mt-5**bold** = margin-top: -5px;<br>
-**bold**mt5p**bold** = margin-top: 5%;<br>
-**bold**mt-5p**bold** = margin-top: -5%;<br>
+**mt** = margin-top: 0;<br>
+**mt5** = margin-top: 5px;<br>
+**mt-5** = margin-top: -5px;<br>
+**mt5p** = margin-top: 5%;<br>
+**mt-5p** = margin-top: -5%;<br>
 
-**bold**mb**bold** = margin-bottom: 0;<br>
-**bold**mb5**bold** = margin-bottom: 5px;<br>
-**bold**mb-5**bold** = margin-bottom: -5px;<br>
-**bold**mb5p**bold** = margin-bottom: 5%;<br>
-**bold**mb-5p**bold** = margin-bottom: -5%;<br>
+**mb** = margin-bottom: 0;<br>
+**mb5** = margin-bottom: 5px;<br>
+**mb-5** = margin-bottom: -5px;<br>
+**mb5p** = margin-bottom: 5%;<br>
+**mb-5p** = margin-bottom: -5%;<br>
 
-**bold**p**bold** = padding: 0;<br>
-**bold**p5**bold** = padding: 5px;<br>
-**bold**p10-5**bold** = padding: 10px 5px;<br>
-**bold**p10-5-10-5**bold** = padding: 10px 5px 10px 5px;<br>  
+**p** = padding: 0;<br>
+**p5** = padding: 5px;<br>
+**p10-5** = padding: 10px 5px;<br>
+**p10-5-10-5** = padding: 10px 5px 10px 5px;<br>  
 
-**bold**pl**bold** = padding-left: 0;<br>
-**bold**pl5**bold** = padding-left: 5px;<br>
-**bold**pl-5**bold** = padding-left: -5px;<br>
-**bold**pl5p**bold** = padding-left: 5%;<br>
-**bold**pl-5p**bold** = padding-left: -5%;<br>
+**pl** = padding-left: 0;<br>
+**pl5** = padding-left: 5px;<br>
+**pl-5** = padding-left: -5px;<br>
+**pl5p** = padding-left: 5%;<br>
+**pl-5p** = padding-left: -5%;<br>
 
-**bold**pr**bold** = padding-right: 0;<br>
-**bold**pr5**bold** = padding-right: 5px;<br>
-**bold**pr-5**bold** = padding-right: -5px;<br>
-**bold**pr5p**bold** = padding-right: 5%;<br>
-**bold**pr-5p**bold** = padding-right: -5%;<br>
+**pr** = padding-right: 0;<br>
+**pr5** = padding-right: 5px;<br>
+**pr-5** = padding-right: -5px;<br>
+**pr5p** = padding-right: 5%;<br>
+**pr-5p** = padding-right: -5%;<br>
 
-**bold**pt**bold** = padding-top: 0;<br>
-**bold**pt5**bold** = padding-top: 5px;<br>
-**bold**pt-5**bold** = padding-top: -5px;<br>
-**bold**pt5p**bold** = padding-top: 5%;<br>
-**bold**pt-5p**bold** = padding-top: -5%;<br>
+**pt** = padding-top: 0;<br>
+**pt5** = padding-top: 5px;<br>
+**pt-5** = padding-top: -5px;<br>
+**pt5p** = padding-top: 5%;<br>
+**pt-5p** = padding-top: -5%;<br>
 
-**bold**pb**bold** = padding-bottom: 0;<br>
-**bold**pb5**bold** = padding-bottom: 5px;<br>
-**bold**pb-5**bold** = padding-bottom: -5px;<br>
-**bold**pb5p**bold** = padding-bottom: 5%;<br>
-**bold**pb-5p**bold** = padding-bottom: -5%;<br>
+**pb** = padding-bottom: 0;<br>
+**pb5** = padding-bottom: 5px;<br>
+**pb-5** = padding-bottom: -5px;<br>
+**pb5p** = padding-bottom: 5%;<br>
+**pb-5p** = padding-bottom: -5%;<br>
 
-**bold**flex**bold** = display: flex;<br>
-**bold**flcen**bold** = align-item: center; justify-content: center;<br>
-**bold**bl**bold** = display: block;<br>
-**bold**inb**bold** = display: inline-block;<br>
+**flex** = display: flex;<br>
+**flcen** = align-item: center; justify-content: center;<br>
+**bl** = display: block;<br>
+**inb** = display: inline-block;<br>
 
-**bold**fix**bold** = position: fixed;<br>
-**bold**abs**bold** = position: absolute;<br>
-**bold**rel**bold** = position: relative;<br>
-**bold**box**bold** = box-sizing: border-box;<br>
+**fix** = position: fixed;<br>
+**abs** = position: absolute;<br>
+**rel** = position: relative;<br>
+**box** = box-sizing: border-box;<br>
 
-**bold**ova**bold** = overflow: auto;<br>
-**bold**ovh**bold** = overflow: hidden;<br>
+**ova** = overflow: auto;<br>
+**ovh** = overflow: hidden;<br>
 
-**bold**lt**bold** = text-align: left;<br>
-**bold**rt**bold** = text-align: right;<br>
-**bold**cen**bold** = text-align: center;<br>
-**bold**just**bold** = text-align: justify;<br>
+**lt** = text-align: left;<br>
+**rt** = text-align: right;<br>
+**cen** = text-align: center;<br>
+**just** = text-align: justify;<br>
 
-**bold**vtop**bold** = vertical-align: top;<br>
-**bold**vmid**bold** = vertical-align: middle;<br>
-**bold**vbot**bold** = vertical-align: bottom;<br>
+**vtop** = vertical-align: top;<br>
+**vmid** = vertical-align: middle;<br>
+**vbot** = vertical-align: bottom;<br>
 
-**bold**cur**bold** = cursor: default;<br>
-**bold**cur-name**bold** = cursor: name;<br>
-**bold**pntr**bold** = cursor: pointer;<br>
-**bold**cnt**bold** = content: "";<br>
-**bold**nor**bold** = resize: none;<br>
+**cur** = cursor: default;<br>
+**cur-name** = cursor: name;<br>
+**pntr** = cursor: pointer;<br>
+**cnt** = content: "";<br>
+**nor** = resize: none;<br>
 
-**bold**fl**bold** = float: left;<br>
-**bold**fr**bold** = float: right;<br>
-**bold**clr**bold** = clear: both;<br>
+**fl** = float: left;<br>
+**fr** = float: right;<br>
+**clr** = clear: both;<br>
 
-**bold**bold**bold** = font-weight: bold;<br>
-**bold**it**bold** = font-style: italic;<br>
-**bold**un**bold** = text-decoration: underline;<br>
+**bold** = font-weight: bold;<br>
+**it** = font-style: italic;<br>
+**un** = text-decoration: underline;<br>
 
-**bold**lh**bold** = line-height: 0;<br>
-**bold**lh20**bold** = line-height: 20px;<br>
-**bold**fs**bold** = font-size: 0;<br>
-**bold**fs15**bold** = font-size: 15px;<br>
-**bold**ff-name**bold** = font-family: name;<br>  
+**lh** = line-height: 0;<br>
+**lh20** = line-height: 20px;<br>
+**fs** = font-size: 0;<br>
+**fs15** = font-size: 15px;<br>
+**ff-name** = font-family: name;<br>  
 
-**bold**o**bold** = opacity: 0;<br>
-**bold**o5**bold** = opacity: 0.5;<br>
-**bold**o10**bold** = opacity: 1;<br>
+**o** = opacity: 0;<br>
+**o5** = opacity: 0.5;<br>
+**o10** = opacity: 1;<br>
 
-**bold**ol**bold** = outline: 0;<br>
-**bold**ol-000**bold** = outline: 1px solid #000;<br>
-**bold**ol-EEE-2**bold** = outline: 2px solid #EEE;<br>
-**bold**ol-EEE-2-dashed**bold** = outline: 2px dashed #EEE;<br>
+**ol** = outline: 0;<br>
+**ol-000** = outline: 1px solid #000;<br>
+**ol-EEE-2** = outline: 2px solid #EEE;<br>
+**ol-EEE-2-dashed** = outline: 2px dashed #EEE;<br>
 
-**bold**bo**bold** = border: 0;<br>
-**bold**bo-000**bold** = border: 1px solid #000;<br>
-**bold**bo-EEE-2**bold** = border: 2px solid #EEE;<br>
-**bold**bo-EEE-2-dashed**bold** = border: 2px dashed #EEE;<br>
+**bo** = border: 0;<br>
+**bo-000** = border: 1px solid #000;<br>
+**bo-EEE-2** = border: 2px solid #EEE;<br>
+**bo-EEE-2-dashed** = border: 2px dashed #EEE;<br>
 
-**bold**bol**bold** = border-left: 0;<br>
-**bold**bol-000**bold** = border-left: 1px solid #000;<br>
-**bold**bol-EEE-2**bold** = border-left: 2px solid #EEE;<br>
-**bold**bol-EEE-2-dashed**bold** = border-left: 2px dashed #EEE;<br>
+**bol** = border-left: 0;<br>
+**bol-000** = border-left: 1px solid #000;<br>
+**bol-EEE-2** = border-left: 2px solid #EEE;<br>
+**bol-EEE-2-dashed** = border-left: 2px dashed #EEE;<br>
 
-**bold**bor**bold** = border-right: 0;<br>
-**bold**bor-000**bold** = border-right: 1px solid #000;<br>
-**bold**bor-EEE-2**bold** = border-right: 2px solid #EEE;<br>
-**bold**bor-EEE-2-dashed**bold** = border-right: 2px dashed #EEE;<br>
+**bor** = border-right: 0;<br>
+**bor-000** = border-right: 1px solid #000;<br>
+**bor-EEE-2** = border-right: 2px solid #EEE;<br>
+**bor-EEE-2-dashed** = border-right: 2px dashed #EEE;<br>
 
-**bold**bot**bold** = border-top: 0;<br>
-**bold**bot-000**bold** = border-top: 1px solid #000;<br>
-**bold**bot-EEE-2**bold** = border-top: 2px solid #EEE;<br>
-**bold**bot-EEE-2-dashed**bold** = border-top: 2px dashed #EEE;<br>
+**bot** = border-top: 0;<br>
+**bot-000** = border-top: 1px solid #000;<br>
+**bot-EEE-2** = border-top: 2px solid #EEE;<br>
+**bot-EEE-2-dashed** = border-top: 2px dashed #EEE;<br>
 
-**bold**bob**bold** = border-bottom: 0;<br>
-**bold**bob-000**bold** = border-bottom: 1px solid #000;<br>
-**bold**bob-EEE-2**bold** = border-bottom: 2px solid #EEE;<br>
-**bold**bob-EEE-2-dashed**bold** = border-bottom: 2px dashed #EEE;<br>
+**bob** = border-bottom: 0;<br>
+**bob-000** = border-bottom: 1px solid #000;<br>
+**bob-EEE-2** = border-bottom: 2px solid #EEE;<br>
+**bob-EEE-2-dashed** = border-bottom: 2px dashed #EEE;<br>
 
-**bold**br**bold** = border-radius: 0;<br>
-**bold**br5**bold** = border-radius: 5px;<br>
-**bold**br50p**bold** = border-radius: 50%;<br>
-**bold**br5-10-10-0**bold** = border-radius: 5px 10px 10px 0;<br>
+**br** = border-radius: 0;<br>
+**br5** = border-radius: 5px;<br>
+**br50p** = border-radius: 50%;<br>
+**br5-10-10-0** = border-radius: 5px 10px 10px 0;<br>
 
-**bold**bsp**bold** = border-spacing: 0;<br>
-**bold**bsp2**bold** = border-spacing: 2px;
+**bsp** = border-spacing: 0;<br>
+**bsp2** = border-spacing: 2px;
 
-**bold**c-fff**bold** = color: #fff;<br>
-**bold**bc-fff**bold** = background-color: #fff;<br>
-**bold**boc-fff**bold** = border-color: #fff;<br>
+**c-fff** = color: #fff;<br>
+**bc-fff** = background-color: #fff;<br>
+**boc-fff** = border-color: #fff;<br>
 
-**bold**shad**bold** = box-shadow: none;<br>
-**bold**shad-000-10**bold** = box-shadow: 0 0 10px #000;<br>
-**bold**shad-000-10-1-1**bold** = box-shadow: 1px 1px 10px #000;<br>
+**shad** = box-shadow: none;<br>
+**shad-000-10** = box-shadow: 0 0 10px #000;<br>
+**shad-000-10-1-1** = box-shadow: 1px 1px 10px #000;<br>
 
-**bold**tshad**bold** = text-shadow: none;<br>
-**bold**tshad-000-2**bold** = text-shadow: 0 0 2px #000;<br>
-**bold**tshad-000-2-1-1**bold** = text-shadow: 1px 1px 2px #000;<br>
+**tshad** = text-shadow: none;<br>
+**tshad-000-2** = text-shadow: 0 0 2px #000;<br>
+**tshad-000-2-1-1** = text-shadow: 1px 1px 2px #000;<br>
 
-**bold**tra-c-3-bc-3-o-3**bold** = transition: color 0.3s, background-color 0.3s, opacity 0.3s;<br>
+**tra-c-3-bc-3-o-3** = transition: color 0.3s, background-color 0.3s, opacity 0.3s;<br>
 <br>
