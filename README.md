@@ -891,7 +891,6 @@ with addedPrefix 'button';
 
 export default class Button extends React.Component {
   render() {
-    let {classes, children, isActive} = this.props;
     let className = 'active';
     return (
       <div classes=".self ..$className">
@@ -907,7 +906,6 @@ import classy from 'classy-loader/classy';
 
 export default class Button extends React.Component {
   render() {
-    let {classes, children, isActive} = this.props;
     let className = 'active';
     return (
       <div className={classy("awesome-example-app-button", "awesome-example-app-" + className)}>
