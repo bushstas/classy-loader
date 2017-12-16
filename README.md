@@ -932,7 +932,7 @@ let className = {
   ...
 }[colorValue];
 ```
-So "className" will have real className value and it can be obfuscated:
+So variable "className" will have real class name value and it can be obfuscated:
 ```javascript
 let className = {
   red: 'hby457r',
