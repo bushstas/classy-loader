@@ -1058,6 +1058,19 @@ render() {
   )
 }
 ```
+You can have only one variable sign "$" in your condition, it should be first of course
+```javascript
+render() {
+  return (
+    <div class="$index==count-1 ? active : inactive">
+      ...
+    </div>
+    // or
+    <div class="$( index == count - 1 ) ? active : inactive">
+      ...
+    </div>
+  )
+}
 ## License
 
 MIT
