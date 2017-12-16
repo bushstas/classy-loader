@@ -39,7 +39,7 @@ By default, it has value "class".
 ```javascript
 render() {
   return (
-    <div class="self">
+    <div class=".self">
       ...
     </div>
   )
@@ -51,7 +51,7 @@ or
 ```javascript
 render() {
   return (
-    <div whateverName="self">
+    <div whateverName=".self">
       ...
     </div>
   )
@@ -111,8 +111,38 @@ let classes = "awesome-example-app-some-class";
 let object = {
   classes: "awesome-example-app-some-other-class"
 };
+
+```
+### globalPrefix
+
+A prefix that will be added to your element class names.<br>
+Special syntax will tell the loader whether add prefixes or not.<br>
+And be whatever word you like but not will be changed.<br>
+By default, it has empty value, so it means no prefix will be added if localPrefix not specified.
+
+```javascript
+render() {
+  return (
+    <div class=".thing">
+      ...
+    </div>
+  )
+}
 ```
 
+will be
+
+```javascript
+render() {
+  return (
+    <div className="awesome-example-app-thing">
+      ...
+    </div>
+  )
+}
+```
+The point means class name shoul have a prefix.<br>
+More about parser syntax written below.
 
 ## Usage
 
