@@ -22,7 +22,6 @@ classy.init({
     extraAttributeName: 'classes',
     globalPrefix: 'awesome-example-app',
     delimiter: '-',
-    localDelimiter: '-',
     obfuscation: false,
     obfuscatedLength: 4,
     addSuffixToAllNames: false,
@@ -206,7 +205,49 @@ render() {
     </div>
   )
 }
+```
 
+### prefixAutoResolving
+
+If this is not false the parser will try to resolve the local prefix by itself.<br>
+There are three variants:<br>
+<ol>
+  <li>
+    <b>content</b><br>
+
+  </li>
+<ol>
+By default, it has value false.
+
+```javascript
+export default class MySuperButton extends React.Component {
+  render() {
+    return (
+      <div class=".self">
+        <span class=".inner">
+          ....
+        </span>
+      </div>
+    )
+  }
+}
+```
+
+So if we have our delimiter like "\__", we will have
+
+```javascript
+export default class MySuperButton extends React.Component {
+  render() {
+    return (
+      <div className="awesome-example-app-my__super__button">
+        <span className="awesome-example-app-my-super-button-inner">
+          ....
+        </span>
+      </div>
+    )
+  }
+}
+```
 
 ## Usage
 
