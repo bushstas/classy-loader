@@ -280,27 +280,19 @@ More about js/css directives see below.
 
 ### obfuscation
 
-If true the loader will obfuscate class names in both JS and CSS.
+If true the loader will obfuscate class names in both JS and CSS files.
 
-```javascript
-render() {
-  return (
-    <div className=".button small">
-      ...
-    </div>
-  )
-}
+```html
+<div className=".button small">
+  ...
+</div>
 ```
 to
 
-```javascript
-render() {
-  return (
-    <div className="w4fq5wq dhet7s5">
-      ...
-    </div>
-  )
-}
+```html
+<div className="w4fq5wq dhet7s5">
+  ...
+</div>
 ```
 
 ## Usage
