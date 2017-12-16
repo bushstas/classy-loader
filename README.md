@@ -1,6 +1,6 @@
 # classy-loader [![npm](https://img.shields.io/npm/v/classy-loader.svg?style=flat-square)](https://www.npmjs.com/package/classy-loader)
 
-Classy-loader is a powerful tool to manage your CSS/JS DOM elements class names
+Classy-loader is a powerful tool for React application to manage your CSS/JS DOM elements class names
 
 
 ## Installation
