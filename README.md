@@ -1153,6 +1153,8 @@ Three points for real class name without prefix.<br>
 }
 ```
 
+If a local prefix not defined global one will be added instead
+
 
 ## License
 
