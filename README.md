@@ -1236,24 +1236,30 @@ can be also with spaces, should end with a semicolon or a new line
 <b>flcen</b> = align-item: center; justify-content: center;<br>
 <b>bl</b> = display: block;<br>
 <b>inb</b> = display: inline-block;<br>
+
 <b>fix</b> = position: fixed;<br>
 <b>abs</b> = position: absolute;<br>
 <b>rel</b> = position: relative;<br>
 <b>box</b> = box-sizing: border-box;<br>
+
 <b>ova</b> = overflow: auto;<br>
 <b>ovh</b> = overflow: hidden;<br>
+
 <b>lt</b> = text-align: left;<br>
 <b>rt</b> = text-align: right;<br>
 <b>cen</b> = text-align: center;<br>
 <b>just</b> = text-align: justify;<br>
+
 <b>vtop</b> = vertical-align: top;<br>
 <b>vmid</b> = vertical-align: middle;<br>
 <b>vbot</b> = vertical-align: bottom;<br>
+
 <b>cur</b> = cursor: default;<br>
 <b>cur-name</b> = cursor: name;<br>
 <b>pntr</b> = cursor: pointer;<br>
 <b>cnt</b> = content: "";<br>
 <b>nor</b> = resize: none;<br>
+
 <b>fl</b> = float: left;<br>
 <b>fr</b> = float: right;<br>
 <b>clr</b> = clear: both;<br>
