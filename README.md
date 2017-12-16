@@ -961,13 +961,14 @@ let className = {
 ```
 Also there is the third way to use <b>$classy</b>:
 ```javascript
+with addedPrefix 'catalog';
+// ....
 let className = $classy(".item item ..some-item $className");
 ```
 It produces this code:
 ```javascript
 import classy from 'classy-loader/classy';
-with addedPrefix 'catalog';
-
+// ....
 let className = classy("awesome-example-app-catalog-item", "item", "awesome-example-app-some-item", className);
 ```
 
