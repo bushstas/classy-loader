@@ -31,7 +31,7 @@ classy.init({
 ```
 ### attributeName
 
-An attribute of DOM elements, that will be parsed by loader.<br>
+An attribute name of DOM elements, that will be parsed by loader.<br>
 It can be whatever word you like and will be changed to className attribute.
 
 ```javascript
@@ -56,7 +56,7 @@ render() {
 }
 ```
 So "class" and "whateverName" are our attributeNames.<br>
-And after parsing we'll get:
+And after processing we'll get parsed value:
 
 ```javascript
 render() {
@@ -69,6 +69,36 @@ render() {
 ```
 So "self" is a keyword that means your global or local prefix.<br>
 In this case we don't have a local prefix, so it will be our globalPrefix from the config we set up above.
+
+### extraAttributeName
+
+An attribute name of React elements, that will be parsed by loader.<br>
+This also can be used like variable names or object keys.
+It also can be whatever word you like and not will be changed.
+
+
+```javascript
+render() {
+  return (
+    <Button classes=".action-button awesome-button">
+      Do it!
+    </Button>
+  )
+}
+```
+
+And after processing we'll get the same attribute "classes" but parsed:
+
+```javascript
+render() {
+  return (
+    <Button classes="awesome-example-app-action-button awesome-button">
+      Do it!
+    </Button>
+  )
+}
+```
+
 
 ## Usage
 
