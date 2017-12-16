@@ -1011,7 +1011,7 @@ render() {
     <div className={classy(active ? "app-active" : "")}>
       ...
     </div>
-     <div className={classy(className)}>
+     <div className={classy(active ? className : "")}>
       ...
     </div>
     // ad so on
