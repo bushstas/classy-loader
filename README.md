@@ -557,7 +557,7 @@ will give the same result
     }
   ```
 
-    the result when <b>"prefixAutoResolving"</b> set to false, so we don't have additional local prefix,<br>just overrided global
+  the result when <b>"prefixAutoResolving"</b> set to false, so we don't have additional local prefix,<br>just overrided global
 
   ```javascript
     // ...imports
@@ -652,6 +652,25 @@ will give the same result
 
 ### CSS directives
 
+Css directives do absolutly the same and looks pretty muck like JS versions
+
+<ul>
+  <li>
+    <h3>.with.prefix.some-prefix;</h3>
+  </li>
+  <li>
+    <h3>.with.auto.prefix.some-prefix;</h3>
+  </li>
+  <li>
+    <h3>.with.addedPrefix.additional-prefix;</h3>
+  </li>
+  <li>
+    <h3>.with.auto.addedPrefix.additional-prefix;</h3>
+  </li>
+  <li>
+    <h3>.with.auto.prefix;</h3>
+  </li>
+</ul>
 
 ## License
 
