@@ -1112,7 +1112,7 @@ render() {
 One point for real class name without prefix.<br>
 Two points for class names with local prefix.<br>
 Three points for class names with global prefix.<br>
-Self is a keywords that means local prefix itself or global if local one not defined
+<b>"Self"</b> is a keywords that means local prefix itself or global if local one not defined
 
 ```scss
 ..self {
