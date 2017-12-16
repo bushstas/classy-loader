@@ -776,10 +776,10 @@ render() {
 ```
 in the Icon
 ```javascript
-export default function Icon({classes}) {
+export default function Icon({classes, children}) {
   return (
     <i class=".icon $classes material-icons">
-      {this.props.children}
+      {children}
     </i>
   )
 }
