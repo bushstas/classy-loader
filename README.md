@@ -76,7 +76,7 @@ In this case we don't have a local prefix, so it will be our globalPrefix from t
 
 An attribute name of React elements, that will be parsed by loader.<br>
 This also can be used like variable names or object keys.<br>
-It also can be whatever word you like and not will be changed.<br>
+And be whatever word you like but not will be changed.<br>
 By default, it has value "classes".
 
 ```javascript
