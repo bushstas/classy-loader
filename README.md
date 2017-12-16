@@ -684,13 +684,10 @@ render() {
   )
 }
 ```
-<ul>
-  <li>
-    <h3>name</h3>
-    Gives class name without a prefixes in non-automatic mode.<br>
-    Gives class name with a local prefix in automatic mode.
-  </li>
-</ul>
+###name
+Gives class name without a prefixes in non-automatic mode.<br>
+Gives class name with a local prefix in automatic mode.
+
 
 ## License
 
