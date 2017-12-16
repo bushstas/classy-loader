@@ -1065,7 +1065,9 @@ render() {
     <div class="$index==count-1 ? active : inactive">
       ...
     </div>
+    
     // or
+
     <div class="$( index == count - 1 ) ? active : inactive">
       ...
     </div>
