@@ -869,6 +869,8 @@ export default function Tab({classes, children, isActive}) {
 ```
 will be
 ```javascript
+import classy from 'classy-loader/classy';
+
 export default function Tab({classes, children, isActive}) {
   render() {
     let className = isActive ? 'active' : 'inactive';
