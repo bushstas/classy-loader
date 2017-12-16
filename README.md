@@ -396,7 +396,7 @@ export default class Container extends React.Component {
 
 In this mode you don't need to add a point for local prefix, one point for global one and two for class name without prefix.<br><br>
 
-So in css files this principle works the same:<br><br>
+So in css files this principle works the same (you need to add the same points or not to add):<br><br>
 None-automatic mode
 
 ```scss
