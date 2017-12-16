@@ -1221,7 +1221,7 @@ can be also with spaces, should end with a semicolon or a new line
 <li><b>b50p</b> = botton: 50%;</li>
 <li><b>b-50p</b> = botton: -50%;</li>
 
-<li><b>z10</b> = z-index: 10px;</li>
+<li><b>z10</b> = z-index: 10;</li>
 
 <li><b>w</b> = width: 100%;</li>
 <li><b>w100</b> = width: 100px;</li>
