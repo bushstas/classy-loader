@@ -1,0 +1,274 @@
+const g = (...params) => {
+	let str = '';
+	for (let i = 0; i < params.length; i++) {
+		str += params[i] + ':' + params[i + 1] + ';';
+		i++;
+	}
+	return str;
+}
+
+const a = (value) => {
+	if (value == '0') return 0;
+	if (typeof value == 'number') {
+		return value + 'px';
+	}
+	return value.match(/p$/) ? value.replace(/p$/, '') + '%' : value + 'px';
+}
+
+const b = (value, param) => {
+	let p = value.split('-');
+	let v = [];
+	for (let i of p) {
+		v.push(a(i));
+	}
+	return g(param, v.join(' '));
+}
+
+const c = (value) => {
+	return '#' + value.replace(/^-/, '');
+}
+
+const h = (value) => {
+	value = value.replace(/^-/, '');
+	switch (value) {
+		case 'grabbing':
+			return g('cursor', 'grabbing', 'cursor', '-moz-grabbing', 'cursor', '-webkit-grabbing');
+		case 'grab':
+			return g('cursor', 'grab', 'cursor', '-moz-grab', 'cursor', '-webkit-grab');
+	}
+	return g('cursor', value);
+}
+
+const s = (value, param) => {
+	let p = value.split('-');
+	let v = [];
+	if (p[2]) {
+		v.push(a(p[2]));
+	} else {
+		v.push(0);
+	}
+	if (p[3]) {
+		v.push(a(p[3]));
+	} else {
+		v.push(0);
+	}
+	if (p[0]) {
+		v.push(a(p[0]));
+	} else {
+		v.push(0);
+	}
+	if (p[1]) {
+		v.push('#' + p[1]);
+	}
+	return g(param, v.join(' '));
+}
+
+const d = (value, param) => {
+	let p = value.split('-');
+	let v = [];
+	if (p[2]) {
+		v.push(a(p[2]));
+	} else {
+		v.push(a(1));
+	}
+	if (p[3]) {
+		v.push(p[3]);
+	} else {
+		v.push('solid');
+	}
+	if (p[1]) {
+		v.push('#' + p[1]);
+	}
+	return g(param, v.join(' '));
+}
+
+const f = (value) => {
+	let v = [];
+	let p = value.replace(/^-/, '').split('-');
+	for (let i of p) {
+		v.push(i);
+	}
+	return g('font-family', '"' + v.join(' ') + '"');
+}
+
+const e = (value) => {
+	let v = [];
+	let p = value.replace(/^-/, '').split('-');
+	for (let i = 0; i < p.length; i++) {
+		let a = p[i];
+		if (typeof map[a] == 'string' && p[i + 1]) {
+			let o = ~~p[i + 1];
+			v.push(map[a] + ' ' + o / 10 + 's');
+		}
+		i++;
+	}
+	return g('transition', v.join(', '));
+}
+
+const data = {
+	lt: g('text-align', 'left'),
+	rt: g('text-align', 'right'),
+	cen: g('text-align', 'center'),
+	just: g('text-align', 'justify'),
+	bsp: g('border-spacing', 0),
+	vtop: g('vertical-align', 'top'),
+	vmid: g('vertical-align', 'middle'),
+	vbot: g('vertical-align', 'bottom'),
+	cur: g('cursor', 'default'),
+	cnt: g('content', '""'),
+	nor: g('resize', 'none'),
+	shad: g('box-shadow', 'none'),
+	tshad: g('text-shadow', 'none'),
+	o: g('opacity', 0),
+	ol: g('outline', 0),
+	bo: g('border', 0),
+	bol: g('border-left', 0),
+	bor: g('border-right', 0),
+	bot: g('border-top', 0),
+	bob: g('border-bottom', 0),
+	br: g('border-radius', 0),
+	un: g('text-decoration', 'underline'),
+	pntr: g('cursor', 'pointer'),
+	fl: g('float', 'left'),
+	fr: g('float', 'right'),
+	clr: g('clear', 'both'),
+	auto: g('margin', 'auto'),
+	bold: g('font-weight', 'bold'),
+	it: g('font-style', 'italic'),
+	l: g('left', 0),
+	r: g('right', 0),
+	t: g('top', 0),
+	b: g('bottom', 0),
+	w: g('width', '100%'),
+	h: g('height', '100%'),
+	
+	fix: g('position', 'fixed'),
+	abs: g('position', 'absolute'),
+	rel: g('position', 'relative'),
+	
+	flex: g('display', 'flex'),
+	bl: g('display', 'block'),
+	inb: g('display', 'inline-block'),
+	
+	flcen: g('align-items', 'center', 'justify-content', 'center'),
+	box: g('box-sizing', 'border-box'),
+
+	ova: g('overflow', 'auto'),
+	ovh: g('overflow', 'hidden'),
+
+	z: value => g('z-index', value),
+	_o: value => g('opacity', '0.' + value),
+
+	boc: value => g('border-color', c(value)),
+	bc: value => g('background-color', c(value)),
+	c: value => g('color', c(value)),
+
+	_br: value => b(value, 'border-radius'),
+
+	_wh: value => g('width', a(value), 'height', a(value)),
+	_w: value => g('width', a(value)),
+	_h: value => g('height', a(value)),
+	_l: value => g('left', a(value)),
+	_r: value => g('right', a(value)),
+	_t: value => g('top', a(value)),
+	_b: value => g('bottom', a(value)),
+	_bsp: value => g('border-spacing', a(value)),
+
+	p: g('padding', 0),
+	pl: g('padding-left', 0),
+	pr: g('padding-right', 0),
+	pt: g('padding-top', 0),
+	pb: g('padding-bottom', 0),
+
+	_p: value => b(value, 'padding'),
+	_pl: value => g('padding-left', a(value)),
+	_pr: value => g('padding-right', a(value)),
+	_pt: value => g('padding-top', a(value)),
+	_pb: value => g('padding-bottom', a(value)),
+
+	m: g('margin', 0),
+	ml: g('margin-left', 0),
+	mr: g('margin-right', 0),
+	mt: g('margin-top', 0),
+	mb: g('margin-bottom', 0),
+
+	_m: value => b(value, 'margin'),
+	_ml: value => g('margin-left', a(value)),
+	_mr: value => g('margin-right', a(value)),
+	_mt: value => g('margin-top', a(value)),
+	_mb: value => g('margin-bottom', a(value)),
+
+	mnw: value => g('min-width', a(value)),
+	mxw: value => g('max-width', a(value)),
+	mnh: value => g('min-height', a(value)),
+	mxh: value => g('max-height', a(value)),
+
+	_ol: value => d(value, 'outline'),
+	_bo: value => d(value, 'border'),
+	_bot: value => d(value, 'border-top'),
+	_bob: value => d(value, 'border-bottom'),
+	_bol: value => d(value, 'border-left'),
+	_bor: value => d(value, 'border-right'),
+	
+	lh: value => g('line-height', a(value)),
+	fs: value => g('font-size', a(value)),
+
+	_cur: h,
+
+	_shad: value => s(value, 'box-shadow'),
+	_tshad: value => s(value, 'text-shadow'),
+	
+	ff: f,
+	tra: e
+}
+
+const map = {
+	br: 'border-radius',
+	cur: 'cursor',
+	fl: 'float',
+	clr: 'clear',
+	m: 'margin',
+	ml: 'margin-left',
+	mr: 'margin-right',
+	mt: 'margin-top',
+	mb: 'margin-bottom',
+	p: 'padding',
+	pl: 'padding-left',
+	pr: 'padding-right',
+	pt: 'padding-top',
+	pb: 'padding-bottom',
+	w: 'width',
+	h: 'height',
+	l: 'left',
+	r: 'right',
+	t: 'top',
+	b: 'bottom',
+	mnw: 'min-width',
+	mnh: 'min-height',
+	mxw: 'max-width',
+	mxh: 'max-height',
+	pos: 'position',
+	dis: 'display',
+	o: 'opacity',
+	fw: 'font-weight',
+	ff: 'font-family',
+	lh: 'line-height',
+	fs: 'font-size', 
+	fst: 'font-style',
+	c: 'color',
+	bc: 'background-color',
+	boc: 'border-color',
+	bo: 'border',
+	bot: 'border-top',
+	bob: 'border-bottom',
+	bol: 'border-left',
+	bor: 'border-right',
+	shad: 'box-shadow',
+	tshad: 'text-shadow',
+	ov: 'overflow',
+	td: 'text-decoration',
+	ta: 'text-align'
+
+}
+
+module.exports = data;
