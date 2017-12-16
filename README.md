@@ -21,6 +21,7 @@ classy.init({
     attributeName: 'class',
     extraAttributeName: 'classes',
     globalPrefix: 'awesome-example-app',
+    delimiter: '-',
     obfuscation: false,
     obfuscatedLength: 4,
     addSuffixToAllNames: false,
@@ -32,7 +33,8 @@ classy.init({
 ### attributeName
 
 An attribute name of DOM elements, that will be parsed by loader.<br>
-It can be whatever word you like and will be changed to className attribute.
+It can be whatever word you like and will be changed to className attribute.<br>
+By default, it has value "class".
 
 ```javascript
 render() {
@@ -74,8 +76,8 @@ In this case we don't have a local prefix, so it will be our globalPrefix from t
 
 An attribute name of React elements, that will be parsed by loader.<br>
 This also can be used like variable names or object keys.<br>
-It also can be whatever word you like and not will be changed.
-
+It also can be whatever word you like and not will be changed.<br>
+By default, it has value "classes".
 
 ```javascript
 render() {
@@ -85,6 +87,12 @@ render() {
     </Button>
   )
 }
+
+let classes = ".some-class";
+
+let object = {
+  classes: ".some-other-class"
+};
 ```
 
 And after processing we'll get the same attribute "classes" but parsed:
@@ -97,6 +105,12 @@ render() {
     </Button>
   )
 }
+
+let classes = "awesome-example-app-some-class";
+
+let object = {
+  classes: "awesome-example-app-some-other-class"
+};
 ```
 
 
