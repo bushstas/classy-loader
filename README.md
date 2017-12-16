@@ -215,7 +215,7 @@ By default, it has value false.<br>
 There are three variants:<br>
 <ol>
   <li>
-    prefixAutoResolving: <big><b>"content"</b></big><br>
+    prefixAutoResolving: <big><b>"content"</b></big><br><br>
     At first the loader will try to find a line with:<br>
     <b>export default (class|function) MySuperClassName</b><br><br>
     Then try with:<br>
@@ -223,7 +223,7 @@ There are three variants:<br>
     Then try with:<br>
     <b>class MySuperClassName</b><br><br>
     And at last it will get the first line with:<br>
-    <b>function MySuperClassName</b><br>
+    <b>function MySuperClassName</b><br><br>
     so "MySuperClassName" will be parsed to "my" + delimiter + "super" + delimiter + "class" + delimiter + "name".  
 
 ```javascript
