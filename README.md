@@ -959,7 +959,7 @@ let className = {
   ...
 }[colorValue];
 ```
-Also there is the third way to use of <b>$classy</b>:
+Also there is the third way to use <b>$classy</b>:
 ```javascript
 let className = $classy(".item item ..some-item $className");
 ```
