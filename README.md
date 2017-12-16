@@ -678,7 +678,7 @@ CSS directives do absolutly the same and look pretty much like JS versions
 ```javascript
 render() {
   return (
-    <div class="name .name ..name $name .$name ..$name">
+    <div class="name .name ..name $name prefix::name .$name ..$name">
       ...
     </div>
   )
@@ -813,6 +813,29 @@ return _react2.default.createElement(
 );
 ```
 
+### prefix::name
+Adds needed addiotinal prefix to class name.<br>
+See the example with the Icon above.<br>
+Let's modify this a little bit.
+```javascript
+render() {
+  return (
+    <Icon classes="..large green">
+      <span class="icon::thing">
+        resize
+      </span>
+    </Icon>
+  )
+}
+```
+so we will have this html
+```html
+<i className="awesome-example-app-icon awesome-example-app-large green material-icons">
+  <span class="awesome-example-app-icon-thing">
+    resize
+  </span>
+</i>
+```
 
 ## License
 
