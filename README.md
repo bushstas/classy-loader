@@ -1232,6 +1232,51 @@ can be also with spaces, should end with a semicolon or a new line
 <b>wh20</b> = width: 20px; height: 20px;<br>
 <b>wh20p</b> = width: 20%; height: 20%;<br>
 
+<b>mnw</b> = min-width: 0;<br>
+<b>mnw100</b> = min-width: 100px;<br>
+<b>mnh</b> = min-height: 0;<br>
+<b>mnh100</b> = min-height: 100px;<br>
+<b>mxw</b> = max-width: none;<br>
+<b>mxw100</b> = max-width: 100px;<br>
+<b>mxh</b> = max-height: none;<br>
+<b>mxh100</b> = max-height: 100px;<br>
+
+<b>auto</b> = margin: auto;<br>
+<b>m</b> = margin: 0;<br>
+<b>m5</b> = margin: 5px;<br>
+<b>m10-5</b> = margin: 10px 5px;<br>
+<b>m10-5-10-5</b> = margin: 10px 5px 10px 5px;<br>
+
+<b>ml</b> = margin-left: 0;<br>
+<b>ml5</b> = margin-left: 5px;<br>
+<b>ml-5</b> = margin-left: -5px;<br>
+<b>ml5p</b> = margin-left: 5%;<br>
+<b>ml-5p</b> = margin-left: -5%;<br>
+
+<b>mr</b> = margin-right: 0;<br>
+<b>mr5</b> = margin-right: 5px;<br>
+<b>mr-5</b> = margin-right: -5px;<br>
+<b>mr5p</b> = margin-right: 5%;<br>
+<b>mr-5p</b> = margin-right: -5%;<br>
+
+<b>mt</b> = margin-top: 0;<br>
+<b>mt5</b> = margin-top: 5px;<br>
+<b>mt-5</b> = margin-top: -5px;<br>
+<b>mt5p</b> = margin-top: 5%;<br>
+<b>mt-5p</b> = margin-top: -5%;<br>
+
+<b>mb</b> = margin-bottom: 0;<br>
+<b>mb5</b> = margin-bottom: 5px;<br>
+<b>mb-5</b> = margin-bottom: -5px;<br>
+<b>mb5p</b> = margin-bottom: 5%;<br>
+<b>mb-5p</b> = margin-bottom: -5%;<br>
+
+<b>p</b> = padding: 0;<br>
+<b>p5</b> = padding: 5px;<br>
+<b>p10-5</b> = padding: 10px 5px;<br>
+<b>p10-5-10-5</b> = padding: 10px 5px 10px 5px;<br>
+  
+
 <b>flex</b> = display: flex;<br>
 <b>flcen</b> = align-item: center; justify-content: center;<br>
 <b>bl</b> = display: block;<br>
@@ -1279,17 +1324,59 @@ can be also with spaces, should end with a semicolon or a new line
 <b>ff-name</b> = font-family: name;<br>
   
 
+<b>o</b> = opacity: 0;<br>
+<b>o5</b> = opacity: 0.5;<br>
+<b>o10</b> = opacity: 1;<br>
 
 
+<b>ol</b> = outline: 0;<br>
+<b>ol-000</b> = outline: 1px solid #000;<br>
+<b>ol-EEE-2</b> = outline: 2px solid #EEE;<br>
+<b>ol-EEE-2-dashed</b> = outline: 2px dashed #EEE;<br>
+
+<b>bo</b> = border: 0;<br>
+<b>bo-000</b> = border: 1px solid #000;<br>
+<b>bo-EEE-2</b> = border: 2px solid #EEE;<br>
+<b>bo-EEE-2-dashed</b> = border: 2px dashed #EEE;<br>
+
+<b>bol</b> = border-left: 0;<br>
+<b>bol-000</b> = border-left: 1px solid #000;<br>
+<b>bol-EEE-2</b> = border-left: 2px solid #EEE;<br>
+<b>bol-EEE-2-dashed</b> = border-left: 2px dashed #EEE;<br>
+
+<b>bor</b> = border-right: 0;<br>
+<b>bor-000</b> = border-right: 1px solid #000;<br>
+<b>bor-EEE-2</b> = border-right: 2px solid #EEE;<br>
+<b>bor-EEE-2-dashed</b> = border-right: 2px dashed #EEE;<br>
+
+<b>bot</b> = border-top: 0;<br>
+<b>bot-000</b> = border-top: 1px solid #000;<br>
+<b>bot-EEE-2</b> = border-top: 2px solid #EEE;<br>
+<b>bot-EEE-2-dashed</b> = border-top: 2px dashed #EEE;<br>
+
+<b>bob</b> = border-bottom: 0;<br>
+<b>bob-000</b> = border-bottom: 1px solid #000;<br>
+<b>bob-EEE-2</b> = border-bottom: 2px solid #EEE;<br>
+<b>bob-EEE-2-dashed</b> = border-bottom: 2px dashed #EEE;<br>
+
+<b>br</b> = border-radius: 0;<br>
+<b>br5</b> = border-radius: 5px;<br>
+<b>br50p</b> = border-radius: 50%;<br>
+<b>br5-10-10-0</b> = border-radius: 5px 10px 10px 0;<br>
 
 <b>bsp</b> = border-spacing: 0;<br>
 <b>bsp2</b> = border-spacing: 2px;
 
+<b>c-fff</b> = color: #fff;<br>
+<b>bc-fff</b> = background-color: #fff;<br>
+<b>boc-fff</b> = border-color: #fff;<br>
 
+<b>shad</b> = box-shadow: none;<br>
+<b>shad-000-10</b> = box-shadow: 0 0 10px #000;<br>
+<b>shad-000-10-1-1</b> = box-shadow: 1px 1px 10px #000;<br>
 
-  
+<b>tshad</b> = text-shadow: none;<br>
+<b>tshad-000-2</b> = text-shadow: 0 0 2px #000;<br>
+<b>tshad-000-2-1-1</b> = text-shadow: 1px 1px 2px #000;<br>
 
-
-## License
-
-Enjoy my dear friends, all for you
+<b>tra-c-3-bc-3</b> = transition: color 0.3, background-color 0.3;<br>
