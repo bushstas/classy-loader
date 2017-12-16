@@ -400,7 +400,7 @@ So in css files this principle works the same:<br><br>
 None-automatic mode
 
 ```css
-/* directive that defines our local refix */
+/* directive that defines our local refix (adds additional prefix to global one) */
 .with.addedPrefix.container;
 
 ..self {
