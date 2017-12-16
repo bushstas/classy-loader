@@ -1155,6 +1155,24 @@ Three points for real class name without prefix.<br>
 
 If a local prefix not defined global one will be added instead
 
+## CSS shorcutty special syntax
+
+Here's an example
+```scss
+.container {
+  var .abs.w100.h200.bc-000.c-fff.fs15;
+}
+```
+will be
+```scss
+.container {
+  position: absolute;
+  width: 100px;
+  background-color: #000;
+  color: #fff;
+  font-size: 15px;
+}
+```
 
 ## License
 
