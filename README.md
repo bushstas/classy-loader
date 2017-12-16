@@ -642,6 +642,13 @@ will give the same result
   </li>
 </ul>
 
+<ul>
+  <li>
+    <h3>with auto prefix;</h3>
+    Gives automatic mode within this file.
+  </li>
+</ul>
+
 
 ### CSS directives
 
