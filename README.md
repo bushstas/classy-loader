@@ -502,25 +502,19 @@ will give the same result
 ```
 
 
-## Usage
+## Directives
 
-A simple example of usage
+### JS directives
 
-```javascript
-import React from 'react'
+<ul>
+  <li>
+    ####with prefix 'my-cool-app';
+    Overrides the global prefix set in config
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <div class="self">
-        <h1 class="title">
-          Classy Loader is awesome
-        </h1>
-      </div>
-    )
-  }
-}
-```
+  </li>
+</ul>
+
+### CSS directives
 
 
 ## License
