@@ -400,6 +400,9 @@ So in css files this principle works the same:<br><br>
 None-automatic mode
 
 ```css
+// directive that define our local refix
+.with.addedPrefix.container;
+
 ..self {
   position: relative;
 
