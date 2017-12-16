@@ -588,7 +588,7 @@ will give the same result
   <li>
     <h3>with addedPrefix 'some-additional-prefix';</h3>
     Sets an additional prefix for local use.<br>
-    This directive do the same thing like param <b>"prefixAutoResolving" and will cancel auto detecting.</b>
+    This directive do the same thing like param <b>"prefixAutoResolving"<br> so it will cancel auto detecting.
   </li>
 </ul>
 
