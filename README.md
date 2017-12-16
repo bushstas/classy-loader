@@ -687,7 +687,21 @@ render() {
 ### name
 Gives class name without a prefixes in non-automatic mode.<br>
 Gives class name with a local prefix in automatic mode.
+```javascript
+render() {
+  return (
+    <div className="name">
+      ...
+    </div>
 
+    //and
+
+    <div className="local-prefix-name">
+      ...
+    </div>
+  )
+}
+```
 
 ## License
 
