@@ -1168,6 +1168,7 @@ will be
 .container {
   position: absolute;
   width: 100px;
+  height: 200px;
   background-color: #000;
   color: #fff;
   font-size: 15px;
