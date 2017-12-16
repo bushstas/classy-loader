@@ -1174,7 +1174,25 @@ will be
   font-size: 15px;
 }
 ```
-
+can be also with spaces, should end with a semicolon or a new line
+```scss
+.container {
+  var .fix .l .r .t .b .z999 .o3;
+}
+```
+will be
+can be also with spaces, should end with a semicolon or a new line
+```scss
+.container {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+  opacity: 0.3;
+}
+```
 ## License
 
 Enjoy my dear friends, all for you
