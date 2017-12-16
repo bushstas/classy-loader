@@ -408,7 +408,7 @@ None-automatic mode
     border: 1px solid #aaa;
   }
 
-  &...wide {
+  &.wide {
     width: 80%;
   }
 
