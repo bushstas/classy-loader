@@ -210,14 +210,14 @@ render() {
 ### prefixAutoResolving
 
 If this is not false the parser will try to resolve the local prefix by itself.<br>
+By default, it has value false.<br>
 There are three variants:<br>
 <ol>
   <li>
-    <b>prefixAutoResolving: 'content'</b><br>
+    prefixAutoResolving: <big><b>"content"</b></big><br>
 
   </li>
-<ol>
-By default, it has value false.
+</ol>
 
 ```javascript
 export default class MySuperButton extends React.Component {
