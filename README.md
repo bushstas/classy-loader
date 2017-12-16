@@ -559,7 +559,7 @@ will give the same result
 
   the result when prefixAutoResolving set to false, so we don't have additional local prefix, just overrided global
 
-    ```javascript
+  ```javascript
     // ...imports
    
     export default class Container extends React.Component {
