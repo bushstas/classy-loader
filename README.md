@@ -215,15 +215,15 @@ By default, it has value false.<br>
 There are three variants:<br>
 <ol>
   <li>
-    prefixAutoResolving: <big>**"content"**</big><br><br>
+    prefixAutoResolving: <big><b>"content"</b></big><br><br>
     At first the loader will try to find a line with:<br>
-    **export default (class|function) MySuperClassName**<br><br>
+    <b>export default (class|function) MySuperClassName</b><br><br>
     Then try with:<br>
-    **export default connect(...)(MySuperClassName)**<br><br>
+    <b>export default connect(...)(MySuperClassName)</b><br><br>
     Then try with:<br>
-    **class MySuperClassName**<br><br>
+    <b>class MySuperClassName</b><br><br>
     And at last it will get the first line with:<br>
-    **function MySuperClassName**<br><br>
+    <b>function MySuperClassName</b><br><br>
     so "MySuperClassName" will be parsed to "my" + delimiter + "super" + delimiter + "class" + delimiter + "name".<br><br>
     For CSS files the loder will search for JS index file (js,jsx,ts) in the same directory<br> and then get local prefix from the file,<br>
     so JS and CSS will be syncronized
@@ -264,7 +264,7 @@ More about js/css directives see below.
   </li>
 
   <li>
-    prefixAutoResolving: <big>**"file"**</big><br>
+    prefixAutoResolving: <big><b>"file"</b></big><br>
     The loader will try to form local prefixes from js/css file names:<br>
     "SuperItem.js" or "super-item.js" or "super_item.js"
     to prefix "super" + delimiter + "item"<br>
@@ -272,7 +272,7 @@ More about js/css directives see below.
   </li>
 
   <li>
-    prefixAutoResolving: <big>**"folder"**</big><br>
+    prefixAutoResolving: <big><b>"folder"</b></big><br>
     The loader will try to form local prefixes from js/css folder names:<br>
     "SuperItem/index.js" or "super-item/some.js" or "super_item/any.js"
     to prefix "super" + delimiter + "item"<br>
@@ -592,7 +592,7 @@ will give the same result
   <li>
     <h3>with addedPrefix 'some-additional-prefix';</h3>
     Sets an additional prefix for local use.<br>
-    This directive do the same thing like param **"prefixAutoResolving"** so it will cancel auto detecting.
+    This directive do the same thing like param <b>"prefixAutoResolving"</b> so it will cancel auto detecting.
   </li>
 </ul>
 
