@@ -260,6 +260,13 @@ More about js/css directives see below.
     "SuperItem.js" or "super-item.js" or "super_item.js"
     to prefix "super" + delimiter + "item"
   </li>
+
+  <li>
+    prefixAutoResolving: <big><b>"folder"</b></big><br>
+    The loader will try to form local prefixes from js/css folder names:<br>
+    "SuperItem/index.js" or "super-item/index.js" or "super_item/index.js"
+    to prefix "super" + delimiter + "item"
+  </li>
 </ol>
 
 ## Usage
