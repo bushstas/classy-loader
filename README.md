@@ -508,9 +508,50 @@ will give the same result
 
 <ul>
   <li>
-    <h4>with prefix 'my-cool-app';</h4>
-    Overrides the global prefix set in config
+    <h4>with prefix 'some-prefix';</h4>
+    Overrides the global prefix that defined in config
 
+    ```javascript
+    // none-automatic mode
+    // prefixAutoResolve: "content"
+    // ...imports
+
+    with prefix 'crazy-app';
+    
+    export default class Container extends React.Component {
+      render() {
+        return (
+          <div class=".self">
+            <div class=".title ..bigger">
+              ...title
+            </div>
+            <div class=".content">
+              ...content
+            </div>
+          </div>
+        )
+      }
+    }
+    ```
+    will be
+    ```javascript
+    // ...imports
+   
+    export default class Container extends React.Component {
+      render() {
+        return (
+          <div class="crazy-app-container">
+            <div class="crazy-app-container-title awesome-example-app-bigger">
+              ...title
+            </div>
+            <div class="crazy-app-container-title">
+              ...content
+            </div>
+          </div>
+        )
+      }
+    }
+    ```
   </li>
 </ul>
 
