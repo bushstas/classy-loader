@@ -508,7 +508,8 @@ will give the same result
 <ul>
   <li>
     <h4>with prefix 'some-prefix';</h4>
-    Creates a local version of the global prefix that overrides defined in config
+    Creates a local version of the global prefix that overrides defined in config.<br>
+    Two points still give common global prefix
   </li>
 </ul>
 
