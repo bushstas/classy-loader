@@ -508,7 +508,7 @@ will give the same result
 <ul>
   <li>
     <h4>with prefix 'some-prefix';</h4>
-    Overrides the global prefix that defined in config
+    Creates a local version of the global prefix that overrides defined in config
   </li>
 </ul>
 
