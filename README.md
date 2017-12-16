@@ -1038,7 +1038,7 @@ render() {
   )
 }
 ```
-This query will have not correct class name something like
+This query will produce incorrect class name something like
 ```javascript
 render() {
   return (
