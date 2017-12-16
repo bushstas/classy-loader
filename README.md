@@ -793,7 +793,7 @@ in the Icon
 ```javascript
 export default function Icon({classes, children}) {
   return (
-    <i className={classy('awesome-example-app-icon', classes, 'material-icons')}>
+    <i className={classy("awesome-example-app-icon", classes, "material-icons")}>
       {children}
     </i>
   )
@@ -805,7 +805,7 @@ an example of a bundled code
 return _react2.default.createElement(
   'i',
   _extends({
-    className: (0, _classy2.default)("awesome-example-app-icon", classes, 'material-icons')
+    className: (0, _classy2.default)("awesome-example-app-icon", classes, "material-icons")
   }),
   children
 );
