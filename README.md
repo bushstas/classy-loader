@@ -264,7 +264,7 @@ More about js/css directives see below.
   <li>
     prefixAutoResolving: <big><b>"folder"</b></big><br>
     The loader will try to form local prefixes from js/css folder names:<br>
-    "SuperItem/index.js" or "super-item/index.js" or "super_item/index.js"
+    "SuperItem/index.js" or "super-item/some.js" or "super_item/any.js"
     to prefix "super" + delimiter + "item"
   </li>
 </ol>
