@@ -209,13 +209,13 @@ render() {
 
 ### prefixAutoResolving
 
-If this is not false the parser will try to resolve the local prefix by itself.<br>
+If this is not false the loader will try to resolve the local prefix by itself.<br>
 By default, it has value false.<br>
 There are three variants:<br>
 <ol>
   <li>
     prefixAutoResolving: <big><b>"content"</b></big><br>
-    The parser will try to find a line with:<br>
+    The loader will try to find a line with:<br>
     <b>export default (class|function) MySuperClassName</b><br>
     so "MySuperClassName" will be parsed to "my" + delimiter + "super" + delimiter + "class" + delimiter + "name".  
 
@@ -256,7 +256,10 @@ More about js/css directives see below.
 
   <li>
     prefixAutoResolving: <big><b>"file"</b></big><br>
-    The parser will try to form local prefix using js/css file names:<br>
+    The loader will try to form local prefixes from js/css file names:<br>
+    "SuperItem.*" to "super-item.*"<br>
+    "super-item.*" to "super" + delimiter + "item.*"<br>
+    "super_item.*" to "super" + delimiter + "item.*"
   </li>
 </ol>
 
