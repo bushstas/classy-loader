@@ -326,7 +326,7 @@ Loader will automatically add prefixes to your class names.<br>
 So you should use different format of class name query.<br>
 By default, it is false.<br><br>
 
-For example this is a query for none-automatic mode (prefixAutoResolving set to "content")
+For example this is a query for non-automatic mode (prefixAutoResolving set to "content")
 
 ```javascript
 export default class Container extends React.Component {
@@ -514,7 +514,7 @@ will give the same result
 </ul>
 
   ```javascript
-    // none-automatic mode
+    // non-automatic mode
     // prefixAutoResolving: "content"
     // ...imports
 
@@ -593,7 +593,7 @@ will give the same result
 </ul>
 
   ```javascript
-    // none-automatic mode
+    // non-automatic mode
     // ...imports
 
     with addedPrefix 'dialog';
@@ -684,6 +684,13 @@ render() {
   )
 }
 ```
+<ul>
+  <li>
+    <h3>name</h3>
+    Gives class name without a prefixes in non-automatic mode.<br>
+    Gives class name with a local prefix in automatic mode.
+  </li>
+</ul>
 
 ## License
 
