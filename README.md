@@ -29,7 +29,44 @@ classy.init({
     autoPrefixMode: false,
     prefixAutoResolving: false
 });
+
+
+//...
+module: {
+  rules: [
+    {
+      test: /\.js$/, 
+      loaders: [
+        {
+            loader: 'babel-loader',
+            options: {
+               //....
+            }
+        },
+        {
+            loader: 'classy-loader?parser=js'
+        }
+      ]
+    },
+    {
+      test: /\.s?css$/,
+      loader: ExtractTextPlugin.extract(
+          {
+              fallback: 'style-loader',
+              use: [
+                  'css-loader?root=...',
+                  'sass-loader',
+                  'classy-loader?parser=css'
+              ]
+          }
+      )
+    }
+  ]
+}
+//...
 ```
+So it should be added after babel and standart css loaders to be processed first.
+
 ### attributeName
 
 An attribute name of DOM elements, that will be parsed by loader.<br>
@@ -140,8 +177,8 @@ render() {
   )
 }
 ```
-The point means class name shoul have a prefix.<br>
-More about parser syntax written below.
+The point means class name should have a prefix.<br>
+More about parser syntax is written below.
 
 ## Usage
 
