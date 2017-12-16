@@ -276,7 +276,7 @@ More about js/css directives see below.
     The loader will try to form local prefixes from js/css folder names:<br>
     "SuperItem/index.js" or "super-item/some.js" or "super_item/any.js"
     to prefix "super" + delimiter + "item"<br>
-    so JS and CSS will be syncronized as they both located in the same directory (aren't they?)
+    so JS and CSS will be syncronized as they are both located in the same directory (aren't they?)
   </li>
 </ol>
 
