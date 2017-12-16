@@ -635,6 +635,13 @@ will give the same result
     }
   ```
 
+<ul>
+  <li>
+    <h3>with auto addedPrefix 'some-additional-prefix';</h3>
+    Evertrhing the same as in the case above plus gives automatic mode within this file.
+  </li>
+</ul>
+
 
 ### CSS directives
 
