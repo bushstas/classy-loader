@@ -328,7 +328,7 @@ Loader will automatically add prefixes to your class names.<br>
 So you should use different format of class name query.<br>
 By default, it is false.<br><br>
 
-For example this is a query for not automatic mode (prefixAutoResolve is "content")
+For example this is a query for none-automatic mode (prefixAutoResolve is "content")
 
 ```javascript
 export default class Container extends React.Component {
