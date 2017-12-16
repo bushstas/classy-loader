@@ -887,13 +887,34 @@ export default function Tab({classes, children, isActive}) {
 Dynamical class name, global prefix plus value of a given variable.<br>
 It's always global prefix regardless whether the mode automatic or not.
 ```javascript
-render() {
-  let className = 'active';
-  return (
-    <Icon classes="..large ..$className">
-        resize
-    </Icon>
-  )
+with addedPrefix 'button';
+
+export default class Button extends React.Component {
+  render() {
+    let {classes, children, isActive} = this.props;
+    let className = 'active';
+    return (
+      <div classes=".self ..$className">
+          ...
+      </div>
+    )
+  }
+}
+```
+will be
+```javascript
+import classy from 'classy-loader/classy';
+
+export default class Button extends React.Component {
+  render() {
+    let {classes, children, isActive} = this.props;
+    let className = 'active';
+    return (
+      <div className={classy("awesome-example-app-button", "awesome-example-app-" + className)}>
+          ...
+      </div>
+    )
+  }
 }
 ```
 
