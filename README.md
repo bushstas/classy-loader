@@ -739,6 +739,30 @@ render() {
 }
 ```
 
+### $name
+Merge a class name or an array of class names from a variable.<br>
+Loader automatically adds import of required module for class merging.<br>
+The variable should already contain classes with prefixes
+```javascript
+render() {
+  return (
+    <div className={classy(name)}>
+      ...
+    </div>
+  )
+}
+```
+an example of bundled code
+```javascript
+return _react2.default.createElement(
+  'i',
+  _extends({
+    className: (0, _classy2.default)("my-app-icon", classes, className)
+  }, others),
+  children
+);
+```
+
 ## License
 
 MIT
