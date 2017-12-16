@@ -652,7 +652,7 @@ will give the same result
 
 ### CSS directives
 
-Css directives do absolutly the same and looks pretty muck like JS versions
+CSS directives do absolutly the same and look pretty much like JS versions
 
 <ul>
   <li>
