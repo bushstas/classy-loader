@@ -867,6 +867,19 @@ export default function Tab({classes, children, isActive}) {
   }
 }
 ```
+will be
+```javascript
+export default function Tab({classes, children, isActive}) {
+  render() {
+    let className = isActive ? 'active' : 'inactive';
+    return (
+      <div className={classy("awesome-example-app-tab", "awesome-example-app-tab" + className,  classes)}>
+          {children}
+      </div>
+    )
+  }
+}
+```
 
 ### ..$name
 Dynamical class name, global prefix plus value of a given variable.<br>
