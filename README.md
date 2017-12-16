@@ -672,6 +672,18 @@ CSS directives do absolutly the same and look pretty much like JS versions
   </li>
 </ul>
 
+## String queries syntax
+
+```javascript
+  render() {
+    return (
+      <div class="name .name ..name $name .$name ..$name">
+        ...
+      </div>
+    )
+  }
+```
+
 ## License
 
 MIT
