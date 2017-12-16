@@ -626,7 +626,7 @@ will give the same result
             <div class="awesome-example-app-dialog-title awesome-example-app-bigger">
               ...
             </div>
-            <div class="awesome-example-app-dialog-title">
+            <div class="awesome-example-app-dialog-content">
               ...
             </div>
           </div>
