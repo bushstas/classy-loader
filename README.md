@@ -1274,8 +1274,31 @@ can be also with spaces, should end with a semicolon or a new line
 <b>p</b> = padding: 0;<br>
 <b>p5</b> = padding: 5px;<br>
 <b>p10-5</b> = padding: 10px 5px;<br>
-<b>p10-5-10-5</b> = padding: 10px 5px 10px 5px;<br>
-  
+<b>p10-5-10-5</b> = padding: 10px 5px 10px 5px;<br>  
+
+<b>pl</b> = padding-left: 0;<br>
+<b>pl5</b> = padding-left: 5px;<br>
+<b>pl-5</b> = padding-left: -5px;<br>
+<b>pl5p</b> = padding-left: 5%;<br>
+<b>pl-5p</b> = padding-left: -5%;<br>
+
+<b>pr</b> = padding-right: 0;<br>
+<b>pr5</b> = padding-right: 5px;<br>
+<b>pr-5</b> = padding-right: -5px;<br>
+<b>pr5p</b> = padding-right: 5%;<br>
+<b>pr-5p</b> = padding-right: -5%;<br>
+
+<b>pt</b> = padding-top: 0;<br>
+<b>pt5</b> = padding-top: 5px;<br>
+<b>pt-5</b> = padding-top: -5px;<br>
+<b>pt5p</b> = padding-top: 5%;<br>
+<b>pt-5p</b> = padding-top: -5%;<br>
+
+<b>pb</b> = padding-bottom: 0;<br>
+<b>pb5</b> = padding-bottom: 5px;<br>
+<b>pb-5</b> = padding-bottom: -5px;<br>
+<b>pb5p</b> = padding-bottom: 5%;<br>
+<b>pb-5p</b> = padding-bottom: -5%;<br>
 
 <b>flex</b> = display: flex;<br>
 <b>flcen</b> = align-item: center; justify-content: center;<br>
@@ -1309,25 +1332,19 @@ can be also with spaces, should end with a semicolon or a new line
 <b>fr</b> = float: right;<br>
 <b>clr</b> = clear: both;<br>
 
-
-
 <b>bold</b> = font-weight: bold;<br>
 <b>it</b> = font-style: italic;<br>
 <b>un</b> = text-decoration: underline;<br>
-
-
 
 <b>lh</b> = line-height: 0;<br>
 <b>lh20</b> = line-height: 20px;<br>
 <b>fs</b> = font-size: 0;<br>
 <b>fs15</b> = font-size: 15px;<br>
-<b>ff-name</b> = font-family: name;<br>
-  
+<b>ff-name</b> = font-family: name;<br>  
 
 <b>o</b> = opacity: 0;<br>
 <b>o5</b> = opacity: 0.5;<br>
 <b>o10</b> = opacity: 1;<br>
-
 
 <b>ol</b> = outline: 0;<br>
 <b>ol-000</b> = outline: 1px solid #000;<br>
