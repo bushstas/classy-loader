@@ -106,7 +106,7 @@ render() {
   )
 }
 ```
-So "self" is a keyword that means your global or local prefix.<br>
+So <b>"self"</b> is a keyword that means your global or local prefix.<br>
 In this case we don't have a local prefix, so it will be our globalPrefix from the config we set up above.
 
 ### extraAttributeName
@@ -210,6 +210,7 @@ render() {
 ### prefixAutoResolving
 
 If this is not false the loader will try to resolve the local prefix by itself.<br>
+Works only if <b>"autoPrefixMode"</b> is set to true.<br>
 By default, it has value false.<br>
 There are three variants:<br>
 <ol>
