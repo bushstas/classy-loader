@@ -1195,12 +1195,96 @@ can be also with spaces, should end with a semicolon or a new line
 ```
 ### Full list of shorcuts
 <ul>
+
+<li><b>l</b> = left: 0;</li>
+<li><b>l10</b> = left: 10px;</li>
+<li><b>l-10</b> = left: -10px;</li>
+<li><b>l50p</b> = left: 50%;</li>
+<li><b>l-50p</b> = left: -50%;</li>
+
+<li><b>r</b> = right: 0;</li>
+<li><b>r10</b> = right: 10px;</li>
+<li><b>r-10</b> = right: -10px;</li>
+<li><b>r50p</b> = right: 50%;</li>
+<li><b>r-50p</b> = right: -50%;</li>
+
+
+<li><b>t</b> = top: 0;</li>
+<li><b>t10</b> = top: 10px;</li>
+<li><b>t-10</b> = top: -10px;</li>
+<li><b>t50p</b> = top: 50%;</li>
+<li><b>t-50p</b> = top: -50%;</li>
+
+<li><b>b</b> = botton: 0;</li>
+<li><b>b10</b> = botton: 10px;</li>
+<li><b>b-10</b> = botton: -10px;</li>
+<li><b>b50p</b> = botton: 50%;</li>
+<li><b>b-50p</b> = botton: -50%;</li>
+
+<li><b>z10</b> = z-index: 10px;</li>
+
+<li><b>w</b> = width: 100%;</li>
+<li><b>w100</b> = width: 100px;</li>
+<li><b>w50p</b> = width: 50%;</li>
+<li><b>h</b> = height: 100%;</li>
+<li><b>h150</b> = height: 150px;</li>
+<li><b>h50p</b> = height: 20%;</li>
+<li><b>wh20</b> = width: 20px; height: 20px;</li>
+<li><b>wh20p</b> = width: 20%; height: 20%;</li>
+
+<li><b>flex</b> = display: flex;</li>
+<li><b>flcen</b> = align-item: center; justify-content: center;</li>
+<li><b>bl</b> = display: block;</li>
+<li><b>inb</b> = display: inline-block;</li>
+<li><b>fix</b> = position: fixed;</li>
+<li><b>abs</b> = position: absolute;</li>
+<li><b>rel</b> = position: relative;</li>
+<li><b>box</b> = box-sizing: border-box;</li>
+<li><b>ova</b> = overflow: auto;</li>
+<li><b>ovh</b> = overflow: hidden;</li>
+
+
 <li><b>lt</b> = text-align: left;</li>
 <li><b>rt</b> = text-align: right;</li>
 <li><b>cen</b> = text-align: center;</li>
 <li><b>just</b> = text-align: justify;</li>
+<li><b>vtop</b> = vertical-align: top;</li>
+<li><b>vmid</b> = vertical-align: middle;</li>
+<li><b>vbot</b> = vertical-align: bottom;</li>
+<li><b>cur</b> = cursor: default;</li>
+<li><b>cur-name</b> = cursor: name;</li>
+<li><b>pntr</b> = cursor: pointer;</li>
+<li><b>cnt</b> = content: "";</li>
+<li><b>nor</b> = resize: none;</li>
+<li><b>fl</b> = float: left;</li>
+<li><b>fr</b> = float: right;</li>
+<li><b>clr</b> = clear: both;</li>
+
+
+
+<li><b>bold</b> = font-weight: bold;</li>
+<li><b>it</b> = font-style: italic;</li>
+<li><b>un</b> = text-decoration: underline;</li>
+
+
+
+<li><b>lh</b> = line-height: 0;</li>
+<li><b>lh20</b> = line-height: 20px;</li>
+<li><b>fs</b> = font-size: 0;</li>
+<li><b>fs15</b> = font-size: 15px;</li>
+<li><b>ff-name</b> = font-family: name;</li>
+  
+
+
+
+
+<li><b>bsp</b> = border-spacing: 0;</li>
+<li><b>bsp2</b> = border-spacing: 2px;</li>
+
 </ul>
 
+
+  
 
 
 ## License
