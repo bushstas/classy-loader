@@ -817,7 +817,7 @@ return _react2.default.createElement(
 Adds needed addiotinal prefix to class name.<br>
 See the example with the Icon above.<br>
 Let's modify this a little bit.<br>
-Added prefix is a local prefix in relation to the Icon
+Added prefix is a local prefix in relation to the Icon.
 ```javascript
 render() {
   return (
@@ -848,6 +848,38 @@ so we will have this html
     resize
   </span>
 </i>
+```
+
+### .$name
+Dynamical class name, local prefix plus value of a given variable.<br>
+It's always local prefix regardless whether the mode automatic or not.
+```javascript
+with addedPrefix 'tab';
+
+export default function Tab({classes, children, isActive}) {
+  render() {
+    let className = isActive ? 'active' : 'inactive';
+    return (
+      <div class=".self .$className $classes">
+          {children}
+      </div>
+    )
+  }
+}
+```
+
+### ..$name
+Dynamical class name, global prefix plus value of a given variable.<br>
+It's always global prefix regardless whether the mode automatic or not.
+```javascript
+render() {
+  let className = 'active';
+  return (
+    <Icon classes="..large ..$className">
+        resize
+    </Icon>
+  )
+}
 ```
 
 ## License
