@@ -975,16 +975,36 @@ let className = classy("awesome-example-app-catalog-item", "item", "awesome-exam
 
 ### Simple at first
 ```javascript
+// all with globalPrefix = 'app'
+// all with autoPrefixMode = false
+// all with addedPrefix 'item'
+
 render() {
   let active = true;
   return (
-    <div class="$active?active">
+    <div class="name $active?active">
       ...
     </div>
-    <div class="$active?.active">
+    <div class=".name $active?.active">
       ...
     </div>
     <div class="$active?..active">
+      ...
+    </div>
+    // ad so on
+  )
+}
+
+render() {
+  let active = true;
+  return (
+    <div className={classy("name", active ? "active" : "")}>
+      ...
+    </div>
+    <div class={classy("app-item-name", active ? "app-item-active" : "")}>
+      ...
+    </div>
+    <div class={classy(active ? "app-active" : "")}>
       ...
     </div>
     // ad so on
