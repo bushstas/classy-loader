@@ -224,7 +224,9 @@ There are three variants:<br>
     **class MySuperClassName**<br><br>
     And at last it will get the first line with:<br>
     **function MySuperClassName**<br><br>
-    so "MySuperClassName" will be parsed to "my" + delimiter + "super" + delimiter + "class" + delimiter + "name".  
+    so "MySuperClassName" will be parsed to "my" + delimiter + "super" + delimiter + "class" + delimiter + "name".<br><br>
+    For CSS files the loder will search for JS index file (js,jsx,ts) in the same directory<br> and then get local prefix from the file,<br>
+    so JS and CSS will be syncronized
 
 ```javascript
 export default class MySuperButton extends React.Component {
@@ -265,14 +267,16 @@ More about js/css directives see below.
     prefixAutoResolving: <big>**"file"**</big><br>
     The loader will try to form local prefixes from js/css file names:<br>
     "SuperItem.js" or "super-item.js" or "super_item.js"
-    to prefix "super" + delimiter + "item"
+    to prefix "super" + delimiter + "item"<br>
+    so you'll have to syncronize JS and CSS file names
   </li>
 
   <li>
     prefixAutoResolving: <big>**"folder"**</big><br>
     The loader will try to form local prefixes from js/css folder names:<br>
     "SuperItem/index.js" or "super-item/some.js" or "super_item/any.js"
-    to prefix "super" + delimiter + "item"
+    to prefix "super" + delimiter + "item"<br>
+    so JS and CSS will be syncronized as they both located in the same directory (aren't they?)
   </li>
 </ol>
 
