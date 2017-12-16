@@ -764,7 +764,7 @@ return _react2.default.createElement(
 ```
 an example how to make it work:<br>
 
-in a parent
+in a parent using <b>extraAttributeName: "classes"</b><br><br>
 ```javascript
 render() {
   return (
@@ -774,7 +774,6 @@ render() {
   )
 }
 ```
-using <b>extraAttributeName: "classes"</b><br><br>
 in the Icon
 ```javascript
 export default function Icon({classes}) {
