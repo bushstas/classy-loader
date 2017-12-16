@@ -509,7 +509,7 @@ will give the same result
   <li>
     <h4>with prefix 'some-prefix';</h4>
     Creates a local version of the global prefix that overrides defined in config.<br>
-    Two points still give common global prefix
+    Two points still give common global prefix.
   </li>
 </ul>
 
@@ -525,10 +525,10 @@ will give the same result
         return (
           <div class=".self">
             <div class=".title ..bigger">
-              ...title
+              ...
             </div>
             <div class=".content">
-              ...content
+              ...
             </div>
           </div>
         )
@@ -546,10 +546,10 @@ will give the same result
         return (
           <div class="crazy-app-container">
             <div class="crazy-app-container-title awesome-example-app-bigger">
-              ...title
+              ...
             </div>
             <div class="crazy-app-container-title">
-              ...content
+              ...
             </div>
           </div>
         )
