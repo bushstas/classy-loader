@@ -989,10 +989,10 @@ render() {
     <div class=".name $active?.active">
       ...
     </div>
-    <div class="$active?..active">
+    <div class="$active?..active:..inactive">
       ...
     </div>
-    <div class="$active?$className">
+    <div class="$active?$className:disabled">
       ...
     </div>
     // ad so on
@@ -1008,10 +1008,10 @@ render() {
     <div className={classy("app-item-name", active ? "app-item-active" : "")}>
       ...
     </div>
-    <div className={classy(active ? "app-active" : "")}>
+    <div className={classy(active ? "app-active" : "app-inactive")}>
       ...
     </div>
-     <div className={classy(active ? className : "")}>
+     <div className={classy(active ? className : "disabled")}>
       ...
     </div>
     // ad so on
