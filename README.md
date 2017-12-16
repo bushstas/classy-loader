@@ -577,6 +577,12 @@ will give the same result
       }
     }
   ```
+<ul>
+  <li>
+    <h4>with auto prefix 'some-prefix';</h4>
+    Evertrhing the same as in the case above plus gives automatic mode for only this file   
+  </li>
+</ul>
 
 ### CSS directives
 
