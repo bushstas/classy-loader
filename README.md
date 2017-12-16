@@ -977,10 +977,11 @@ let className = classy("awesome-example-app-catalog-item", "item", "awesome-exam
 ```javascript
 // all with globalPrefix = 'app'
 // all with autoPrefixMode = false
-// all with addedPrefix 'item'
+// all with addedPrefix = 'item'
 
 render() {
   let active = true;
+  let className = $classy('.thing');
   return (
     <div class="name $active?active">
       ...
@@ -989,6 +990,9 @@ render() {
       ...
     </div>
     <div class="$active?..active">
+      ...
+    </div>
+    <div class="$active?$className">
       ...
     </div>
     // ad so on
@@ -1001,10 +1005,13 @@ render() {
     <div className={classy("name", active ? "active" : "")}>
       ...
     </div>
-    <div class={classy("app-item-name", active ? "app-item-active" : "")}>
+    <div className={classy("app-item-name", active ? "app-item-active" : "")}>
       ...
     </div>
-    <div class={classy(active ? "app-active" : "")}>
+    <div className={classy(active ? "app-active" : "")}>
+      ...
+    </div>
+     <div className={classy(className)}>
       ...
     </div>
     // ad so on
