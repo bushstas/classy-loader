@@ -213,7 +213,7 @@ If this is not false the parser will try to resolve the local prefix by itself.<
 There are three variants:<br>
 <ol>
   <li>
-    <b>content</b><br>
+    <b>prefixAutoResolving: 'content'</b><br>
 
   </li>
 <ol>
