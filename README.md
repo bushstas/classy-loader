@@ -802,7 +802,7 @@ export default function Icon({classes, children}) {
 }
 ```
 
-an example of a bundled code
+so this is how the code will look like in a bundle
 ```javascript
 return _react2.default.createElement(
   'i',
