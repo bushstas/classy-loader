@@ -971,7 +971,7 @@ import classy from 'classy-loader/classy';
 // ....
 let className = classy("awesome-example-app-catalog-item", "item", "awesome-example-app-some-item", classes);
 ```
-## And finally conditional queries
+## Conditional queries
 
 ### Simple at first
 ```javascript
@@ -1074,6 +1074,34 @@ render() {
   )
 }
 ```
+
+## And finally super short cherry on the cake querries
+```javascript
+render() {
+  return (
+    <div class="$?active">
+      ...
+    </div>
+
+    // or
+
+    <div class="?$active">
+      ...
+    </div>
+  )
+}
+```
+will be
+```javascript
+render() {
+  return (
+    <div className={classy(active ? "active" : "")}>
+      ...
+    </div>
+  )
+}
+```
+
 
 ## License
 
