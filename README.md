@@ -791,6 +791,8 @@ render() {
 ```
 in the Icon
 ```javascript
+import classy from 'classy-loader/classy';
+
 export default function Icon({classes, children}) {
   return (
     <i className={classy("awesome-example-app-icon", classes, "material-icons")}>
