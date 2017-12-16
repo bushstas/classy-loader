@@ -932,7 +932,7 @@ let className = {
   ...
 }[colorValue];
 ```
-So variable "className" will have real class name value and it can be obfuscated:
+So variable "className" will have a real class name value and it can be obfuscated:
 ```javascript
 let className = {
   red: 'hby457r',
@@ -940,6 +940,22 @@ let className = {
   blue: 'dh409gl',
   yellow: 'sl58sgf',
   orange: 'dl50gak',
+  ...
+}[colorValue];
+```
+Another way to make a roadmap with different class name patterns.
+```javascript
+let className = $classy(colorValue, {
+  red: "..red item::reddish",
+  green: "..green ..greenish",
+  ...
+});
+```
+It produces this code:
+```javascript
+let className = {
+  red: 'awesome-example-app-red awesome-example-app-item-reddish',
+  green: 'awesome-example-app-green awesome-example-app-greenish',
   ...
 }[colorValue];
 ```
