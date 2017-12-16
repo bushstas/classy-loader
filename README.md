@@ -219,7 +219,7 @@ There are three variants:<br>
     At first the loader will try to find a line with:<br>
     <b>export default (class|function) MySuperClassName</b><br>
     Then try with:<br>
-    <b>export default connect([^\)]\*)(MySuperClassName)</b><br>
+    <b>export default connect(...)(MySuperClassName)</b><br>
     Then try with:<br>
     <b>class MySuperClassName</b><br>
     And at last it will get the first line with:<br>
