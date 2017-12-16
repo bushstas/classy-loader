@@ -288,7 +288,7 @@ By default, it has value false.<br>
 ```javascript
 render() {
   return (
-    <div className=".button small">
+    <div class=".button small">
       ...
     </div>
   )
@@ -321,6 +321,46 @@ render() {
   )
 }
 ```
+
+### autoPrefixMode
+
+Loader will be automatically add prefixes to your class names.<br>
+So you should use different format of class name query.<br>
+By default, it is false.<br><br>
+
+For example this is a query for not automatic mode (prefixAutoResolve is "content")
+
+```javascript
+export default class Container extends React.Component {
+  render() {
+    return (
+      <div class=".self wide ..area">
+        <div class=".content content">
+          ...
+        </div>
+      </div>
+    )
+  }
+}
+```
+will be
+
+```javascript
+export default class Container extends React.Component {
+  render() {
+    return (
+      <div className="awesome-example-app-container wide awesome-example-app-area">
+        <div class="awesome-example-app-container-content content">
+          ...
+        </div>
+      </div>
+    )
+  }
+}
+```
+
+Here the local prefix is "awesome-example-app-container" (global prefix plus the local prefix auto resolved from class name "Container").<br>
+So in this mode you need to add point(s) for prefixes: one for the local prefix and two points for global prefix.
 
 ## Usage
 
