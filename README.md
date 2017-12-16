@@ -218,10 +218,12 @@ There are three variants:<br>
     prefixAutoResolving: <big><b>"content"</b></big><br>
     At first the loader will try to find a line with:<br>
     <b>export default (class|function) MySuperClassName</b><br>
-    At second with:<br>
+    Then try with:<br>
+    <b>export default connect([^\)]\*)(MySuperClassName)</b><br>
+    Then try with:<br>
     <b>class MySuperClassName</b><br>
     And at last it will get the first line with:<br>
-    <b>function whatever</b><br>
+    <b>function MySuperClassName</b><br>
     so "MySuperClassName" will be parsed to "my" + delimiter + "super" + delimiter + "class" + delimiter + "name".  
 
 ```javascript
