@@ -324,7 +324,7 @@ render() {
 
 ### autoPrefixMode
 
-Loader will be automatically add prefixes to your class names.<br>
+Loader will automatically add prefixes to your class names.<br>
 So you should use different format of class name query.<br>
 By default, it is false.<br><br>
 
