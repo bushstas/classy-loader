@@ -959,6 +959,19 @@ let className = {
   ...
 }[colorValue];
 ```
+Also there is the third way to use of <b>$classy</b>:
+```javascript
+let className = $classy(".item item ..some-item $className");
+```
+It produces this code:
+```javascript
+import classy from 'classy-loader/classy';
+with addedPrefix 'catalog';
+
+let className = classy("awesome-example-app-catalog-item", "item", "awesome-example-app-some-item", className);
+```
+
+```
 ## License
 
 MIT
