@@ -278,6 +278,31 @@ More about js/css directives see below.
   </li>
 </ol>
 
+### obfuscation
+
+If true the loader will obfuscate class names in both JS and CSS.
+
+```javascript
+render() {
+  return (
+    <div className=".button small">
+      ...
+    </div>
+  )
+}
+```
+to
+
+```javascript
+render() {
+  return (
+    <div className="w4fq5wq dhet7s5">
+      ...
+    </div>
+  )
+}
+```
+
 ## Usage
 
 A simple example of usage
