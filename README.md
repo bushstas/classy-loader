@@ -117,7 +117,7 @@ let object = {
 
 A prefix that will be added to your element class names.<br>
 Special syntax will tell the loader whether add prefixes or not.<br>
-By default, it has empty value, so it means no prefix will be added if localPrefix not specified.
+By default, it has an empty value, so it means no prefix will be added if a local prefix not specified.
 
 ```javascript
 render() {
