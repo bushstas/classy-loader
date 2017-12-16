@@ -378,7 +378,7 @@ export default class Container extends React.Component {
   }
 }
 ```
-will be
+will be the same
 
 ```javascript
 export default class Container extends React.Component {
@@ -394,7 +394,57 @@ export default class Container extends React.Component {
 }
 ```
 
-In this mode you don't need to add point for local prefix, one point for global one and two for class name witout prefix.<br>
+In this mode you don't need to add a point for local prefix, one point for global one and two for class name without prefix.<br><br>
+
+So in css files this principle works the same:<br><br>
+None-automatic mode
+
+```css
+..self {
+  position: relative;
+
+  &...area {
+    background-color: #eee;
+    border: 1px solid #aaa;
+  }
+
+  &...wide {
+    width: 80%;
+  }
+
+  ..content {
+    padding: 10px;
+
+    &.content {
+      padding-top: 0;
+    }
+  }
+}
+```
+
+will be
+
+```css
+.awesome-example-app-container {
+  position: relative;
+
+  &.awesome-example-app-area {
+    background-color: #eee;
+    border: 1px solid #aaa;
+  }
+
+  &.wide {
+    width: 80%;
+  }
+
+  .awesome-example-app-container-content {
+    padding: 10px;
+
+    &.content {
+      padding-top: 0;
+    }
+  }
+}
 
 
 ## Usage
