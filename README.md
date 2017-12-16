@@ -281,7 +281,8 @@ More about js/css directives see below.
 ### obfuscation
 
 If true the loader will obfuscate class names in both JS and CSS files.<br>
-Be careful, you should check that all class names in JS defined with classy <b>"attributeName"</b> and <b>extraAttributeName</b>.
+Be careful, you should check that all class names in JS defined with classy <b>"attributeName"</b> and <b>extraAttributeName</b><br>
+or special $classy syntax (see below).
 
 ```javascript
 render() {
