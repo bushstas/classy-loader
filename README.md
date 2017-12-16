@@ -702,6 +702,24 @@ render() {
   )
 }
 ```
+### .name
+Gives class name with a local prefix in non-automatic mode.<br>
+Gives class name with a global prefix in automatic mode.
+```javascript
+render() {
+  return (
+    <div className="local-prefix-name">
+      ...
+    </div>
+
+    //and
+
+    <div className="global-prefix-name">
+      ...
+    </div>
+  )
+}
+```
 
 ## License
 
