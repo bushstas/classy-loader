@@ -217,9 +217,7 @@ There are three variants:<br>
     prefixAutoResolving: <big><b>"content"</b></big><br>
     The parser will try to find a line with:<br>
     <b>export default (class|function) MySuperClassName</b><br>
-    so "MySuperClassName" will be parsed to "my" + delimiter + "super" + delimiter + "class" + delimiter + "name".
-  </li>
-</ol>
+    so "MySuperClassName" will be parsed to "my" + delimiter + "super" + delimiter + "class" + delimiter + "name".  
 
 ```javascript
 export default class MySuperButton extends React.Component {
@@ -250,6 +248,17 @@ export default class MySuperButton extends React.Component {
   }
 }
 ```
+This variant only works for js files, so in your css files you still need to define local prefixes with special directives.<br>
+More about js/css directives see below.
+
+
+  </li>
+
+  <li>
+    prefixAutoResolving: <big><b>"file"</b></big><br>
+    The parser will try to form local prefix using js/css file names:<br>
+  </li>
+</ol>
 
 ## Usage
 
