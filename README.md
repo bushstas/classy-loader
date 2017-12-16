@@ -508,7 +508,7 @@ will give the same result
 
 <ul>
   <li>
-    ####with prefix 'my-cool-app';
+    <h3>with prefix 'my-cool-app';</h3>
     Overrides the global prefix set in config
 
   </li>
