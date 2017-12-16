@@ -533,9 +533,11 @@ will give the same result
         )
       }
     }
-    ```
+  ```
+
     will be
-    ```javascript
+
+  ```javascript
     // ...imports
    
     export default class Container extends React.Component {
@@ -552,7 +554,7 @@ will give the same result
         )
       }
     }
-    ```
+  ```
 
 ### CSS directives
 
