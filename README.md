@@ -752,7 +752,7 @@ render() {
   )
 }
 ```
-an example of bundled code
+an example of a bundled code
 ```javascript
 return _react2.default.createElement(
   'i',
@@ -762,6 +762,29 @@ return _react2.default.createElement(
   children
 );
 ```
+an example how to make it work:<br>
+
+in a parent
+```javascript
+render() {
+  return (
+    <Icon classes="..large green">
+      resize
+    </Icon>
+  )
+}
+```
+in the Icon
+```javascript
+export default function Icon({classes}) {
+  return (
+    <i class=".icon $classes material-icons">
+      {this.props.children}
+    </i>
+  )
+}
+```
+
 
 ## License
 
