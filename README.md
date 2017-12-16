@@ -55,8 +55,8 @@ render() {
   )
 }
 ```
-
-after parsing
+So "class" and "whateverName" are our attributeNames.<be>
+And after parsing we'll get:
 
 ```javascript
 render() {
