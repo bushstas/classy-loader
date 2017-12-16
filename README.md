@@ -1109,4 +1109,4 @@ render() {
 
 ## License
 
-MIT
+Enjoy my dear friends, all for you
