@@ -557,6 +557,27 @@ will give the same result
     }
   ```
 
+  the result when prefixAutoResolving set to false, so we don't have additional local prefix, just overrided global
+
+    ```javascript
+    // ...imports
+   
+    export default class Container extends React.Component {
+      render() {
+        return (
+          <div class="crazy-app">
+            <div class="crazy-app-title awesome-example-app-bigger">
+              ...
+            </div>
+            <div class="crazy-app-title">
+              ...
+            </div>
+          </div>
+        )
+      }
+    }
+  ```
+
 ### CSS directives
 
 
