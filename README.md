@@ -22,6 +22,7 @@ classy.init({
     extraAttributeName: 'classes',
     globalPrefix: 'awesome-example-app',
     delimiter: '-',
+    localDelimiter: '-',
     obfuscation: false,
     obfuscatedLength: 4,
     addSuffixToAllNames: false,
@@ -179,6 +180,33 @@ render() {
 ```
 The point means class name should have a prefix.<br>
 More about parser syntax is written below.
+
+### delimiter
+
+A symbol or word that class names and prefixes will be joined with.<br>
+By default, it has value "-".
+
+```javascript
+render() {
+  return (
+    <div class=".some-item">
+      ...
+    </div>
+  )
+}
+```
+
+So if we have our delimiter like "\_", we will have
+
+```javascript
+render() {
+  return (
+    <div className="awesome-example-app_some-item">
+      ...
+    </div>
+  )
+}
+
 
 ## Usage
 
