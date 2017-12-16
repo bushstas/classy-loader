@@ -685,7 +685,7 @@ render() {
 }
 ```
 ### name
-Gives class name without a prefixes in non-automatic mode.<br>
+Gives class name without prefixes in non-automatic mode.<br>
 Gives class name with a local prefix in automatic mode.
 ```javascript
 render() {
@@ -715,6 +715,24 @@ render() {
     //and
 
     <div className="global-prefix-name">
+      ...
+    </div>
+  )
+}
+```
+### ..name
+Gives class name with a global prefix in non-automatic mode.<br>
+Gives class name without prefixes in automatic mode.
+```javascript
+render() {
+  return (
+    <div className="global-prefix-name">
+      ...
+    </div>
+
+    //and
+
+    <div className="name">
       ...
     </div>
   )
