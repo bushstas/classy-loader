@@ -106,7 +106,7 @@ render() {
   )
 }
 ```
-So <b>"self"</b> is a keyword that means your global or local prefix.<br>
+So **bold**"self"**bold** is a keyword that means your global or local prefix.<br>
 In this case we don't have a local prefix, so it will be our globalPrefix from the config we set up above.
 
 ### extraAttributeName
@@ -210,20 +210,20 @@ render() {
 ### prefixAutoResolving
 
 If this is not false the loader will try to resolve the local prefix by itself.<br>
-Works only if <b>"autoPrefixMode"</b> is set to true.<br>
+Works only if **bold**"autoPrefixMode"**bold** is set to true.<br>
 By default, it has value false.<br>
 There are three variants:<br>
 <ol>
   <li>
-    prefixAutoResolving: <big><b>"content"</b></big><br><br>
+    prefixAutoResolving: <big>**bold**"content"**bold**</big><br><br>
     At first the loader will try to find a line with:<br>
-    <b>export default (class|function) MySuperClassName</b><br><br>
+    **bold**export default (class|function) MySuperClassName**bold**<br><br>
     Then try with:<br>
-    <b>export default connect(...)(MySuperClassName)</b><br><br>
+    **bold**export default connect(...)(MySuperClassName)**bold**<br><br>
     Then try with:<br>
-    <b>class MySuperClassName</b><br><br>
+    **bold**class MySuperClassName**bold**<br><br>
     And at last it will get the first line with:<br>
-    <b>function MySuperClassName</b><br><br>
+    **bold**function MySuperClassName**bold**<br><br>
     so "MySuperClassName" will be parsed to "my" + delimiter + "super" + delimiter + "class" + delimiter + "name".  
 
 ```javascript
@@ -262,14 +262,14 @@ More about js/css directives see below.
   </li>
 
   <li>
-    prefixAutoResolving: <big><b>"file"</b></big><br>
+    prefixAutoResolving: <big>**bold**"file"**bold**</big><br>
     The loader will try to form local prefixes from js/css file names:<br>
     "SuperItem.js" or "super-item.js" or "super_item.js"
     to prefix "super" + delimiter + "item"
   </li>
 
   <li>
-    prefixAutoResolving: <big><b>"folder"</b></big><br>
+    prefixAutoResolving: <big>**bold**"folder"**bold**</big><br>
     The loader will try to form local prefixes from js/css folder names:<br>
     "SuperItem/index.js" or "super-item/some.js" or "super_item/any.js"
     to prefix "super" + delimiter + "item"
@@ -279,8 +279,8 @@ More about js/css directives see below.
 ### obfuscation
 
 If true the loader will obfuscate class names in both JS and CSS files.<br>
-Be careful, you should check that all class names in JS defined with classy <b>"attributeName"</b> and <b>extraAttributeName</b><br>
-or special <b>$classy</b> syntax (see below).<br>
+Be careful, you should check that all class names in JS defined with classy **bold**"attributeName"**bold** and **bold**extraAttributeName**bold**<br>
+or special **bold**$classy**bold** syntax (see below).<br>
 By default, it has value false.<br>
 
 ```javascript
@@ -308,7 +308,7 @@ render() {
 
 Length of obfuscated class names.<br>
 By default, it has value "7".<br>
-So if you have <b>"obfuscatedLength"</b> equal 4
+So if you have **bold**"obfuscatedLength"**bold** equal 4
 
 ```javascript
 render() {
@@ -398,7 +398,7 @@ So in css files this principle works the same (you need to add the same points o
 None-automatic mode
 
 ```scss
-/* directive that defines our local refix (adds additional prefix to global one) */
+/* directive that defines our local prefix (adds additional prefix to global one) */
 .with.addedPrefix.container;
 
 ..self {
@@ -451,7 +451,7 @@ will be
 And the automatic mode
 
 ```scss
-/* directive that defines our local refix (adds additional prefix to global one) */
+/* directive that defines our local prefix (adds additional prefix to global one) */
 .with.addedPrefix.container;
 
 .self {
@@ -557,7 +557,7 @@ will give the same result
     }
   ```
 
-  the result when <b>"prefixAutoResolving"</b> set to false, so we don't have additional local prefix,<br>just overrided global
+  the result when **bold**"prefixAutoResolving"**bold** set to false, so we don't have additional local prefix,<br>just overrided global
 
   ```javascript
     // ...imports
@@ -588,7 +588,7 @@ will give the same result
   <li>
     <h3>with addedPrefix 'some-additional-prefix';</h3>
     Sets an additional prefix for local use.<br>
-    This directive do the same thing like param <b>"prefixAutoResolving"</b> so it will cancel auto detecting.
+    This directive do the same thing like param **bold**"prefixAutoResolving"**bold** so it will cancel auto detecting.
   </li>
 </ul>
 
@@ -754,7 +754,7 @@ render() {
 ```
 an example how to make it work:<br>
 
-in a parent using <b>extraAttributeName: "classes"</b><br><br>
+in a parent using **bold**extraAttributeName: "classes"**bold**<br><br>
 ```javascript
 render() {
   return (
@@ -916,7 +916,7 @@ export default class Button extends React.Component {
 }
 ```
 
-It's impossible to obfuscate dynamical class names so there are special fake <b>$classy</b> functions to make roadmaps for obfuscation.<br>
+It's impossible to obfuscate dynamical class names so there are special fake **bold**$classy**bold** functions to make roadmaps for obfuscation.<br>
 Here is the an example.
 ```javascript
 let className = $classy(colorValue, '..color', ['red', 'green', 'blue', 'yellow', 'orange' ...]);
@@ -959,7 +959,7 @@ let className = {
   ...
 }[colorValue];
 ```
-Also there is the third way to use <b>$classy</b>:
+Also there is the third way to use **bold**$classy**bold**:
 ```javascript
 with addedPrefix 'catalog';
 // ....
@@ -1112,7 +1112,7 @@ render() {
 One point for real class name without prefix.<br>
 Two points for class names with local prefix.<br>
 Three points for class names with global prefix.<br>
-<b>"Self"</b> is a keywords that means local prefix itself or global if local one not defined
+**bold**"Self"**bold** is a keywords that means local prefix itself or global if local one not defined
 
 ```scss
 ..self {
@@ -1195,206 +1195,206 @@ can be also with spaces, should end with a semicolon or a new line
 ```
 ### Full list of shorcuts
 
-<b>l</b> = left: 0;<br>
-<b>l10</b> = left: 10px;<br>
-<b>l-10</b> = left: -10px;<br>
-<b>l50p</b> = left: 50%;<br>
-<b>l-50p</b> = left: -50%;<br>
+**bold**l**bold** = left: 0;<br>
+**bold**l10**bold** = left: 10px;<br>
+**bold**l-10**bold** = left: -10px;<br>
+**bold**l50p**bold** = left: 50%;<br>
+**bold**l-50p**bold** = left: -50%;<br>
 
-<b>r</b> = right: 0;<br>
-<b>r10</b> = right: 10px;<br>
-<b>r-10</b> = right: -10px;<br>
-<b>r50p</b> = right: 50%;<br>
-<b>r-50p</b> = right: -50%;<br>
+**bold**r**bold** = right: 0;<br>
+**bold**r10**bold** = right: 10px;<br>
+**bold**r-10**bold** = right: -10px;<br>
+**bold**r50p**bold** = right: 50%;<br>
+**bold**r-50p**bold** = right: -50%;<br>
 
-<b>t</b> = top: 0;<br>
-<b>t10</b> = top: 10px;<br>
-<b>t-10</b> = top: -10px;<br>
-<b>t50p</b> = top: 50%;<br>
-<b>t-50p</b> = top: -50%;<br>
+**bold**t**bold** = top: 0;<br>
+**bold**t10**bold** = top: 10px;<br>
+**bold**t-10**bold** = top: -10px;<br>
+**bold**t50p**bold** = top: 50%;<br>
+**bold**t-50p**bold** = top: -50%;<br>
 
-<b>b</b> = botton: 0;<br>
-<b>b10</b> = botton: 10px;<br>
-<b>b-10</b> = botton: -10px;<br>
-<b>b50p</b> = botton: 50%;<br>
-<b>b-50p</b> = botton: -50%;<br>
+**bold**b**bold** = botton: 0;<br>
+**bold**b10**bold** = botton: 10px;<br>
+**bold**b-10**bold** = botton: -10px;<br>
+**bold**b50p**bold** = botton: 50%;<br>
+**bold**b-50p**bold** = botton: -50%;<br>
 
-<b>z10</b> = z-index: 10;<br>
+**bold**z10**bold** = z-index: 10;<br>
 
-<b>w</b> = width: 100%;<br>
-<b>w100</b> = width: 100px;<br>
-<b>w50p</b> = width: 50%;<br>
+**bold**w**bold** = width: 100%;<br>
+**bold**w100**bold** = width: 100px;<br>
+**bold**w50p**bold** = width: 50%;<br>
 
-<b>h</b> = height: 100%;<br>
-<b>h150</b> = height: 150px;<br>
-<b>h20p</b> = height: 20%;<br>
+**bold**h**bold** = height: 100%;<br>
+**bold**h150**bold** = height: 150px;<br>
+**bold**h20p**bold** = height: 20%;<br>
 
-<b>wh20</b> = width: 20px; height: 20px;<br>
-<b>wh20p</b> = width: 20%; height: 20%;<br>
+**bold**wh20**bold** = width: 20px; height: 20px;<br>
+**bold**wh20p**bold** = width: 20%; height: 20%;<br>
 
-<b>mnw</b> = min-width: 0;<br>
-<b>mnw100</b> = min-width: 100px;<br>
-<b>mnh</b> = min-height: 0;<br>
-<b>mnh100</b> = min-height: 100px;<br>
-<b>mxw</b> = max-width: none;<br>
-<b>mxw100</b> = max-width: 100px;<br>
-<b>mxh</b> = max-height: none;<br>
-<b>mxh100</b> = max-height: 100px;<br>
+**bold**mnw**bold** = min-width: 0;<br>
+**bold**mnw100**bold** = min-width: 100px;<br>
+**bold**mnh**bold** = min-height: 0;<br>
+**bold**mnh100**bold** = min-height: 100px;<br>
+**bold**mxw**bold** = max-width: none;<br>
+**bold**mxw100**bold** = max-width: 100px;<br>
+**bold**mxh**bold** = max-height: none;<br>
+**bold**mxh100**bold** = max-height: 100px;<br>
 
-<b>auto</b> = margin: auto;<br>
-<b>m</b> = margin: 0;<br>
-<b>m5</b> = margin: 5px;<br>
-<b>m10-5</b> = margin: 10px 5px;<br>
-<b>m10-5-10-5</b> = margin: 10px 5px 10px 5px;<br>
+**bold**auto**bold** = margin: auto;<br>
+**bold**m**bold** = margin: 0;<br>
+**bold**m5**bold** = margin: 5px;<br>
+**bold**m10-5**bold** = margin: 10px 5px;<br>
+**bold**m10-5-10-5**bold** = margin: 10px 5px 10px 5px;<br>
 
-<b>ml</b> = margin-left: 0;<br>
-<b>ml5</b> = margin-left: 5px;<br>
-<b>ml-5</b> = margin-left: -5px;<br>
-<b>ml5p</b> = margin-left: 5%;<br>
-<b>ml-5p</b> = margin-left: -5%;<br>
+**bold**ml**bold** = margin-left: 0;<br>
+**bold**ml5**bold** = margin-left: 5px;<br>
+**bold**ml-5**bold** = margin-left: -5px;<br>
+**bold**ml5p**bold** = margin-left: 5%;<br>
+**bold**ml-5p**bold** = margin-left: -5%;<br>
 
-<b>mr</b> = margin-right: 0;<br>
-<b>mr5</b> = margin-right: 5px;<br>
-<b>mr-5</b> = margin-right: -5px;<br>
-<b>mr5p</b> = margin-right: 5%;<br>
-<b>mr-5p</b> = margin-right: -5%;<br>
+**bold**mr**bold** = margin-right: 0;<br>
+**bold**mr5**bold** = margin-right: 5px;<br>
+**bold**mr-5**bold** = margin-right: -5px;<br>
+**bold**mr5p**bold** = margin-right: 5%;<br>
+**bold**mr-5p**bold** = margin-right: -5%;<br>
 
-<b>mt</b> = margin-top: 0;<br>
-<b>mt5</b> = margin-top: 5px;<br>
-<b>mt-5</b> = margin-top: -5px;<br>
-<b>mt5p</b> = margin-top: 5%;<br>
-<b>mt-5p</b> = margin-top: -5%;<br>
+**bold**mt**bold** = margin-top: 0;<br>
+**bold**mt5**bold** = margin-top: 5px;<br>
+**bold**mt-5**bold** = margin-top: -5px;<br>
+**bold**mt5p**bold** = margin-top: 5%;<br>
+**bold**mt-5p**bold** = margin-top: -5%;<br>
 
-<b>mb</b> = margin-bottom: 0;<br>
-<b>mb5</b> = margin-bottom: 5px;<br>
-<b>mb-5</b> = margin-bottom: -5px;<br>
-<b>mb5p</b> = margin-bottom: 5%;<br>
-<b>mb-5p</b> = margin-bottom: -5%;<br>
+**bold**mb**bold** = margin-bottom: 0;<br>
+**bold**mb5**bold** = margin-bottom: 5px;<br>
+**bold**mb-5**bold** = margin-bottom: -5px;<br>
+**bold**mb5p**bold** = margin-bottom: 5%;<br>
+**bold**mb-5p**bold** = margin-bottom: -5%;<br>
 
-<b>p</b> = padding: 0;<br>
-<b>p5</b> = padding: 5px;<br>
-<b>p10-5</b> = padding: 10px 5px;<br>
-<b>p10-5-10-5</b> = padding: 10px 5px 10px 5px;<br>  
+**bold**p**bold** = padding: 0;<br>
+**bold**p5**bold** = padding: 5px;<br>
+**bold**p10-5**bold** = padding: 10px 5px;<br>
+**bold**p10-5-10-5**bold** = padding: 10px 5px 10px 5px;<br>  
 
-<b>pl</b> = padding-left: 0;<br>
-<b>pl5</b> = padding-left: 5px;<br>
-<b>pl-5</b> = padding-left: -5px;<br>
-<b>pl5p</b> = padding-left: 5%;<br>
-<b>pl-5p</b> = padding-left: -5%;<br>
+**bold**pl**bold** = padding-left: 0;<br>
+**bold**pl5**bold** = padding-left: 5px;<br>
+**bold**pl-5**bold** = padding-left: -5px;<br>
+**bold**pl5p**bold** = padding-left: 5%;<br>
+**bold**pl-5p**bold** = padding-left: -5%;<br>
 
-<b>pr</b> = padding-right: 0;<br>
-<b>pr5</b> = padding-right: 5px;<br>
-<b>pr-5</b> = padding-right: -5px;<br>
-<b>pr5p</b> = padding-right: 5%;<br>
-<b>pr-5p</b> = padding-right: -5%;<br>
+**bold**pr**bold** = padding-right: 0;<br>
+**bold**pr5**bold** = padding-right: 5px;<br>
+**bold**pr-5**bold** = padding-right: -5px;<br>
+**bold**pr5p**bold** = padding-right: 5%;<br>
+**bold**pr-5p**bold** = padding-right: -5%;<br>
 
-<b>pt</b> = padding-top: 0;<br>
-<b>pt5</b> = padding-top: 5px;<br>
-<b>pt-5</b> = padding-top: -5px;<br>
-<b>pt5p</b> = padding-top: 5%;<br>
-<b>pt-5p</b> = padding-top: -5%;<br>
+**bold**pt**bold** = padding-top: 0;<br>
+**bold**pt5**bold** = padding-top: 5px;<br>
+**bold**pt-5**bold** = padding-top: -5px;<br>
+**bold**pt5p**bold** = padding-top: 5%;<br>
+**bold**pt-5p**bold** = padding-top: -5%;<br>
 
-<b>pb</b> = padding-bottom: 0;<br>
-<b>pb5</b> = padding-bottom: 5px;<br>
-<b>pb-5</b> = padding-bottom: -5px;<br>
-<b>pb5p</b> = padding-bottom: 5%;<br>
-<b>pb-5p</b> = padding-bottom: -5%;<br>
+**bold**pb**bold** = padding-bottom: 0;<br>
+**bold**pb5**bold** = padding-bottom: 5px;<br>
+**bold**pb-5**bold** = padding-bottom: -5px;<br>
+**bold**pb5p**bold** = padding-bottom: 5%;<br>
+**bold**pb-5p**bold** = padding-bottom: -5%;<br>
 
-<b>flex</b> = display: flex;<br>
-<b>flcen</b> = align-item: center; justify-content: center;<br>
-<b>bl</b> = display: block;<br>
-<b>inb</b> = display: inline-block;<br>
+**bold**flex**bold** = display: flex;<br>
+**bold**flcen**bold** = align-item: center; justify-content: center;<br>
+**bold**bl**bold** = display: block;<br>
+**bold**inb**bold** = display: inline-block;<br>
 
-<b>fix</b> = position: fixed;<br>
-<b>abs</b> = position: absolute;<br>
-<b>rel</b> = position: relative;<br>
-<b>box</b> = box-sizing: border-box;<br>
+**bold**fix**bold** = position: fixed;<br>
+**bold**abs**bold** = position: absolute;<br>
+**bold**rel**bold** = position: relative;<br>
+**bold**box**bold** = box-sizing: border-box;<br>
 
-<b>ova</b> = overflow: auto;<br>
-<b>ovh</b> = overflow: hidden;<br>
+**bold**ova**bold** = overflow: auto;<br>
+**bold**ovh**bold** = overflow: hidden;<br>
 
-<b>lt</b> = text-align: left;<br>
-<b>rt</b> = text-align: right;<br>
-<b>cen</b> = text-align: center;<br>
-<b>just</b> = text-align: justify;<br>
+**bold**lt**bold** = text-align: left;<br>
+**bold**rt**bold** = text-align: right;<br>
+**bold**cen**bold** = text-align: center;<br>
+**bold**just**bold** = text-align: justify;<br>
 
-<b>vtop</b> = vertical-align: top;<br>
-<b>vmid</b> = vertical-align: middle;<br>
-<b>vbot</b> = vertical-align: bottom;<br>
+**bold**vtop**bold** = vertical-align: top;<br>
+**bold**vmid**bold** = vertical-align: middle;<br>
+**bold**vbot**bold** = vertical-align: bottom;<br>
 
-<b>cur</b> = cursor: default;<br>
-<b>cur-name</b> = cursor: name;<br>
-<b>pntr</b> = cursor: pointer;<br>
-<b>cnt</b> = content: "";<br>
-<b>nor</b> = resize: none;<br>
+**bold**cur**bold** = cursor: default;<br>
+**bold**cur-name**bold** = cursor: name;<br>
+**bold**pntr**bold** = cursor: pointer;<br>
+**bold**cnt**bold** = content: "";<br>
+**bold**nor**bold** = resize: none;<br>
 
-<b>fl</b> = float: left;<br>
-<b>fr</b> = float: right;<br>
-<b>clr</b> = clear: both;<br>
+**bold**fl**bold** = float: left;<br>
+**bold**fr**bold** = float: right;<br>
+**bold**clr**bold** = clear: both;<br>
 
-<b>bold</b> = font-weight: bold;<br>
-<b>it</b> = font-style: italic;<br>
-<b>un</b> = text-decoration: underline;<br>
+**bold**bold**bold** = font-weight: bold;<br>
+**bold**it**bold** = font-style: italic;<br>
+**bold**un**bold** = text-decoration: underline;<br>
 
-<b>lh</b> = line-height: 0;<br>
-<b>lh20</b> = line-height: 20px;<br>
-<b>fs</b> = font-size: 0;<br>
-<b>fs15</b> = font-size: 15px;<br>
-<b>ff-name</b> = font-family: name;<br>  
+**bold**lh**bold** = line-height: 0;<br>
+**bold**lh20**bold** = line-height: 20px;<br>
+**bold**fs**bold** = font-size: 0;<br>
+**bold**fs15**bold** = font-size: 15px;<br>
+**bold**ff-name**bold** = font-family: name;<br>  
 
-<b>o</b> = opacity: 0;<br>
-<b>o5</b> = opacity: 0.5;<br>
-<b>o10</b> = opacity: 1;<br>
+**bold**o**bold** = opacity: 0;<br>
+**bold**o5**bold** = opacity: 0.5;<br>
+**bold**o10**bold** = opacity: 1;<br>
 
-<b>ol</b> = outline: 0;<br>
-<b>ol-000</b> = outline: 1px solid #000;<br>
-<b>ol-EEE-2</b> = outline: 2px solid #EEE;<br>
-<b>ol-EEE-2-dashed</b> = outline: 2px dashed #EEE;<br>
+**bold**ol**bold** = outline: 0;<br>
+**bold**ol-000**bold** = outline: 1px solid #000;<br>
+**bold**ol-EEE-2**bold** = outline: 2px solid #EEE;<br>
+**bold**ol-EEE-2-dashed**bold** = outline: 2px dashed #EEE;<br>
 
-<b>bo</b> = border: 0;<br>
-<b>bo-000</b> = border: 1px solid #000;<br>
-<b>bo-EEE-2</b> = border: 2px solid #EEE;<br>
-<b>bo-EEE-2-dashed</b> = border: 2px dashed #EEE;<br>
+**bold**bo**bold** = border: 0;<br>
+**bold**bo-000**bold** = border: 1px solid #000;<br>
+**bold**bo-EEE-2**bold** = border: 2px solid #EEE;<br>
+**bold**bo-EEE-2-dashed**bold** = border: 2px dashed #EEE;<br>
 
-<b>bol</b> = border-left: 0;<br>
-<b>bol-000</b> = border-left: 1px solid #000;<br>
-<b>bol-EEE-2</b> = border-left: 2px solid #EEE;<br>
-<b>bol-EEE-2-dashed</b> = border-left: 2px dashed #EEE;<br>
+**bold**bol**bold** = border-left: 0;<br>
+**bold**bol-000**bold** = border-left: 1px solid #000;<br>
+**bold**bol-EEE-2**bold** = border-left: 2px solid #EEE;<br>
+**bold**bol-EEE-2-dashed**bold** = border-left: 2px dashed #EEE;<br>
 
-<b>bor</b> = border-right: 0;<br>
-<b>bor-000</b> = border-right: 1px solid #000;<br>
-<b>bor-EEE-2</b> = border-right: 2px solid #EEE;<br>
-<b>bor-EEE-2-dashed</b> = border-right: 2px dashed #EEE;<br>
+**bold**bor**bold** = border-right: 0;<br>
+**bold**bor-000**bold** = border-right: 1px solid #000;<br>
+**bold**bor-EEE-2**bold** = border-right: 2px solid #EEE;<br>
+**bold**bor-EEE-2-dashed**bold** = border-right: 2px dashed #EEE;<br>
 
-<b>bot</b> = border-top: 0;<br>
-<b>bot-000</b> = border-top: 1px solid #000;<br>
-<b>bot-EEE-2</b> = border-top: 2px solid #EEE;<br>
-<b>bot-EEE-2-dashed</b> = border-top: 2px dashed #EEE;<br>
+**bold**bot**bold** = border-top: 0;<br>
+**bold**bot-000**bold** = border-top: 1px solid #000;<br>
+**bold**bot-EEE-2**bold** = border-top: 2px solid #EEE;<br>
+**bold**bot-EEE-2-dashed**bold** = border-top: 2px dashed #EEE;<br>
 
-<b>bob</b> = border-bottom: 0;<br>
-<b>bob-000</b> = border-bottom: 1px solid #000;<br>
-<b>bob-EEE-2</b> = border-bottom: 2px solid #EEE;<br>
-<b>bob-EEE-2-dashed</b> = border-bottom: 2px dashed #EEE;<br>
+**bold**bob**bold** = border-bottom: 0;<br>
+**bold**bob-000**bold** = border-bottom: 1px solid #000;<br>
+**bold**bob-EEE-2**bold** = border-bottom: 2px solid #EEE;<br>
+**bold**bob-EEE-2-dashed**bold** = border-bottom: 2px dashed #EEE;<br>
 
-<b>br</b> = border-radius: 0;<br>
-<b>br5</b> = border-radius: 5px;<br>
-<b>br50p</b> = border-radius: 50%;<br>
-<b>br5-10-10-0</b> = border-radius: 5px 10px 10px 0;<br>
+**bold**br**bold** = border-radius: 0;<br>
+**bold**br5**bold** = border-radius: 5px;<br>
+**bold**br50p**bold** = border-radius: 50%;<br>
+**bold**br5-10-10-0**bold** = border-radius: 5px 10px 10px 0;<br>
 
-<b>bsp</b> = border-spacing: 0;<br>
-<b>bsp2</b> = border-spacing: 2px;
+**bold**bsp**bold** = border-spacing: 0;<br>
+**bold**bsp2**bold** = border-spacing: 2px;
 
-<b>c-fff</b> = color: #fff;<br>
-<b>bc-fff</b> = background-color: #fff;<br>
-<b>boc-fff</b> = border-color: #fff;<br>
+**bold**c-fff**bold** = color: #fff;<br>
+**bold**bc-fff**bold** = background-color: #fff;<br>
+**bold**boc-fff**bold** = border-color: #fff;<br>
 
-<b>shad</b> = box-shadow: none;<br>
-<b>shad-000-10</b> = box-shadow: 0 0 10px #000;<br>
-<b>shad-000-10-1-1</b> = box-shadow: 1px 1px 10px #000;<br>
+**bold**shad**bold** = box-shadow: none;<br>
+**bold**shad-000-10**bold** = box-shadow: 0 0 10px #000;<br>
+**bold**shad-000-10-1-1**bold** = box-shadow: 1px 1px 10px #000;<br>
 
-<b>tshad</b> = text-shadow: none;<br>
-<b>tshad-000-2</b> = text-shadow: 0 0 2px #000;<br>
-<b>tshad-000-2-1-1</b> = text-shadow: 1px 1px 2px #000;<br>
+**bold**tshad**bold** = text-shadow: none;<br>
+**bold**tshad-000-2**bold** = text-shadow: 0 0 2px #000;<br>
+**bold**tshad-000-2-1-1**bold** = text-shadow: 1px 1px 2px #000;<br>
 
-<b>tra-c-3-bc-3-o-3</b> = transition: color 0.3s, background-color 0.3s, opacity 0.3s;<br>
+**bold**tra-c-3-bc-3-o-3**bold** = transition: color 0.3s, background-color 0.3s, opacity 0.3s;<br>
 <br>
