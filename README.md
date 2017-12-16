@@ -875,7 +875,7 @@ export default function Tab({classes, children, isActive}) {
   render() {
     let className = isActive ? 'active' : 'inactive';
     return (
-      <div className={classy("awesome-example-app-tab", "awesome-example-app-tab" + className,  classes)}>
+      <div className={classy("awesome-example-app-tab", "awesome-example-app-tab-" + className,  classes)}>
           {children}
       </div>
     )
