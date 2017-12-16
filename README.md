@@ -225,7 +225,7 @@ There are three variants:<br>
     And at last it will get the first line with:<br>
     <b>function MySuperClassName</b><br><br>
     so "MySuperClassName" will be parsed to "my" + delimiter + "super" + delimiter + "class" + delimiter + "name".<br><br>
-    For CSS files the loder will search for JS index file (js,jsx,ts) in the same directory<br> and then get local prefix from the file,<br>
+    For CSS files the loder will search for JS index file (js, jsx, ts) in the same directory<br> and then get local prefix from the file,<br>
     so JS and CSS will be syncronized
 
 ```javascript
