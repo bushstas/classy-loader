@@ -326,7 +326,7 @@ Loader will automatically add prefixes to your class names.<br>
 So you should use different format of class name query.<br>
 By default, it is false.<br><br>
 
-For example this is a query for none-automatic mode (prefixAutoResolve set to "content")
+For example this is a query for none-automatic mode (prefixAutoResolving set to "content")
 
 ```javascript
 export default class Container extends React.Component {
@@ -360,7 +360,7 @@ export default class Container extends React.Component {
 Here the local prefix is "awesome-example-app-container" (global prefix plus the local prefix auto resolved from class name "Container").<br>
 So in this mode you need to add point(s) for prefixes: one for the local prefix and two points for global prefix.<br><br>
 
-And finally an example of a query for automatic mode (prefixAutoResolve set to "content").<br>
+And finally an example of a query for automatic mode (prefixAutoResolving set to "content").<br>
 In the end we'll get the same result.
 
 ```javascript
@@ -514,7 +514,7 @@ will give the same result
 
   ```javascript
     // none-automatic mode
-    // prefixAutoResolve: "content"
+    // prefixAutoResolving: "content"
     // ...imports
 
     with prefix 'crazy-app';
