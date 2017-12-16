@@ -916,6 +916,12 @@ export default class Button extends React.Component {
 }
 ```
 
+It's impossible to obfuscate dynamical class names so there are special fake <b>$classy</b> functions to make roadmaps for obfuscation.<br>
+Here is the an example.
+```javascript
+$classy(value, ['red', 'green', 'blue', 'yellow', 'orange' ...]);
+```
+
 ## License
 
 MIT
