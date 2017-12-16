@@ -828,6 +828,18 @@ render() {
   )
 }
 ```
+also you can use just code like this for the same purpose, but first variant adds delimiter by itself
+```javascript
+render() {
+  return (
+    <Icon classes="..large green">
+      <span class="..icon-thing">
+        resize
+      </span>
+    </Icon>
+  )
+}
+```
 so we will have this html
 ```html
 <i className="awesome-example-app-icon awesome-example-app-large green material-icons">
