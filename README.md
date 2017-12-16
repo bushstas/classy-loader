@@ -580,7 +580,7 @@ will give the same result
 <ul>
   <li>
     <h3>with auto prefix 'some-prefix';</h3>
-    Evertrhing the same as in the case above plus gives automatic mode for only this file   
+    Evertrhing the same as in the case above plus gives automatic mode within this file   
   </li>
 </ul>
 
