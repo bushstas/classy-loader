@@ -1228,7 +1228,7 @@ can be also with spaces, should end with a semicolon or a new line
 <li><b>w50p</b> = width: 50%;</li>
 <li><b>h</b> = height: 100%;</li>
 <li><b>h150</b> = height: 150px;</li>
-<li><b>h50p</b> = height: 20%;</li>
+<li><b>h20p</b> = height: 20%;</li>
 <li><b>wh20</b> = width: 20px; height: 20px;</li>
 <li><b>wh20p</b> = width: 20%; height: 20%;</li>
 
