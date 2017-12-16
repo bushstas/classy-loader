@@ -752,16 +752,6 @@ render() {
   )
 }
 ```
-an example of a bundled code
-```javascript
-return _react2.default.createElement(
-  'i',
-  _extends({
-    className: (0, _classy2.default)("my-app-icon", classes, className)
-  }, others),
-  children
-);
-```
 an example how to make it work:<br>
 
 in a parent using <b>extraAttributeName: "classes"</b><br><br>
@@ -776,13 +766,49 @@ render() {
 ```
 in the Icon
 ```javascript
+with addedPrefix 'icon';
+
 export default function Icon({classes, children}) {
   return (
-    <i class=".icon $classes material-icons">
+    <i class=".self $classes material-icons">
       {children}
     </i>
   )
 }
+```
+
+so we will have 
+
+in a parent
+```javascript
+render() {
+  return (
+    <Icon classes="awesome-example-app-large green">
+      resize
+    </Icon>
+  )
+}
+```
+in the Icon
+```javascript
+export default function Icon({classes, children}) {
+  return (
+    <i className={classy('awesome-example-app-icon', classes, 'material-icons')}>
+      {children}
+    </i>
+  )
+}
+```
+
+an example of a bundled code
+```javascript
+return _react2.default.createElement(
+  'i',
+  _extends({
+    className: (0, _classy2.default)("awesome-example-app-icon", classes, 'material-icons')
+  }),
+  children
+);
 ```
 
 
