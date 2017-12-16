@@ -270,6 +270,7 @@ More about js/css directives see below.
     to prefix "super" + delimiter + "item"<br>
     so you'll have to syncronize JS and CSS file names
   </li>
+  <br>
 
   <li>
     prefixAutoResolving: <big><b>"folder"</b></big><br>
