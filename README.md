@@ -282,7 +282,8 @@ More about js/css directives see below.
 
 If true the loader will obfuscate class names in both JS and CSS files.<br>
 Be careful, you should check that all class names in JS defined with classy <b>"attributeName"</b> and <b>extraAttributeName</b><br>
-or special <b>$classy</b> syntax (see below).
+or special <b>$classy</b> syntax (see below).<br>
+By default, it has value false.<br>
 
 ```javascript
 render() {
@@ -299,6 +300,22 @@ to
 render() {
   return (
     <div className="w4fq5wq dhet7s5">
+      ...
+    </div>
+  )
+}
+```
+
+### obfuscatedLength
+
+Length of obfuscated class names.<br>
+By default, it has value "7".
+So if you have <b>"obfuscatedLength"</b> equal 4
+
+```javascript
+render() {
+  return (
+    <div className="ald8 jd6g">
       ...
     </div>
   )
