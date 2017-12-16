@@ -11,6 +11,24 @@ Classy-loader is a powerful tool to manage your CSS/JS DOM elements class names
 npm install --save classy-loader
 ```
 
+## Adding to Webpack config
+
+### At first you need to set required config
+
+```javascript
+const classy = require('classy-loader');
+classy.init({
+    attributeName: 'class',
+    extraAttributeName: 'classes',
+    globalPrefix: 'example-app',
+    obfuscation: false,
+    obfuscatedLength: 4,
+    addSuffixToAllNames: false,
+    addSuffixToSimpleNames: false,
+    autoPrefixMode: false,
+    prefixAutoResolving: false
+});
+```
 
 ## Usage
 
