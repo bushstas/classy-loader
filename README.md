@@ -1194,94 +1194,92 @@ can be also with spaces, should end with a semicolon or a new line
 }
 ```
 ### Full list of shorcuts
-<ul>
 
-<li><b>l</b> = left: 0;</li>
-<li><b>l10</b> = left: 10px;</li>
-<li><b>l-10</b> = left: -10px;</li>
-<li><b>l50p</b> = left: 50%;</li>
-<li><b>l-50p</b> = left: -50%;</li>
+<b>l</b> = left: 0;<br>
+<b>l10</b> = left: 10px;<br>
+<b>l-10</b> = left: -10px;<br>
+<b>l50p</b> = left: 50%;<br>
+<b>l-50p</b> = left: -50%;<br>
 
-<li><b>r</b> = right: 0;</li>
-<li><b>r10</b> = right: 10px;</li>
-<li><b>r-10</b> = right: -10px;</li>
-<li><b>r50p</b> = right: 50%;</li>
-<li><b>r-50p</b> = right: -50%;</li>
-
-
-<li><b>t</b> = top: 0;</li>
-<li><b>t10</b> = top: 10px;</li>
-<li><b>t-10</b> = top: -10px;</li>
-<li><b>t50p</b> = top: 50%;</li>
-<li><b>t-50p</b> = top: -50%;</li>
-
-<li><b>b</b> = botton: 0;</li>
-<li><b>b10</b> = botton: 10px;</li>
-<li><b>b-10</b> = botton: -10px;</li>
-<li><b>b50p</b> = botton: 50%;</li>
-<li><b>b-50p</b> = botton: -50%;</li>
-
-<li><b>z10</b> = z-index: 10;</li>
-
-<li><b>w</b> = width: 100%;</li>
-<li><b>w100</b> = width: 100px;</li>
-<li><b>w50p</b> = width: 50%;</li>
-<li><b>h</b> = height: 100%;</li>
-<li><b>h150</b> = height: 150px;</li>
-<li><b>h20p</b> = height: 20%;</li>
-<li><b>wh20</b> = width: 20px; height: 20px;</li>
-<li><b>wh20p</b> = width: 20%; height: 20%;</li>
-
-<li><b>flex</b> = display: flex;</li>
-<li><b>flcen</b> = align-item: center; justify-content: center;</li>
-<li><b>bl</b> = display: block;</li>
-<li><b>inb</b> = display: inline-block;</li>
-<li><b>fix</b> = position: fixed;</li>
-<li><b>abs</b> = position: absolute;</li>
-<li><b>rel</b> = position: relative;</li>
-<li><b>box</b> = box-sizing: border-box;</li>
-<li><b>ova</b> = overflow: auto;</li>
-<li><b>ovh</b> = overflow: hidden;</li>
+<b>r</b> = right: 0;<br>
+<b>r10</b> = right: 10px;<br>
+<b>r-10</b> = right: -10px;<br>
+<b>r50p</b> = right: 50%;<br>
+<b>r-50p</b> = right: -50%;<br>
 
 
-<li><b>lt</b> = text-align: left;</li>
-<li><b>rt</b> = text-align: right;</li>
-<li><b>cen</b> = text-align: center;</li>
-<li><b>just</b> = text-align: justify;</li>
-<li><b>vtop</b> = vertical-align: top;</li>
-<li><b>vmid</b> = vertical-align: middle;</li>
-<li><b>vbot</b> = vertical-align: bottom;</li>
-<li><b>cur</b> = cursor: default;</li>
-<li><b>cur-name</b> = cursor: name;</li>
-<li><b>pntr</b> = cursor: pointer;</li>
-<li><b>cnt</b> = content: "";</li>
-<li><b>nor</b> = resize: none;</li>
-<li><b>fl</b> = float: left;</li>
-<li><b>fr</b> = float: right;</li>
-<li><b>clr</b> = clear: both;</li>
+<b>t</b> = top: 0;<br>
+<b>t10</b> = top: 10px;<br>
+<b>t-10</b> = top: -10px;<br>
+<b>t50p</b> = top: 50%;<br>
+<b>t-50p</b> = top: -50%;<br>
+
+<b>b</b> = botton: 0;<br>
+<b>b10</b> = botton: 10px;<br>
+<b>b-10</b> = botton: -10px;<br>
+<b>b50p</b> = botton: 50%;<br>
+<b>b-50p</b> = botton: -50%;<br>
+
+<b>z10</b> = z-index: 10;<br>
+
+<b>w</b> = width: 100%;<br>
+<b>w100</b> = width: 100px;<br>
+<b>w50p</b> = width: 50%;<br>
+<b>h</b> = height: 100%;<br>
+<b>h150</b> = height: 150px;<br>
+<b>h20p</b> = height: 20%;<br>
+<b>wh20</b> = width: 20px; height: 20px;<br>
+<b>wh20p</b> = width: 20%; height: 20%;<br>
+
+<b>flex</b> = display: flex;<br>
+<b>flcen</b> = align-item: center; justify-content: center;<br>
+<b>bl</b> = display: block;<br>
+<b>inb</b> = display: inline-block;<br>
+<b>fix</b> = position: fixed;<br>
+<b>abs</b> = position: absolute;<br>
+<b>rel</b> = position: relative;<br>
+<b>box</b> = box-sizing: border-box;<br>
+<b>ova</b> = overflow: auto;<br>
+<b>ovh</b> = overflow: hidden;<br>
 
 
-
-<li><b>bold</b> = font-weight: bold;</li>
-<li><b>it</b> = font-style: italic;</li>
-<li><b>un</b> = text-decoration: underline;</li>
+<b>lt</b> = text-align: left;<br>
+<b>rt</b> = text-align: right;<br>
+<b>cen</b> = text-align: center;<br>
+<b>just</b> = text-align: justify;<br>
+<b>vtop</b> = vertical-align: top;<br>
+<b>vmid</b> = vertical-align: middle;<br>
+<b>vbot</b> = vertical-align: bottom;<br>
+<b>cur</b> = cursor: default;<br>
+<b>cur-name</b> = cursor: name;<br>
+<b>pntr</b> = cursor: pointer;<br>
+<b>cnt</b> = content: "";<br>
+<b>nor</b> = resize: none;<br>
+<b>fl</b> = float: left;<br>
+<b>fr</b> = float: right;<br>
+<b>clr</b> = clear: both;<br>
 
 
 
-<li><b>lh</b> = line-height: 0;</li>
-<li><b>lh20</b> = line-height: 20px;</li>
-<li><b>fs</b> = font-size: 0;</li>
-<li><b>fs15</b> = font-size: 15px;</li>
-<li><b>ff-name</b> = font-family: name;</li>
+<b>bold</b> = font-weight: bold;<br>
+<b>it</b> = font-style: italic;<br>
+<b>un</b> = text-decoration: underline;<br>
+
+
+
+<b>lh</b> = line-height: 0;<br>
+<b>lh20</b> = line-height: 20px;<br>
+<b>fs</b> = font-size: 0;<br>
+<b>fs15</b> = font-size: 15px;<br>
+<b>ff-name</b> = font-family: name;<br>
   
 
 
 
 
-<li><b>bsp</b> = border-spacing: 0;</li>
-<li><b>bsp2</b> = border-spacing: 2px;</li>
+<b>bsp</b> = border-spacing: 0;<br>
+<b>bsp2</b> = border-spacing: 2px;
 
-</ul>
 
 
   
