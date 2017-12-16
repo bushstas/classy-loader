@@ -1018,7 +1018,36 @@ render() {
   )
 }
 ```
-
+You can have spaces next to symbols "?" and ":" like
+```javascript
+render() {
+  return (
+    <div class="$active ? active : inactive">
+      ...
+    </div>
+  )
+}
+```
+But not in conditional parts
+```javascript
+render() {
+  return (
+    <div class="$active === true ? active : inactive">
+      ...
+    </div>
+  )
+}
+```
+This query will have not correct class name something like
+```javascript
+render() {
+  return (
+    <div className="1 === true active inactive">
+      ...
+    </div>
+  )
+}
+```
 ## License
 
 MIT
