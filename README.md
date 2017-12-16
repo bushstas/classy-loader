@@ -507,7 +507,7 @@ will give the same result
 
 <ul>
   <li>
-    <h4>with prefix 'some-prefix';</h4>
+    <h3>with prefix 'some-prefix';</h3>
     Creates a local version of the global prefix that overrides defined in config.<br>
     Two points still give common global prefix.
   </li>
@@ -579,7 +579,7 @@ will give the same result
   ```
 <ul>
   <li>
-    <h4>with auto prefix 'some-prefix';</h4>
+    <h3>with auto prefix 'some-prefix';</h3>
     Evertrhing the same as in the case above plus gives automatic mode for only this file   
   </li>
 </ul>
