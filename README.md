@@ -450,6 +450,60 @@ will be
 }
 ```
 
+And the automatic mode
+
+```scss
+/* directive that defines our local refix (adds additional prefix to global one) */
+.with.addedPrefix.container;
+
+.self {
+  position: relative;
+
+  &..area {
+    background-color: #eee;
+    border: 1px solid #aaa;
+  }
+
+  &...wide {
+    width: 80%;
+  }
+
+  .content {
+    padding: 10px;
+
+    &...content {
+      padding-top: 0;
+    }
+  }
+}
+```
+
+will give the same result
+
+```css
+.awesome-example-app-container {
+  position: relative;
+
+  &.awesome-example-app-area {
+    background-color: #eee;
+    border: 1px solid #aaa;
+  }
+
+  &.wide {
+    width: 80%;
+  }
+
+  .awesome-example-app-container-content {
+    padding: 10px;
+
+    &.content {
+      padding-top: 0;
+    }
+  }
+}
+```
+
+
 ## Usage
 
 A simple example of usage
