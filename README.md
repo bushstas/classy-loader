@@ -257,9 +257,9 @@ More about js/css directives see below.
   <li>
     prefixAutoResolving: <big><b>"file"</b></big><br>
     The loader will try to form local prefixes from js/css file names:<br>
-    "SuperItem.*" to "super-item.*"<br>
-    "super-item.*" to prefix "super" + delimiter + "item"<br>
-    "super_item.*" to prefix "super" + delimiter + "item"
+    "SuperItem.js" to "super-item.*"<br>
+    "super-item.js" to prefix "super" + delimiter + "item"<br>
+    "super_item.js" to prefix "super" + delimiter + "item"
   </li>
 </ol>
 
