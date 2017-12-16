@@ -774,6 +774,7 @@ render() {
   )
 }
 ```
+using <b>extraAttributeName: "classes"</b><br><br>
 in the Icon
 ```javascript
 export default function Icon({classes}) {
