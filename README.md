@@ -671,6 +671,7 @@ CSS directives do absolutly the same and look pretty much like JS versions
     <h3>.with.auto.prefix;</h3>
   </li>
 </ul>
+<br>
 
 ## String queries syntax
 
