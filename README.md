@@ -580,9 +580,61 @@ will give the same result
 <ul>
   <li>
     <h3>with auto prefix 'some-prefix';</h3>
-    Evertrhing the same as in the case above plus gives automatic mode within this file   
+    Evertrhing the same as in the case above plus gives automatic mode within this file.
   </li>
 </ul>
+
+<ul>
+  <li>
+    <h3>with addedPrefix 'some-additional-prefix';</h3>
+    Sets an additional prefix for local use.<br>
+    This directive do the same thing like param <b>"prefixAutoResolving" and will cancel auto detecting.</b>
+  </li>
+</ul>
+
+  ```javascript
+    // none-automatic mode
+    // ...imports
+
+    with addedPrefix 'dialog';
+    
+    export default class Dialog extends React.Component {
+      render() {
+        return (
+          <div class=".self">
+            <div class=".title ..bigger">
+              ...
+            </div>
+            <div class=".content">
+              ...
+            </div>
+          </div>
+        )
+      }
+    }
+  ```
+
+    will be
+
+  ```javascript
+    // ...imports
+   
+    export default class Dialog extends React.Component {
+      render() {
+        return (
+          <div class="awesome-example-app-dialog">
+            <div class="awesome-example-app-dialog-title awesome-example-app-bigger">
+              ...
+            </div>
+            <div class="awesome-example-app-dialog-title">
+              ...
+            </div>
+          </div>
+        )
+      }
+    }
+  ```
+
 
 ### CSS directives
 
