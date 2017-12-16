@@ -1048,6 +1048,16 @@ render() {
   )
 }
 ```
+If you want to have spaces in conditions use parentheses
+```javascript
+render() {
+  return (
+    <div class="$(active == 'something') ? active : inactive">
+      ...
+    </div>
+  )
+}
+```
 ## License
 
 MIT
