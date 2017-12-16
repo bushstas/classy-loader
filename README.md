@@ -399,7 +399,7 @@ In this mode you don't need to add a point for local prefix, one point for globa
 So in css files this principle works the same:<br><br>
 None-automatic mode
 
-```css
+```scss
 /* directive that defines our local refix (adds additional prefix to global one) */
 .with.addedPrefix.container;
 
