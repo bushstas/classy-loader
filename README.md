@@ -1106,6 +1106,52 @@ render() {
 }
 ```
 
+## CSS syntax
+
+### Non-automatic prefix mode
+One point for real class name without prefix.<br>
+Two points for class names with local prefix.<br>
+Three points for class names with global prefix.<br>
+
+```scss
+..self {
+  ..title {
+
+  }
+  ..content {
+
+  }
+  ...active {
+
+  }
+  .item {
+
+  }
+}
+```
+
+### Automatic prefix mode
+One point for class names with local prefix.<br>
+Two points for class names with global prefix.<br>
+Three points for real class name without prefix.<br>
+
+```scss
+.self {
+  .title {
+
+  }
+  .content {
+
+  }
+  ..active {
+
+  }
+  ...item {
+
+  }
+}
+```
+
 
 ## License
 
