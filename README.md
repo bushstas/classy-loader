@@ -557,7 +557,7 @@ will give the same result
     }
   ```
 
-  the result when <b>"prefixAutoResolving"</b> set to false, so we don't have additional local prefix, just overrided global
+    the result when <b>"prefixAutoResolving"</b> set to false, so we don't have additional local prefix, just overrided global
 
   ```javascript
     // ...imports
@@ -645,7 +645,7 @@ will give the same result
 <ul>
   <li>
     <h3>with auto prefix;</h3>
-    Gives automatic mode within this file.
+    Gives the automatic mode within this file.
   </li>
 </ul>
 
