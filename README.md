@@ -73,7 +73,7 @@ In this case we don't have a local prefix, so it will be our globalPrefix from t
 ### extraAttributeName
 
 An attribute name of React elements, that will be parsed by loader.<br>
-This also can be used like variable names or object keys.
+This also can be used like variable names or object keys.<br>
 It also can be whatever word you like and not will be changed.
 
 
