@@ -217,11 +217,11 @@ There are three variants:<br>
   <li>
     prefixAutoResolving: <big><b>"content"</b></big><br>
     At first the loader will try to find a line with:<br>
-    <b>export default (class|function) MySuperClassName</b><br>
+    <b>export default (class|function) MySuperClassName</b><br><br>
     Then try with:<br>
-    <b>export default connect(...)(MySuperClassName)</b><br>
+    <b>export default connect(...)(MySuperClassName)</b><br><br>
     Then try with:<br>
-    <b>class MySuperClassName</b><br>
+    <b>class MySuperClassName</b><br><br>
     And at last it will get the first line with:<br>
     <b>function MySuperClassName</b><br>
     so "MySuperClassName" will be parsed to "my" + delimiter + "super" + delimiter + "class" + delimiter + "name".  
