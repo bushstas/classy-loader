@@ -995,7 +995,9 @@ render() {
     <div class="$active?$className:disabled">
       ...
     </div>
-    // ad so on
+    <div class="!$active?disabled $!active?inactive">
+      ...
+    </div>
   )
 }
 
@@ -1014,7 +1016,9 @@ render() {
      <div className={classy(active ? className : "disabled")}>
       ...
     </div>
-    // ad so on
+    <div className={classy(!active ? "disabled" : "", !active ? "inactive" : "")} >
+      ...
+    </div>
   )
 }
 ```
