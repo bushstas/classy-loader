@@ -13,7 +13,7 @@ npm install --save classy-loader
 
 ## Adding to Webpack config
 
-### At first you need to set required config
+### At first you need to set required config.
 
 ```javascript
 const classy = require('classy-loader');
@@ -31,8 +31,8 @@ classy.init({
 ```
 ### attributeName
 
-An attribute of DOM elements, that will be parsed by loader<br>
-It can be whatever word you like and will be changed to className attribute
+An attribute of DOM elements, that will be parsed by loader.<br>
+It can be whatever word you like and will be changed to className attribute.
 
 ```javascript
 render() {
@@ -42,7 +42,18 @@ render() {
     </div>
   )
 }
-});
+```
+
+or
+
+```javascript
+render() {
+  return (
+    <div whateverName="self">
+      ...
+    </div>
+  )
+}
 ```
 
 after parsing
@@ -55,10 +66,9 @@ render() {
     </div>
   )
 }
-});
 ```
-So "self" is a keyword that means your global or local prefix<br>
-In this case we don't have a local prefix, so it will be our globalPrefix from the config we set up above
+So "self" is a keyword that means your global or local prefix.<br>
+In this case we don't have a local prefix, so it will be our globalPrefix from the config we set up above.
 
 ## Usage
 
