@@ -26,8 +26,6 @@ classy.init({
     delimiter: '-',
     obfuscation: false,
     obfuscatedLength: 4,
-    addSuffixToAllNames: false,
-    addSuffixToSimpleNames: false,
     autoPrefixMode: false,
     prefixAutoResolving: false
 });
