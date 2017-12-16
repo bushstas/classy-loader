@@ -1379,4 +1379,5 @@ can be also with spaces, should end with a semicolon or a new line
 <b>tshad-000-2</b> = text-shadow: 0 0 2px #000;<br>
 <b>tshad-000-2-1-1</b> = text-shadow: 1px 1px 2px #000;<br>
 
-<b>tra-c-3-bc-3</b> = transition: color 0.3, background-color 0.3;<br>
+<b>tra-c-3-bc-3</b> = transition: color 0.3, background-color 0.3; //use the same shorcuts for style names
+<br>
