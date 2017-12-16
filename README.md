@@ -1224,8 +1224,8 @@ can be also with spaces, should end with a semicolon or a new line
 <b>w</b> = width: 100%;<br>
 <b>w100</b> = width: 100px;<br>
 <b>w50p</b> = width: 50%;<br>
-<b>h</b> = height: 100%;<br>
 
+<b>h</b> = height: 100%;<br>
 <b>h150</b> = height: 150px;<br>
 <b>h20p</b> = height: 20%;<br>
 
