@@ -676,13 +676,13 @@ CSS directives do absolutly the same and look pretty much like JS versions
 ## String queries syntax
 
 ```javascript
-  render() {
-    return (
-      <div class="name .name ..name $name .$name ..$name">
-        ...
-      </div>
-    )
-  }
+render() {
+  return (
+    <div class="name .name ..name $name .$name ..$name">
+      ...
+    </div>
+  )
+}
 ```
 
 ## License
