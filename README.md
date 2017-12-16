@@ -557,7 +557,7 @@ will give the same result
     }
   ```
 
-    the result when <b>"prefixAutoResolving"</b> set to false, so we don't have additional local prefix, just overrided global
+  the result when <b>"prefixAutoResolving"</b> set to false, so we don't have additional local prefix,<br>just overrided global
 
   ```javascript
     // ...imports
