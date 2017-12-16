@@ -814,7 +814,7 @@ return _react2.default.createElement(
 ```
 
 ### prefix::name
-Adds needed addiotinal prefix to class name. (local prefix for the Icon)<br>
+Adds needed addiotinal prefix to class name. (local prefix in relation to the Icon)<br>
 See the example with the Icon above.<br>
 Let's modify this a little bit.
 ```javascript
