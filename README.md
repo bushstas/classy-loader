@@ -309,7 +309,7 @@ render() {
 ### obfuscatedLength
 
 Length of obfuscated class names.<br>
-By default, it has value "7".
+By default, it has value "7".<br>
 So if you have <b>"obfuscatedLength"</b> equal 4
 
 ```javascript
