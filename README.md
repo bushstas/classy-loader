@@ -1207,7 +1207,6 @@ can be also with spaces, should end with a semicolon or a new line
 <b>r50p</b> = right: 50%;<br>
 <b>r-50p</b> = right: -50%;<br>
 
-
 <b>t</b> = top: 0;<br>
 <b>t10</b> = top: 10px;<br>
 <b>t-10</b> = top: -10px;<br>
@@ -1226,8 +1225,10 @@ can be also with spaces, should end with a semicolon or a new line
 <b>w100</b> = width: 100px;<br>
 <b>w50p</b> = width: 50%;<br>
 <b>h</b> = height: 100%;<br>
+
 <b>h150</b> = height: 150px;<br>
 <b>h20p</b> = height: 20%;<br>
+
 <b>wh20</b> = width: 20px; height: 20px;<br>
 <b>wh20p</b> = width: 20%; height: 20%;<br>
 
@@ -1241,8 +1242,6 @@ can be also with spaces, should end with a semicolon or a new line
 <b>box</b> = box-sizing: border-box;<br>
 <b>ova</b> = overflow: auto;<br>
 <b>ovh</b> = overflow: hidden;<br>
-
-
 <b>lt</b> = text-align: left;<br>
 <b>rt</b> = text-align: right;<br>
 <b>cen</b> = text-align: center;<br>
