@@ -215,7 +215,9 @@ There are three variants:<br>
 <ol>
   <li>
     prefixAutoResolving: <big><b>"content"</b></big><br>
-
+    The parser will try to find a line with:<br>
+    <b>export default (class|function) MySuperClassName</b><br>
+    so "MySuperClassName" will be parsed to "my" + delimiter + "super" + delimiter + "class" + delimiter + "name".
   </li>
 </ol>
 
@@ -233,13 +235,13 @@ export default class MySuperButton extends React.Component {
 }
 ```
 
-So if we have our delimiter like "\__", we will have
+will be
 
 ```javascript
 export default class MySuperButton extends React.Component {
   render() {
     return (
-      <div className="awesome-example-app-my__super__button">
+      <div className="awesome-example-app-my-super-button">
         <span className="awesome-example-app-my-super-button-inner">
           ....
         </span>
