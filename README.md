@@ -684,7 +684,7 @@ CSS directives do absolutly the same and look pretty much like JS versions
 ```javascript
 render() {
   return (
-    <div class="name .name ..name $name prefix::name .$name ..$name">
+    <div class="name .name ..name $name $$name prefix::name .$name ..$name">
       ...
     </div>
   )
@@ -817,6 +817,32 @@ return _react2.default.createElement(
   }),
   children
 );
+```
+### $$name
+The same as **$name** but tells the loader that this variable is a valid string and not an array or undefined,<br>
+so don't need to use merge function
+```javascript
+render() {
+  return (
+    <div class="$classes">
+        <div class="$$className">
+           ...
+        </div>
+    </div>
+  )
+}
+```
+will be
+```javascript
+render() {
+  return (
+    <div className={classy(classes)}>
+      <div className={className}>
+        ...
+      </div>
+    </div>
+  )
+}
 ```
 
 ### prefix::name
