@@ -1505,7 +1505,7 @@ Define few sources if you need. Just duplicate lines with different paths to fol
 .with.image.source './bg-images';
 .with.image.source './images/gifs';
 ```
-And the use code like this:
+And then use code like this:
 
 ```scss
 .item {
