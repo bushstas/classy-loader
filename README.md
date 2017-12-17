@@ -1486,4 +1486,5 @@ can be also with spaces, should end with a semicolon or a new line
 **rot-45** = transform: rotate(-45deg);  
 **ell** = text-overflow: ellipsis; overflow: hidden; white-space: nowrap;  
 **nowr** = white-space: nowrap;  
+**hid** = visibility: hidden;  
   

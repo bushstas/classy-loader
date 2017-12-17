@@ -241,7 +241,10 @@ const data = {
 	
 	ff: f,
 	tra: e,
-	rot: r
+	rot: r,
+	ell: g('text-overflow', 'ellipsis', 'overflow', 'hidden', 'white-space', 'nowrap'),
+	nowr: g('white-space', 'nowrap'),
+	hid: g('visibility', 'hidden')
 }
 
 const map = {
