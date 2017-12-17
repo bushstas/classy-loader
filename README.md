@@ -210,7 +210,6 @@ render() {
 ### prefixAutoResolving
 
 If this is not false the loader will try to resolve the local prefix by itself.  
-Works only if **"autoPrefixMode"** is set to true.  
 By default, it has value false.  
 There are three variants:  
 
