@@ -586,7 +586,7 @@ will give the same result
 <ul>
   <li>
     <h3>with auto prefix 'some-prefix';</h3>
-    Evertrhing the same as in the case above plus gives automatic mode within this file.
+    Evertrhing the same as in the case above plus gives automatic mode within a file.
   </li>
 </ul>
 
@@ -644,14 +644,14 @@ will give the same result
 <ul>
   <li>
     <h3>with auto addedPrefix 'some-additional-prefix';</h3>
-    Evertrhing the same as in the case above plus gives automatic mode within this file.
+    Evertrhing the same as in the case above plus gives automatic mode within a file.
   </li>
 </ul>
 
 <ul>
   <li>
     <h3>with auto prefix;</h3>
-    Gives the automatic mode within this file.
+    Gives the automatic mode within a file.
   </li>
 </ul>
 
@@ -914,7 +914,7 @@ export default class Button extends React.Component {
   render() {
     let className = 'active';
     return (
-      <div className={classy("awesome-example-app-button", "awesome-example-app-" + className)}>
+      <div className={"awesome-example-app-button awesome-example-app-" + className}>
           ...
       </div>
     )
