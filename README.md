@@ -266,7 +266,7 @@ More about JS/CSS directives see below.
 
   
 #### `prefixAutoResolving: "file"`
-The loader will try to form local prefixes from js/css file names:  
+The loader will try to form local prefixes from JS/CSS file names:  
 "SuperItem.js" or "super-item.js" or "super_item.js"
 to prefix "super" + delimiter + "item"  
 so you'll have to syncronize JS and CSS file names
@@ -275,7 +275,7 @@ so you'll have to syncronize JS and CSS file names
 
 
 #### `prefixAutoResolving: "folder"`
-The loader will try to form local prefixes from js/css folder names:  
+The loader will try to form local prefixes from JS/CSS folder names:  
 "SuperItem/index.js" or "super-item/some.js" or "super_item/any.js"
 to prefix "super" + delimiter + "item"  
 so JS and CSS will be syncronized as they are both located in the same directory (aren't they?)
