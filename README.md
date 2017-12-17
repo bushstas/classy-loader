@@ -1162,7 +1162,7 @@ render() {
 ```javascript
 render() {
   return (
-    <div class="$?active">
+    <div class="$?active $?.active $?..active">
       ...
     </div>
   )
@@ -1178,6 +1178,7 @@ render() {
   )
 }
 ```
+Points work the same as usual
 
 ## CSS syntax
 
