@@ -127,7 +127,12 @@ const data = {
 	clr: g('clear', 'both'),
 	auto: g('margin', 'auto'),
 	bold: g('font-weight', 'bold'),
-	it: g('font-style', 'italic'),	
+	it: g('font-style', 'italic'),
+	
+	norep: g('background-repeat', 'no-repeat'),	
+	repx: g('background-repeat', 'repeat-x'),	
+	repy: g('background-repeat', 'repeat-y'),	
+	cvr: g('background-size', 'cover'),	
 	
 	fix: g('position', 'fixed'),
 	abs: g('position', 'absolute'),

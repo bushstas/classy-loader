@@ -1413,6 +1413,11 @@ can be also with spaces, should end with a semicolon or a new line
 **it** = font-style: italic;  
 **un** = text-decoration: underline;  
 
+**norep** = background-repeat: no-repeat; 
+**repx** = background-repeat: repeat-x; 
+**repy** = background-repeat: repeat-y; 
+**cvr** = background-size: cover; 
+
 **lh** = line-height: 0;  
 **lh20** = line-height: 20px;  
 **fs** = font-size: 0;  
