@@ -1545,5 +1545,5 @@ Of cource you can add number of source folder
   
 This two lines do the same  
   
-**jpg-e** = background-image: url(../path/to/images/e.jpg);  
-**jpg1-e** = background-image: url(../path/to/images/e.jpg);  
+**jpg-e** = background-image: url(../path/to/first/source/e.jpg);  
+**jpg1-e** = background-image: url(../path/to/first/source/e.jpg);  
