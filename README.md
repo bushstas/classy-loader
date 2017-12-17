@@ -948,20 +948,40 @@ export default class Button extends React.Component {
 ```
 
 It's impossible to obfuscate dynamical class names so there are special fake **$classy** functions to make roadmaps for obfuscation.  
-Here is the an example.
+Here is the an example for non-automatic mode.
 ```javascript
-let className = $classy(colorValue, '..color-', ['red', 'green', 'blue', 'yellow', 'orange' ...]);
+let className = $classy(color, '..color-', ['red', 'green']);
+className = $classy(number, '.color-', ['blue', 'yellow']);
+className = $classy(number, '..', ['one', 'two']);
+className = $classy(quality, '.', ['good', 'bad']);
+className = $classy(name, '', ['John', 'Rick']);
 ```
 It produces this code:
 ```javascript
 let className = {
   red: 'awesome-example-app-color-red',
-  green: 'awesome-example-app-color-green',
-  blue: 'awesome-example-app-color-blue',
-  yellow: 'awesome-example-app-color-yellow',
-  orange: 'awesome-example-app-color-orange',
-  ...
-}[colorValue];
+  green: 'awesome-example-app-color-green'
+}[color];
+
+className = {
+  blue: 'awesome-example-app-button-color-blue',
+  yellow: 'awesome-example-app-button-color-yellow'
+}[color];
+
+className = {
+  one: 'awesome-example-app-one',
+  two: 'awesome-example-app-two'
+}[number];
+
+className = {
+  good: 'awesome-example-app-button-good',
+  bad: 'awesome-example-app-button-bad'
+}[quality];
+
+className = {
+  John: 'John',
+  Rick: 'Rick'
+}[name];
 ```
 So variable "className" will have a real class name value and it can be obfuscated:
 ```javascript
