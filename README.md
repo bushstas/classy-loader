@@ -1272,7 +1272,6 @@ can be also with spaces, should end with a semicolon or a new line
 <details>
 <summary>Click to expand</summary>  
   
-  
 **rubb** = left: 0; right: 0; top: 0; bottom: 0;  
 **l** = left: 0;  
 **l10** = left: 10px;  
@@ -1536,6 +1535,9 @@ So you will have these styles:
 ```
 So shortcuts look like this:  
 
+<details>
+<summary>Click to expand</summary>  
+
 **png-png-filename** = background-image: url(../some/path/png-filename.png);  
 **jpg-jpg_filename** = background-image: url(../some/path/jpg_filename.jpg);  
 **jpeg-oneMoreJpgFilename** = background-image: url(../some/path/oneMoreJpgFilename.jpeg);  
@@ -1551,3 +1553,4 @@ This two lines do the same
   
 **jpg-e** = background-image: url(../path/to/first/source/e.jpg);  
 **jpg1-e** = background-image: url(../path/to/first/source/e.jpg);  
+</details>
