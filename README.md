@@ -1526,7 +1526,7 @@ So you will have these styles:
   background-image: url(../../assets/images/bg.jpg);
   background-image: url(../../assets/images/line.jpeg);
   background-image: url(./bg-images/some-image.png);
-  background-image: url(./images/gifs/preloader.gif;
-  background-image: url(../svgs/icon.svg;
+  background-image: url(./images/gifs/preloader.gif);
+  background-image: url(../svgs/icon.svg);
 }
 ```
