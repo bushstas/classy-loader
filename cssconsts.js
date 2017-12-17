@@ -91,6 +91,10 @@ const f = (value) => {
 	return g('font-family', '"' + v.join(' ') + '"');
 }
 
+const r = (value) => {	
+	return g('transform', 'rotate(' + value + 'deg)');
+}
+
 const e = (value) => {
 	let v = [];
 	let p = value.replace(/^-/, '').split('-');
@@ -147,6 +151,7 @@ const data = {
 
 	ova: g('overflow', 'auto'),
 	ovh: g('overflow', 'hidden'),	
+	ovs: g('overflow', 'scroll'),	
 
 	boc: value => g('border-color', c(value)),
 	bc: value => g('background-color', c(value)),
@@ -235,7 +240,8 @@ const data = {
 	_tshad: value => s(value, 'text-shadow'),
 	
 	ff: f,
-	tra: e
+	tra: e,
+	rot: r
 }
 
 const map = {

@@ -1389,6 +1389,7 @@ can be also with spaces, should end with a semicolon or a new line
 
 **ova** = overflow: auto;  
 **ovh** = overflow: hidden;  
+**ovs** = overflow: scroll;  
 
 **lt** = text-align: left;  
 **rt** = text-align: right;  
@@ -1481,4 +1482,6 @@ can be also with spaces, should end with a semicolon or a new line
 **tshad-000-2-1-1** = text-shadow: 1px 1px 2px #000;  
 
 **tra-c-3-bc-3-o-3** = transition: color 0.3s, background-color 0.3s, opacity 0.3s;  
+**rot20** = transform: rotate(20deg);
+**rot-45** = transform: rotate(-45deg);
   
