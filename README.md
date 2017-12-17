@@ -1514,5 +1514,5 @@ And then use code like this:
 }
 ```
 So add number 2 (3) if an image is from the second (third) source.  
-Shortcuts are named as image file extentions (png, gif, jpeg, jpg).
+Shortcuts are named as image file extentions (png, gif, jpeg, jpg).  
 Second parts are image file names.
