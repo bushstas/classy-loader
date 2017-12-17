@@ -86,7 +86,7 @@ render() {
 }
 ```
 
-or
+или так
 
 ```javascript
 render() {
