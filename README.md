@@ -1530,3 +1530,10 @@ So you will have these styles:
   background-image: url(../svgs/icon.svg);
 }
 ```
+So shortcuts look like this:  
+
+**png-png-filename** = background-image: url(../some/path/png-filename.png);  
+**jpg-jpg_filename** = background-image: url(../some/path/jpg_filename.jpg);  
+**jpeg-oneMoreJpgFilename** = background-image: url(../some/path/oneMoreJpgFilename.jpeg);  
+**gif-giffy** = background-image: url(../some/path/giffy.gif);  
+**svg-blabla** = background-image: url(../some/path/blabla.svg);  
