@@ -1537,3 +1537,13 @@ So shortcuts look like this:
 **jpeg-oneMoreJpgFilename** = background-image: url(../some/path/oneMoreJpgFilename.jpeg);  
 **gif-giffy** = background-image: url(../some/path/giffy.gif);  
 **svg-blabla** = background-image: url(../some/path/blabla.svg);  
+  
+Of cource you can add number of source folder  
+  
+**png2-a** = background-image: url(../path/to/second/source/a.png);  
+**gif33-d** = background-image: url(../path/to/33-th/source/d.gif);  
+  
+This two lines do the same  
+  
+**jpg-e** = background-image: url(../path/to/images/e.jpg);  
+**jpg1-e** = background-image: url(../path/to/images/e.jpg);  
