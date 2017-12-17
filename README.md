@@ -213,21 +213,20 @@ If this is not false the loader will try to resolve the local prefix by itself.
 Works only if **"autoPrefixMode"** is set to true.  
 By default, it has value false.  
 There are three variants:  
-<ol>
-  <li>
-    prefixAutoResolving: <big><b>"content"</b></big><br><br>
-    At first the loader will try to find a line with:<br>
-    <b>export default (class|function) MySuperClassName</b><br><br>
-    Then try with:<br>
-    <b>export default connect(...)(MySuperClassName)</b><br><br>
-    Then try with:<br>
-    <b>class MySuperClassName</b><br><br>
-    And at last it will get the first line with:<br>
-    <b>function MySuperClassName</b><br><br>
-    so "MySuperClassName" will be parsed to "my" + delimiter + "super" + delimiter + "class" + delimiter + "name".<br><br>
-    For CSS files the loader will search for JS index file in the same directory<br>
-    and then get local prefix from the file, so JS and CSS will be syncronized.<br>
-    You should put your JS loaders first before CSS loaders, because CSS parser will need cached JS prefixes
+
+1.prefixAutoResolving: <big><b>"content"</b></big><br><br>
+At first the loader will try to find a line with:<br>
+<b>export default (class|function) MySuperClassName</b><br><br>
+Then try with:<br>
+<b>export default connect(...)(MySuperClassName)</b><br><br>
+Then try with:<br>
+<b>class MySuperClassName</b><br><br>
+And at last it will get the first line with:<br>
+<b>function MySuperClassName</b><br><br>
+so "MySuperClassName" will be parsed to "my" + delimiter + "super" + delimiter + "class" + delimiter + "name".<br><br>
+For CSS files the loader will search for JS index file in the same directory<br>
+and then get local prefix from the file, so JS and CSS will be syncronized.<br>
+You should put your JS loaders first before CSS loaders, because CSS parser will need cached JS prefixes
 
 ```javascript
 export default class MySuperButton extends React.Component {
@@ -261,26 +260,22 @@ export default class MySuperButton extends React.Component {
 This variant only works for js files, so in your css files you still need to define local prefixes with special directives.  
 More about js/css directives see below.
 
+  
+2.prefixAutoResolving: <big><b>"file"</b></big><br>
+  The loader will try to form local prefixes from js/css file names:<br>
+  "SuperItem.js" or "super-item.js" or "super_item.js"
+  to prefix "super" + delimiter + "item"<br>
+  so you'll have to syncronize JS and CSS file names
 
-  </li>
+<br>
 
-  <li>
-    prefixAutoResolving: <big><b>"file"</b></big><br>
-    The loader will try to form local prefixes from js/css file names:<br>
-    "SuperItem.js" or "super-item.js" or "super_item.js"
-    to prefix "super" + delimiter + "item"<br>
-    so you'll have to syncronize JS and CSS file names
-  </li>
-    
 
-  <li>
-    prefixAutoResolving: <big><b>"folder"</b></big><br>
-    The loader will try to form local prefixes from js/css folder names:<br>
-    "SuperItem/index.js" or "super-item/some.js" or "super_item/any.js"
-    to prefix "super" + delimiter + "item"<br>
-    so JS and CSS will be syncronized as they are both located in the same directory (aren't they?)
-  </li>
-</ol>
+3.prefixAutoResolving: <big><b>"folder"</b></big><br>
+  The loader will try to form local prefixes from js/css folder names:<br>
+  "SuperItem/index.js" or "super-item/some.js" or "super_item/any.js"
+  to prefix "super" + delimiter + "item"<br>
+  so JS and CSS will be syncronized as they are both located in the same directory (aren't they?)
+
 
 ### obfuscation
 
