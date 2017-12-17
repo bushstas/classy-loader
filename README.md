@@ -1517,7 +1517,7 @@ So add number 2 (3) if an image is from the second (third) source.
 Shortcuts are named as image file extentions (png, gif, jpeg, jpg).  
 Second parts are image file names.  
   
-So you will have hese styles:
+So you will have these styles:
 
 ```scss
 .item {
