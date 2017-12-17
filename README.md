@@ -214,18 +214,23 @@ Works only if **"autoPrefixMode"** is set to true.
 By default, it has value false.  
 There are three variants:  
 
-1. prefixAutoResolving: <big><b>"content"</b></big><br><br>
-At first the loader will try to find a line with:<br>
-<b>export default (class|function) MySuperClassName</b><br><br>
-Then try with:<br>
-<b>export default connect(...)(MySuperClassName)</b><br><br>
-Then try with:<br>
-<b>class MySuperClassName</b><br><br>
-And at last it will get the first line with:<br>
-<b>function MySuperClassName</b><br><br>
-so "MySuperClassName" will be parsed to "my" + delimiter + "super" + delimiter + "class" + delimiter + "name".<br><br>
-For CSS files the loader will search for JS index file in the same directory<br>
-and then get local prefix from the file, so JS and CSS will be syncronized.<br>
+##### `prefixAutoResolving: "content"`
+At first the loader will try to find a line with:  
+**export default (class|function) MySuperClassName**    
+  
+Then try with:  
+export default connect(...)(MySuperClassName)**    
+  
+Then try with:  
+**class MySuperClassName**    
+  
+And at last it will get the first line with:  
+**function MySuperClassName**    
+  
+so "MySuperClassName" will be parsed to "my" + delimiter + "super" + delimiter + "class" + delimiter + "name".  
+
+For CSS files the loader will search for JS index file in the same directory  
+and then get local prefix from the file, so JS and CSS will be syncronized.  
 You should put your JS loaders first before CSS loaders, because CSS parser will need cached JS prefixes
 
 ```javascript
@@ -261,20 +266,20 @@ This variant only works for js files, so in your css files you still need to def
 More about js/css directives see below.
 
   
-2. prefixAutoResolving: <big><b>"file"</b></big><br>
-  The loader will try to form local prefixes from js/css file names:<br>
-  "SuperItem.js" or "super-item.js" or "super_item.js"
-  to prefix "super" + delimiter + "item"<br>
-  so you'll have to syncronize JS and CSS file names
+##### `prefixAutoResolving: "file"`
+The loader will try to form local prefixes from js/css file names:  
+"SuperItem.js" or "super-item.js" or "super_item.js"
+to prefix "super" + delimiter + "item"  
+so you'll have to syncronize JS and CSS file names
 
-<br>
+  
 
 
-3. prefixAutoResolving: <big><b>"folder"</b></big><br>
-  The loader will try to form local prefixes from js/css folder names:<br>
-  "SuperItem/index.js" or "super-item/some.js" or "super_item/any.js"
-  to prefix "super" + delimiter + "item"<br>
-  so JS and CSS will be syncronized as they are both located in the same directory (aren't they?)
+##### `prefixAutoResolving: "folder"`
+The loader will try to form local prefixes from js/css folder names:  
+"SuperItem/index.js" or "super-item/some.js" or "super_item/any.js"
+to prefix "super" + delimiter + "item"  
+so JS and CSS will be syncronized as they are both located in the same directory (aren't they?)
 
 
 ### obfuscation
@@ -509,7 +514,7 @@ will give the same result
 <ul>
   <li>
     <h3>with prefix 'some-prefix';</h3>
-    Creates a local version of the global prefix that overrides defined in config.<br>
+    Creates a local version of the global prefix that overrides defined in config.  
     Two points still give common global prefix.
   </li>
 </ul>
@@ -589,8 +594,8 @@ will give the same result
 <ul>
   <li>
     <h3>with addedPrefix 'some-additional-prefix';</h3>
-    Sets an additional prefix for local use.<br>
-    This directive do the same thing like param <b>"prefixAutoResolving"</b> so it will cancel auto detecting.
+    Sets an additional prefix for local use.  
+    This directive do the same thing like param **"prefixAutoResolving"** so it will cancel auto detecting.
   </li>
 </ul>
 
