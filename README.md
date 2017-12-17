@@ -214,7 +214,7 @@ Works only if **"autoPrefixMode"** is set to true.
 By default, it has value false.  
 There are three variants:  
 
-1.prefixAutoResolving: <big><b>"content"</b></big><br><br>
+1. prefixAutoResolving: <big><b>"content"</b></big><br><br>
 At first the loader will try to find a line with:<br>
 <b>export default (class|function) MySuperClassName</b><br><br>
 Then try with:<br>
@@ -261,7 +261,7 @@ This variant only works for js files, so in your css files you still need to def
 More about js/css directives see below.
 
   
-2.prefixAutoResolving: <big><b>"file"</b></big><br>
+2. prefixAutoResolving: <big><b>"file"</b></big><br>
   The loader will try to form local prefixes from js/css file names:<br>
   "SuperItem.js" or "super-item.js" or "super_item.js"
   to prefix "super" + delimiter + "item"<br>
@@ -270,7 +270,7 @@ More about js/css directives see below.
 <br>
 
 
-3.prefixAutoResolving: <big><b>"folder"</b></big><br>
+3. prefixAutoResolving: <big><b>"folder"</b></big><br>
   The loader will try to form local prefixes from js/css folder names:<br>
   "SuperItem/index.js" or "super-item/some.js" or "super_item/any.js"
   to prefix "super" + delimiter + "item"<br>
