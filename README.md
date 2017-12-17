@@ -1022,7 +1022,6 @@ let className = {
   ...
 }[color];
 ```
-- - -
 Another way to make a roadmap with different class name patterns.
 ```javascript
 let className = $classy(colorValue, {
