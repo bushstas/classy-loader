@@ -13,6 +13,9 @@ It has a very flexible organization and perfectly helps to avoid css class name 
 npm install --save classy-loader
 ```
 
+### An example to play
+[Link to Github repository](https://github.com/bushstas/classy-loader-example.git)
+
 ## Adding to Webpack config
 
 ### At first you need to set required config.
