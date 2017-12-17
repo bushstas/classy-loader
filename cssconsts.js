@@ -40,7 +40,7 @@ const h = (value) => {
 }
 
 const s = (value, param) => {
-	let p = value.split('-');
+	let p = value.replace(/^-/, '').split('-');
 	let v = [];
 	if (p[2]) {
 		v.push(a(p[2]));
@@ -52,13 +52,13 @@ const s = (value, param) => {
 	} else {
 		v.push(0);
 	}
-	if (p[0]) {
-		v.push(a(p[0]));
+	if (p[1]) {
+		v.push(a(p[1]));
 	} else {
 		v.push(0);
 	}
-	if (p[1]) {
-		v.push('#' + p[1]);
+	if (p[0]) {
+		v.push('#' + p[0]);
 	}
 	return g(param, v.join(' '));
 }
