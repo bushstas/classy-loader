@@ -215,16 +215,19 @@ By default, it has value false.<br>
 There are three variants:<br>
 <ol>
   <li>
-    prefixAutoResolving: <big>**"content"**</big><br><br>
+    prefixAutoResolving: <big><b>"content"</b></big><br><br>
     At first the loader will try to find a line with:<br>
-    **export default (class|function) MySuperClassName**<br><br>
+    <b>export default (class|function) MySuperClassName</b><br><br>
     Then try with:<br>
-    **export default connect(...)(MySuperClassName)**<br><br>
+    <b>export default connect(...)(MySuperClassName)</b><br><br>
     Then try with:<br>
-    **class MySuperClassName**<br><br>
+    <b>class MySuperClassName</b><br><br>
     And at last it will get the first line with:<br>
-    **function MySuperClassName**<br><br>
-    so "MySuperClassName" will be parsed to "my" + delimiter + "super" + delimiter + "class" + delimiter + "name".  
+    <b>function MySuperClassName</b><br><br>
+    so "MySuperClassName" will be parsed to "my" + delimiter + "super" + delimiter + "class" + delimiter + "name".<br><br>
+    For CSS files the loader will search for JS index file in the same directory<br> and then get local prefix from the file,
+    so JS and CSS will be syncronized.<br>
+    You should put your JS loaders first before CSS loaders, because CSS parser will need cached JS prefixes
 
 ```javascript
 export default class MySuperButton extends React.Component {
@@ -262,17 +265,20 @@ More about js/css directives see below.
   </li>
 
   <li>
-    prefixAutoResolving: <big>**"file"**</big><br>
+    prefixAutoResolving: <big><b>"file"</b></big><br>
     The loader will try to form local prefixes from js/css file names:<br>
     "SuperItem.js" or "super-item.js" or "super_item.js"
-    to prefix "super" + delimiter + "item"
+    to prefix "super" + delimiter + "item"<br>
+    so you'll have to syncronize JS and CSS file names
   </li>
+  <br>
 
   <li>
-    prefixAutoResolving: <big>**"folder"**</big><br>
+    prefixAutoResolving: <big><b>"folder"</b></big><br>
     The loader will try to form local prefixes from js/css folder names:<br>
     "SuperItem/index.js" or "super-item/some.js" or "super_item/any.js"
-    to prefix "super" + delimiter + "item"
+    to prefix "super" + delimiter + "item"<br>
+    so JS and CSS will be syncronized as they are both located in the same directory (aren't they?)
   </li>
 </ol>
 
@@ -588,7 +594,7 @@ will give the same result
   <li>
     <h3>with addedPrefix 'some-additional-prefix';</h3>
     Sets an additional prefix for local use.<br>
-    This directive do the same thing like param **"prefixAutoResolving"** so it will cancel auto detecting.
+    This directive do the same thing like param <b>"prefixAutoResolving"</b> so it will cancel auto detecting.
   </li>
 </ul>
 
@@ -1195,6 +1201,8 @@ can be also with spaces, should end with a semicolon or a new line
 ```
 ### Full list of shorcuts
 
+**rubb** = left: 0; right: 0; top: 0; bottom: 0;<br>
+
 **l** = left: 0;<br>
 **l10** = left: 10px;<br>
 **l-10** = left: -10px;<br>
@@ -1229,6 +1237,7 @@ can be also with spaces, should end with a semicolon or a new line
 **h150** = height: 150px;<br>
 **h20p** = height: 20%;<br>
 
+**wh** = width: 100%; height: 100%;<br>
 **wh20** = width: 20px; height: 20px;<br>
 **wh20p** = width: 20%; height: 20%;<br>
 
