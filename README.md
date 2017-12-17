@@ -1292,11 +1292,11 @@ can be also with spaces, should end with a semicolon or a new line
 **t50p** = top: 50%;  
 **t-50p** = top: -50%;  
 
-**b** = botton: 0;  
-**b10** = botton: 10px;  
-**b-10** = botton: -10px;  
-**b50p** = botton: 50%;  
-**b-50p** = botton: -50%;  
+**b** = bottom: 0;  
+**b10** = bottom: 10px;  
+**b-10** = bottom: -10px;  
+**b50p** = bottom: 50%;  
+**b-50p** = bottom: -50%;  
 
 **z10** = z-index: 10;  
 
