@@ -262,7 +262,7 @@ export default class MySuperButton extends React.Component {
 }
 ```
 Also you can define JS/CSS local prefixes with special directives.  
-More about js/css directives see below.
+More about JS/CSS directives see below.
 
   
 #### `prefixAutoResolving: "file"`
