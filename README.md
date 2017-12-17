@@ -1488,9 +1488,9 @@ can be also with spaces, should end with a semicolon or a new line
 **nowr** = white-space: nowrap;  
 **hid** = visibility: hidden;  
 
-**bgcen** = background-position: 50% 50%;  
-**bgpos-20-20** = background-position: 20px 20px;  
-**bgpos-50p-20p** = background-position: 20% 20%;  
-**bgpos-c-b** = background-position: center bottom;  
-**bgpos-r-t** = background-position: right top;  
+**bpcen** = background-position: 50% 50%;  
+**bp-20-20** = background-position: 20px 20px;  
+**bp-50p-20p** = background-position: 20% 20%;  
+**bp-c-b** = background-position: center bottom;  
+**bp-r-t** = background-position: right top;  
   

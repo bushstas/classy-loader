@@ -110,10 +110,31 @@ const e = (value) => {
 }
 
 const n = (value) => {
-	let p = value.replace(/^-/, '').split('-');
-	p[0] = p[0] || '0';
-	p[1] = p[1] || '0';
-	return g('background-position', p[0] + ' ' + p[1]);
+	let p = value.replace(/^-/, '').split('-'),
+		p1 = p[0] || '0',
+		p2 = p[1] || '0';
+
+	return g('background-position', m(p1) + ' ' + m(p2));
+}
+
+const m = (value) => {
+	value = value.trim();
+	switch (value) {
+		case 'c':
+			return 'center';
+		case 'l':
+			return 'left';
+		case 'r':
+			return 'right';
+		case 't':
+			return 'top';
+		case 'b':
+			return 'bottom';
+	}
+	if (value.match(/^-*[\d]+p*$/)) {
+		return a(value);
+	}
+	return '0';
 }
 
 const data = {
@@ -253,8 +274,8 @@ const data = {
 	nowr: g('white-space', 'nowrap'),
 	hid: g('visibility', 'hidden'),
 
-	bgcen: g('background-position', '50% 50%'),
-	bgpos: n
+	bpcen: g('background-position', '50% 50%'),
+	bp: n
 }
 
 const map = {
