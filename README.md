@@ -1487,4 +1487,10 @@ can be also with spaces, should end with a semicolon or a new line
 **ell** = text-overflow: ellipsis; overflow: hidden; white-space: nowrap;  
 **nowr** = white-space: nowrap;  
 **hid** = visibility: hidden;  
+
+**bgcen** = background-position: 50% 50%;  
+**bgpos-20-20** = background-position: 20px 20px;  
+**bgpos-50p-20p** = background-position: 20% 20%;  
+**bgpos-c-b** = background-position: center bottom;  
+**bgpos-r-t** = background-position: right top;  
   
