@@ -109,6 +109,13 @@ const e = (value) => {
 	return g('transition', v.join(', '));
 }
 
+const n = (value) => {
+	let p = value.replace(/^-/, '').split('-');
+	p[0] = p[0] || '0';
+	p[1] = p[1] || '0';
+	return g('background-position', p[0] + ' ' + p[1]);
+}
+
 const data = {
 	lt: g('text-align', 'left'),
 	rt: g('text-align', 'right'),
@@ -244,7 +251,10 @@ const data = {
 	rot: r,
 	ell: g('text-overflow', 'ellipsis', 'overflow', 'hidden', 'white-space', 'nowrap'),
 	nowr: g('white-space', 'nowrap'),
-	hid: g('visibility', 'hidden')
+	hid: g('visibility', 'hidden'),
+
+	bgcen: g('background-position', '50% 50%'),
+	bgpos: n
 }
 
 const map = {
