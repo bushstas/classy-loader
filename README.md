@@ -215,19 +215,16 @@ By default, it has value false.<br>
 There are three variants:<br>
 <ol>
   <li>
-    prefixAutoResolving: <big><b>"content"</b></big><br><br>
+    prefixAutoResolving: <big>**"content"**</big><br><br>
     At first the loader will try to find a line with:<br>
-    <b>export default (class|function) MySuperClassName</b><br><br>
+    **export default (class|function) MySuperClassName**<br><br>
     Then try with:<br>
-    <b>export default connect(...)(MySuperClassName)</b><br><br>
+    **export default connect(...)(MySuperClassName)**<br><br>
     Then try with:<br>
-    <b>class MySuperClassName</b><br><br>
+    **class MySuperClassName**<br><br>
     And at last it will get the first line with:<br>
-    <b>function MySuperClassName</b><br><br>
-    so "MySuperClassName" will be parsed to "my" + delimiter + "super" + delimiter + "class" + delimiter + "name".<br><br>
-    For CSS files the loader will search for JS index file (js, jsx, ts) in the same directory<br> and then get local prefix from the file,
-    so JS and CSS will be syncronized.<br>
-    You should put your JS loaders first before CSS loaders, because CSS parser will need cached JS prefixes
+    **function MySuperClassName**<br><br>
+    so "MySuperClassName" will be parsed to "my" + delimiter + "super" + delimiter + "class" + delimiter + "name".  
 
 ```javascript
 export default class MySuperButton extends React.Component {
@@ -265,20 +262,17 @@ More about js/css directives see below.
   </li>
 
   <li>
-    prefixAutoResolving: <big><b>"file"</b></big><br>
+    prefixAutoResolving: <big>**"file"**</big><br>
     The loader will try to form local prefixes from js/css file names:<br>
     "SuperItem.js" or "super-item.js" or "super_item.js"
-    to prefix "super" + delimiter + "item"<br>
-    so you'll have to syncronize JS and CSS file names
+    to prefix "super" + delimiter + "item"
   </li>
-  <br>
 
   <li>
-    prefixAutoResolving: <big><b>"folder"</b></big><br>
+    prefixAutoResolving: <big>**"folder"**</big><br>
     The loader will try to form local prefixes from js/css folder names:<br>
     "SuperItem/index.js" or "super-item/some.js" or "super_item/any.js"
-    to prefix "super" + delimiter + "item"<br>
-    so JS and CSS will be syncronized as they are both located in the same directory (aren't they?)
+    to prefix "super" + delimiter + "item"
   </li>
 </ol>
 
@@ -594,7 +588,7 @@ will give the same result
   <li>
     <h3>with addedPrefix 'some-additional-prefix';</h3>
     Sets an additional prefix for local use.<br>
-    This directive do the same thing like param <b>"prefixAutoResolving"</b> so it will cancel auto detecting.
+    This directive do the same thing like param **"prefixAutoResolving"** so it will cancel auto detecting.
   </li>
 </ul>
 

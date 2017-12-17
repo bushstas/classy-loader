@@ -153,6 +153,7 @@ const data = {
 	z: value => g('z-index', value),
 	_wh: value => g('width', a(value), 'height', a(value)),	
 
+	wh: g('width', '100%', 'height', '100%'),
 	w: g('width', '100%'),
 	h: g('height', '100%'),
 	l: g('left', 0),
@@ -167,6 +168,7 @@ const data = {
 	_t: value => g('top', a(value)),
 	_b: value => g('bottom', a(value)),
 	_o: value => g('opacity', '0.' + value),
+	rubb: g('left', 0, 'right', 0, 'top', 0, 'bottom', 0),
 	
 	_bsp: value => g('border-spacing', a(value)),
 
