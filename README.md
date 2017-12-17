@@ -1077,7 +1077,9 @@ render() {
     </div>
   )
 }
-
+```
+will become
+```javascript
 render() {
   let active = true;
   return (
