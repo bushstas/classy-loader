@@ -218,7 +218,7 @@ At first the loader will try to find a line with:
 **export default (class|function) MySuperClassName**    
   
 Then try with:  
-export default connect(...)(MySuperClassName)**    
+**export default connect(...)(MySuperClassName)**  
   
 Then try with:  
 **class MySuperClassName**    
