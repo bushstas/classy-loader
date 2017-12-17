@@ -1420,6 +1420,8 @@ can be also with spaces, should end with a semicolon or a new line
 
 **lh** = line-height: 0;  
 **lh20** = line-height: 20px;  
+**ls** = letter-spacing: 0;  
+**ls2** = letter-spacing: 2px;  
 **fs** = font-size: 0;  
 **fs15** = font-size: 15px;  
 **ff-name** = font-family: name;    

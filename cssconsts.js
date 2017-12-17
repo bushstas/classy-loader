@@ -224,8 +224,10 @@ const data = {
 	
 	lh: g('line-height', 0),
 	fs: g('font-size', 0),
+	ls: g('letter-spacing', 0),
 	_lh: value => g('line-height', a(value)),
 	_fs: value => g('font-size', a(value)),
+	_ls: value => g('letter-spacing', a(value)),
 
 	_cur: h,
 
