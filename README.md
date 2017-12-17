@@ -1165,12 +1165,6 @@ render() {
     <div class="$?active">
       ...
     </div>
-
-    // or
-
-    <div class="?$active">
-      ...
-    </div>
   )
 }
 ```
