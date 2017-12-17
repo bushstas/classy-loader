@@ -1495,3 +1495,24 @@ can be also with spaces, should end with a semicolon or a new line
 **bp-r-t** = background-position: right top;  
 **bp-l-10** = background-position: left 10px;  
   
+### Background image style shortcuts
+
+You need to define source directories of images with these directives  
+Defined few sources if you need just duplicate lines with different paths to folders (not files)
+
+```scss
+.with.image.source '../../assets/images/';
+.with.image.source './bg-images';
+.with.image.source './images/gifs';
+```
+And the use code like this:
+
+```scss
+.item {
+  var .png-arrow.jpg-bg.jpeg-line.png2-some-image;
+  var .gif3-preloader;
+}
+```
+So add number 2 (3) if an image is from the second (third) source.  
+Shortcuts are named as image file extentions (png, gif, jpeg, jpg).
+Second parts are image file names.
