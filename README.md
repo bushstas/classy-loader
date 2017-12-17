@@ -1515,4 +1515,16 @@ And then use code like this:
 ```
 So add number 2 (3) if an image is from the second (third) source.  
 Shortcuts are named as image file extentions (png, gif, jpeg, jpg).  
-Second parts are image file names.
+Second parts are image file names.  
+  
+So you will have hese styles:
+
+```scss
+.item {
+  background-image: url(../../assets/images/arrow.png);
+  background-image: url(../../assets/images/bg.jpg);
+  background-image: url(../../assets/images/line.jpeg);
+  background-image: url(./bg-images/some-image.png);
+  background-image: url(./images/gifs/preloader.gif;
+}
+```
