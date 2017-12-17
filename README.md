@@ -1484,4 +1484,6 @@ can be also with spaces, should end with a semicolon or a new line
 **tra-c-3-bc-3-o-3** = transition: color 0.3s, background-color 0.3s, opacity 0.3s;  
 **rot20** = transform: rotate(20deg);  
 **rot-45** = transform: rotate(-45deg);  
+**ell** = text-overflow: ellipsis; overflow: hidden; white-space: nowrap;  
+**nowr** = white-space: nowrap;  
   
