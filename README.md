@@ -69,8 +69,8 @@ So it should be added after babel and standart css loaders to be processed first
 
 ### attributeName
 
-An attribute name of DOM elements, that will be parsed by loader.<br>
-It can be whatever word you like and will be changed to className attribute.<br>
+An attribute name of DOM elements, that will be parsed by loader.  
+It can be whatever word you like and will be changed to className attribute.  
 By default, it has value "class".
 
 ```javascript
@@ -94,7 +94,7 @@ render() {
   )
 }
 ```
-So "class" and "whateverName" are our attributeNames.<br>
+So "class" and "whateverName" are our attributeNames.  
 And after processing we'll get parsed value:
 
 ```javascript
@@ -106,14 +106,14 @@ render() {
   )
 }
 ```
-So **"self"** is a keyword that means your global or local prefix.<br>
+So **"self"** is a keyword that means your global or local prefix.  
 In this case we don't have a local prefix, so it will be our globalPrefix from the config we set up above.
 
 ### extraAttributeName
 
-An attribute name of React elements, that will be parsed by loader.<br>
-This also can be used like variable names or object keys.<br>
-And be whatever word you like but not will be changed.<br>
+An attribute name of React elements, that will be parsed by loader.  
+This also can be used like variable names or object keys.  
+And be whatever word you like but not will be changed.  
 By default, it has value "classes".
 
 ```javascript
@@ -152,8 +152,8 @@ let object = {
 ```
 ### globalPrefix
 
-A prefix that will be added to your element class names.<br>
-Special syntax will tell the loader whether add prefixes or not.<br>
+A prefix that will be added to your element class names.  
+Special syntax will tell the loader whether add prefixes or not.  
 By default, it has an empty value, so it means no prefix will be added if a local prefix not specified.
 
 ```javascript
@@ -177,12 +177,12 @@ render() {
   )
 }
 ```
-The point means class name should have a prefix.<br>
+The point means class name should have a prefix.  
 More about parser syntax is written below.
 
 ### delimiter
 
-A symbol or word that class names and prefixes will be joined with.<br>
+A symbol or word that class names and prefixes will be joined with.  
 By default, it has value "-".
 
 ```javascript
@@ -209,24 +209,25 @@ render() {
 
 ### prefixAutoResolving
 
-If this is not false the loader will try to resolve the local prefix by itself.<br>
-Works only if **"autoPrefixMode"** is set to true.<br>
-By default, it has value false.<br>
-There are three variants:<br>
+If this is not false the loader will try to resolve the local prefix by itself.  
+Works only if **"autoPrefixMode"** is set to true.  
+By default, it has value false.  
+There are three variants:  
 <ol>
   <li>
-    prefixAutoResolving: <big><b>"content"</b></big><br><br>
-    At first the loader will try to find a line with:<br>
-    <b>export default (class|function) MySuperClassName</b><br><br>
-    Then try with:<br>
-    <b>export default connect(...)(MySuperClassName)</b><br><br>
-    Then try with:<br>
-    <b>class MySuperClassName</b><br><br>
-    And at last it will get the first line with:<br>
-    <b>function MySuperClassName</b><br><br>
-    so "MySuperClassName" will be parsed to "my" + delimiter + "super" + delimiter + "class" + delimiter + "name".<br><br>
-    For CSS files the loader will search for JS index file in the same directory<br> and then get local prefix from the file,
-    so JS and CSS will be syncronized.<br>
+    prefixAutoResolving: <big><b>"content"</b></big>    
+    At first the loader will try to find a line with:  
+    <b>export default (class|function) MySuperClassName</b>    
+    Then try with:  
+    <b>export default connect(...)(MySuperClassName)</b>    
+    Then try with:  
+    <b>class MySuperClassName</b>    
+    And at last it will get the first line with:  
+    <b>function MySuperClassName</b>    
+    so "MySuperClassName" will be parsed to "my" + delimiter + "super" + delimiter + "class" + delimiter + "name".    
+    For CSS files the loader will search for JS index file in the same directory  
+    and then get local prefix from the file,
+    so JS and CSS will be syncronized.  
     You should put your JS loaders first before CSS loaders, because CSS parser will need cached JS prefixes
 
 ```javascript
@@ -258,36 +259,36 @@ export default class MySuperButton extends React.Component {
   }
 }
 ```
-This variant only works for js files, so in your css files you still need to define local prefixes with special directives.<br>
+This variant only works for js files, so in your css files you still need to define local prefixes with special directives.  
 More about js/css directives see below.
 
 
   </li>
 
   <li>
-    prefixAutoResolving: <big><b>"file"</b></big><br>
-    The loader will try to form local prefixes from js/css file names:<br>
+    prefixAutoResolving: <big><b>"file"</b></big>  
+    The loader will try to form local prefixes from js/css file names:  
     "SuperItem.js" or "super-item.js" or "super_item.js"
-    to prefix "super" + delimiter + "item"<br>
+    to prefix "super" + delimiter + "item"  
     so you'll have to syncronize JS and CSS file names
   </li>
-  <br>
+    
 
   <li>
-    prefixAutoResolving: <big><b>"folder"</b></big><br>
-    The loader will try to form local prefixes from js/css folder names:<br>
+    prefixAutoResolving: <big><b>"folder"</b></big>  
+    The loader will try to form local prefixes from js/css folder names:  
     "SuperItem/index.js" or "super-item/some.js" or "super_item/any.js"
-    to prefix "super" + delimiter + "item"<br>
+    to prefix "super" + delimiter + "item"  
     so JS and CSS will be syncronized as they are both located in the same directory (aren't they?)
   </li>
 </ol>
 
 ### obfuscation
 
-If true the loader will obfuscate class names in both JS and CSS files.<br>
-Be careful, you should check that all class names in JS defined with classy **"attributeName"** and **extraAttributeName**<br>
-or special **$classy** syntax (see below).<br>
-By default, it has value false.<br>
+If true the loader will obfuscate class names in both JS and CSS files.  
+Be careful, you should check that all class names in JS defined with classy **"attributeName"** and **extraAttributeName**  
+or special **$classy** syntax (see below).  
+By default, it has value false.  
 
 ```javascript
 render() {
@@ -312,8 +313,8 @@ render() {
 
 ### obfuscatedLength
 
-Length of obfuscated class names.<br>
-By default, it has value "7".<br>
+Length of obfuscated class names.  
+By default, it has value "7".  
 So if you have **"obfuscatedLength"** equal 4
 
 ```javascript
@@ -328,9 +329,9 @@ render() {
 
 ### autoPrefixMode
 
-Loader will automatically add prefixes to your class names.<br>
-So you should use different format of class name query.<br>
-By default, it is false.<br><br>
+Loader will automatically add prefixes to your class names.  
+So you should use different format of class name query.  
+By default, it is false.    
 
 For example this is a query for non-automatic mode (prefixAutoResolving set to "content")
 
@@ -363,10 +364,10 @@ export default class Container extends React.Component {
 }
 ```
 
-Here the local prefix is "awesome-example-app-container" (global prefix plus the local prefix auto resolved from class name "Container").<br>
-So in this mode you need to add point(s) for prefixes: one for the local prefix and two points for global prefix.<br><br>
+Here the local prefix is "awesome-example-app-container" (global prefix plus the local prefix auto resolved from class name "Container").  
+So in this mode you need to add point(s) for prefixes: one for the local prefix and two points for global prefix.    
 
-And finally an example of a query for automatic mode (prefixAutoResolving set to "content").<br>
+And finally an example of a query for automatic mode (prefixAutoResolving set to "content").  
 In the end we'll get the same result.
 
 ```javascript
@@ -398,9 +399,9 @@ export default class Container extends React.Component {
 }
 ```
 
-In this mode you don't need to add a point for local prefix, one point for global one and two for class name without prefix.<br><br>
+In this mode you don't need to add a point for local prefix, one point for global one and two for class name without prefix.    
 
-So in css files this principle works the same (you need to add the same points or not to add):<br><br>
+So in css files this principle works the same (you need to add the same points or not to add):    
 None-automatic mode
 
 ```scss
@@ -514,7 +515,7 @@ will give the same result
 <ul>
   <li>
     <h3>with prefix 'some-prefix';</h3>
-    Creates a local version of the global prefix that overrides defined in config.<br>
+    Creates a local version of the global prefix that overrides defined in config.  
     Two points still give common global prefix.
   </li>
 </ul>
@@ -563,7 +564,8 @@ will give the same result
     }
   ```
 
-  the result when **"prefixAutoResolving"** set to false, so we don't have additional local prefix,<br>just overrided global
+  the result when **"prefixAutoResolving"** set to false, so we don't have additional local prefix,  
+  just overrided global
 
   ```javascript
     // ...imports
@@ -593,7 +595,7 @@ will give the same result
 <ul>
   <li>
     <h3>with addedPrefix 'some-additional-prefix';</h3>
-    Sets an additional prefix for local use.<br>
+    Sets an additional prefix for local use.  
     This directive do the same thing like param <b>"prefixAutoResolving"</b> so it will cancel auto detecting.
   </li>
 </ul>
@@ -677,7 +679,7 @@ CSS directives do absolutly the same and look pretty much like JS versions
     <h3>.with.auto.prefix;</h3>
   </li>
 </ul>
-<br>
+  
 
 ## String queries syntax
 
@@ -691,7 +693,7 @@ render() {
 }
 ```
 ### name
-Gives class name without prefixes in non-automatic mode.<br>
+Gives class name without prefixes in non-automatic mode.  
 Gives class name with a local prefix in automatic mode.
 ```javascript
 render() {
@@ -709,7 +711,7 @@ render() {
 }
 ```
 ### .name
-Gives class name with a local prefix in non-automatic mode.<br>
+Gives class name with a local prefix in non-automatic mode.  
 Gives class name with a global prefix in automatic mode.
 ```javascript
 render() {
@@ -727,7 +729,7 @@ render() {
 }
 ```
 ### ..name
-Gives class name with a global prefix in non-automatic mode.<br>
+Gives class name with a global prefix in non-automatic mode.  
 Gives class name without prefixes in automatic mode.
 ```javascript
 render() {
@@ -746,8 +748,8 @@ render() {
 ```
 
 ### $name
-Merges a class name or an array of class names from a variable.<br>
-The loader automatically adds import of required module for class name merging.<br>
+Merges a class name or an array of class names from a variable.  
+The loader automatically adds import of required module for class name merging.  
 The variable should already contain classes with prefixes or be already obfuscated.
 ```javascript
 render() {
@@ -758,9 +760,9 @@ render() {
   )
 }
 ```
-an example how to make it work:<br>
+an example how to make it work:  
 
-in a parent using **extraAttributeName: "classes"**<br><br>
+in a parent using **extraAttributeName: "classes"**    
 ```javascript
 render() {
   return (
@@ -819,7 +821,7 @@ return _react2.default.createElement(
 );
 ```
 ### $$name
-The same as **$name** but tells the loader that this variable is a valid string and not an array or undefined,<br>
+The same as **$name** but tells the loader that this variable is a valid string and not an array or undefined,  
 so don't need to use merge function
 ```javascript
 render() {
@@ -846,9 +848,9 @@ render() {
 ```
 
 ### prefix::name
-Adds needed addiotinal prefix to class name.<br>
-See the example with the Icon above.<br>
-Let's modify this a little bit.<br>
+Adds needed addiotinal prefix to class name.  
+See the example with the Icon above.  
+Let's modify this a little bit.  
 Added prefix is a local prefix in relation to the Icon.
 ```javascript
 render() {
@@ -883,7 +885,7 @@ so we will have this html
 ```
 
 ### .$name
-Dynamical class name, local prefix plus value of a given variable.<br>
+Dynamical class name, local prefix plus value of a given variable.  
 It's always local prefix regardless whether the mode automatic or not.
 ```javascript
 with addedPrefix 'tab';
@@ -916,7 +918,7 @@ export default function Tab({classes, children, isActive}) {
 ```
 
 ### ..$name
-Dynamical class name, global prefix plus value of a given variable.<br>
+Dynamical class name, global prefix plus value of a given variable.  
 It's always global prefix regardless whether the mode automatic or not.
 ```javascript
 with addedPrefix 'button';
@@ -946,7 +948,7 @@ export default class Button extends React.Component {
 }
 ```
 
-It's impossible to obfuscate dynamical class names so there are special fake **$classy** functions to make roadmaps for obfuscation.<br>
+It's impossible to obfuscate dynamical class names so there are special fake **$classy** functions to make roadmaps for obfuscation.  
 Here is the an example.
 ```javascript
 let className = $classy(colorValue, '..color', ['red', 'green', 'blue', 'yellow', 'orange' ...]);
@@ -1139,9 +1141,9 @@ render() {
 ## CSS syntax
 
 ### Non-automatic prefix mode
-One point for real class name without prefix.<br>
-Two points for class names with local prefix.<br>
-Three points for class names with global prefix.<br>
+One point for real class name without prefix.  
+Two points for class names with local prefix.  
+Three points for class names with global prefix.  
 **"Self"** is a keywords that means local prefix itself or global if local one not defined
 
 ```scss
@@ -1162,9 +1164,9 @@ Three points for class names with global prefix.<br>
 ```
 
 ### Automatic prefix mode
-One point for class names with local prefix.<br>
-Two points for class names with global prefix.<br>
-Three points for real class name without prefix.<br>
+One point for class names with local prefix.  
+Two points for class names with global prefix.  
+Three points for real class name without prefix.  
 
 ```scss
 .self {
@@ -1225,209 +1227,209 @@ can be also with spaces, should end with a semicolon or a new line
 ```
 ### Full list of shorcuts
 
-**rubb** = left: 0; right: 0; top: 0; bottom: 0;<br>
+**rubb** = left: 0; right: 0; top: 0; bottom: 0;  
 
-**l** = left: 0;<br>
-**l10** = left: 10px;<br>
-**l-10** = left: -10px;<br>
-**l50p** = left: 50%;<br>
-**l-50p** = left: -50%;<br>
+**l** = left: 0;  
+**l10** = left: 10px;  
+**l-10** = left: -10px;  
+**l50p** = left: 50%;  
+**l-50p** = left: -50%;  
 
-**r** = right: 0;<br>
-**r10** = right: 10px;<br>
-**r-10** = right: -10px;<br>
-**r50p** = right: 50%;<br>
-**r-50p** = right: -50%;<br>
+**r** = right: 0;  
+**r10** = right: 10px;  
+**r-10** = right: -10px;  
+**r50p** = right: 50%;  
+**r-50p** = right: -50%;  
 
-**t** = top: 0;<br>
-**t10** = top: 10px;<br>
-**t-10** = top: -10px;<br>
-**t50p** = top: 50%;<br>
-**t-50p** = top: -50%;<br>
+**t** = top: 0;  
+**t10** = top: 10px;  
+**t-10** = top: -10px;  
+**t50p** = top: 50%;  
+**t-50p** = top: -50%;  
 
-**b** = botton: 0;<br>
-**b10** = botton: 10px;<br>
-**b-10** = botton: -10px;<br>
-**b50p** = botton: 50%;<br>
-**b-50p** = botton: -50%;<br>
+**b** = botton: 0;  
+**b10** = botton: 10px;  
+**b-10** = botton: -10px;  
+**b50p** = botton: 50%;  
+**b-50p** = botton: -50%;  
 
-**z10** = z-index: 10;<br>
+**z10** = z-index: 10;  
 
-**w** = width: 100%;<br>
-**w100** = width: 100px;<br>
-**w50p** = width: 50%;<br>
+**w** = width: 100%;  
+**w100** = width: 100px;  
+**w50p** = width: 50%;  
 
-**h** = height: 100%;<br>
-**h150** = height: 150px;<br>
-**h20p** = height: 20%;<br>
+**h** = height: 100%;  
+**h150** = height: 150px;  
+**h20p** = height: 20%;  
 
-**wh** = width: 100%; height: 100%;<br>
-**wh20** = width: 20px; height: 20px;<br>
-**wh20p** = width: 20%; height: 20%;<br>
+**wh** = width: 100%; height: 100%;  
+**wh20** = width: 20px; height: 20px;  
+**wh20p** = width: 20%; height: 20%;  
 
-**mnw** = min-width: 0;<br>
-**mnw100** = min-width: 100px;<br>
-**mnh** = min-height: 0;<br>
-**mnh100** = min-height: 100px;<br>
-**mxw** = max-width: none;<br>
-**mxw100** = max-width: 100px;<br>
-**mxh** = max-height: none;<br>
-**mxh100** = max-height: 100px;<br>
+**mnw** = min-width: 0;  
+**mnw100** = min-width: 100px;  
+**mnh** = min-height: 0;  
+**mnh100** = min-height: 100px;  
+**mxw** = max-width: none;  
+**mxw100** = max-width: 100px;  
+**mxh** = max-height: none;  
+**mxh100** = max-height: 100px;  
 
-**auto** = margin: auto;<br>
-**m** = margin: 0;<br>
-**m5** = margin: 5px;<br>
-**m10-5** = margin: 10px 5px;<br>
-**m10-5-10-5** = margin: 10px 5px 10px 5px;<br>
+**auto** = margin: auto;  
+**m** = margin: 0;  
+**m5** = margin: 5px;  
+**m10-5** = margin: 10px 5px;  
+**m10-5-10-5** = margin: 10px 5px 10px 5px;  
 
-**ml** = margin-left: 0;<br>
-**ml5** = margin-left: 5px;<br>
-**ml-5** = margin-left: -5px;<br>
-**ml5p** = margin-left: 5%;<br>
-**ml-5p** = margin-left: -5%;<br>
+**ml** = margin-left: 0;  
+**ml5** = margin-left: 5px;  
+**ml-5** = margin-left: -5px;  
+**ml5p** = margin-left: 5%;  
+**ml-5p** = margin-left: -5%;  
 
-**mr** = margin-right: 0;<br>
-**mr5** = margin-right: 5px;<br>
-**mr-5** = margin-right: -5px;<br>
-**mr5p** = margin-right: 5%;<br>
-**mr-5p** = margin-right: -5%;<br>
+**mr** = margin-right: 0;  
+**mr5** = margin-right: 5px;  
+**mr-5** = margin-right: -5px;  
+**mr5p** = margin-right: 5%;  
+**mr-5p** = margin-right: -5%;  
 
-**mt** = margin-top: 0;<br>
-**mt5** = margin-top: 5px;<br>
-**mt-5** = margin-top: -5px;<br>
-**mt5p** = margin-top: 5%;<br>
-**mt-5p** = margin-top: -5%;<br>
+**mt** = margin-top: 0;  
+**mt5** = margin-top: 5px;  
+**mt-5** = margin-top: -5px;  
+**mt5p** = margin-top: 5%;  
+**mt-5p** = margin-top: -5%;  
 
-**mb** = margin-bottom: 0;<br>
-**mb5** = margin-bottom: 5px;<br>
-**mb-5** = margin-bottom: -5px;<br>
-**mb5p** = margin-bottom: 5%;<br>
-**mb-5p** = margin-bottom: -5%;<br>
+**mb** = margin-bottom: 0;  
+**mb5** = margin-bottom: 5px;  
+**mb-5** = margin-bottom: -5px;  
+**mb5p** = margin-bottom: 5%;  
+**mb-5p** = margin-bottom: -5%;  
 
-**p** = padding: 0;<br>
-**p5** = padding: 5px;<br>
-**p10-5** = padding: 10px 5px;<br>
-**p10-5-10-5** = padding: 10px 5px 10px 5px;<br>  
+**p** = padding: 0;  
+**p5** = padding: 5px;  
+**p10-5** = padding: 10px 5px;  
+**p10-5-10-5** = padding: 10px 5px 10px 5px;    
 
-**pl** = padding-left: 0;<br>
-**pl5** = padding-left: 5px;<br>
-**pl-5** = padding-left: -5px;<br>
-**pl5p** = padding-left: 5%;<br>
-**pl-5p** = padding-left: -5%;<br>
+**pl** = padding-left: 0;  
+**pl5** = padding-left: 5px;  
+**pl-5** = padding-left: -5px;  
+**pl5p** = padding-left: 5%;  
+**pl-5p** = padding-left: -5%;  
 
-**pr** = padding-right: 0;<br>
-**pr5** = padding-right: 5px;<br>
-**pr-5** = padding-right: -5px;<br>
-**pr5p** = padding-right: 5%;<br>
-**pr-5p** = padding-right: -5%;<br>
+**pr** = padding-right: 0;  
+**pr5** = padding-right: 5px;  
+**pr-5** = padding-right: -5px;  
+**pr5p** = padding-right: 5%;  
+**pr-5p** = padding-right: -5%;  
 
-**pt** = padding-top: 0;<br>
-**pt5** = padding-top: 5px;<br>
-**pt-5** = padding-top: -5px;<br>
-**pt5p** = padding-top: 5%;<br>
-**pt-5p** = padding-top: -5%;<br>
+**pt** = padding-top: 0;  
+**pt5** = padding-top: 5px;  
+**pt-5** = padding-top: -5px;  
+**pt5p** = padding-top: 5%;  
+**pt-5p** = padding-top: -5%;  
 
-**pb** = padding-bottom: 0;<br>
-**pb5** = padding-bottom: 5px;<br>
-**pb-5** = padding-bottom: -5px;<br>
-**pb5p** = padding-bottom: 5%;<br>
-**pb-5p** = padding-bottom: -5%;<br>
+**pb** = padding-bottom: 0;  
+**pb5** = padding-bottom: 5px;  
+**pb-5** = padding-bottom: -5px;  
+**pb5p** = padding-bottom: 5%;  
+**pb-5p** = padding-bottom: -5%;  
 
-**flex** = display: flex;<br>
-**flcen** = align-item: center; justify-content: center;<br>
-**bl** = display: block;<br>
-**inb** = display: inline-block;<br>
+**flex** = display: flex;  
+**flcen** = align-item: center; justify-content: center;  
+**bl** = display: block;  
+**inb** = display: inline-block;  
 
-**fix** = position: fixed;<br>
-**abs** = position: absolute;<br>
-**rel** = position: relative;<br>
-**box** = box-sizing: border-box;<br>
+**fix** = position: fixed;  
+**abs** = position: absolute;  
+**rel** = position: relative;  
+**box** = box-sizing: border-box;  
 
-**ova** = overflow: auto;<br>
-**ovh** = overflow: hidden;<br>
+**ova** = overflow: auto;  
+**ovh** = overflow: hidden;  
 
-**lt** = text-align: left;<br>
-**rt** = text-align: right;<br>
-**cen** = text-align: center;<br>
-**just** = text-align: justify;<br>
+**lt** = text-align: left;  
+**rt** = text-align: right;  
+**cen** = text-align: center;  
+**just** = text-align: justify;  
 
-**vtop** = vertical-align: top;<br>
-**vmid** = vertical-align: middle;<br>
-**vbot** = vertical-align: bottom;<br>
+**vtop** = vertical-align: top;  
+**vmid** = vertical-align: middle;  
+**vbot** = vertical-align: bottom;  
 
-**cur** = cursor: default;<br>
-**cur-name** = cursor: name;<br>
-**pntr** = cursor: pointer;<br>
-**cnt** = content: "";<br>
-**nor** = resize: none;<br>
+**cur** = cursor: default;  
+**cur-name** = cursor: name;  
+**pntr** = cursor: pointer;  
+**cnt** = content: "";  
+**nor** = resize: none;  
 
-**fl** = float: left;<br>
-**fr** = float: right;<br>
-**clr** = clear: both;<br>
+**fl** = float: left;  
+**fr** = float: right;  
+**clr** = clear: both;  
 
-**bold** = font-weight: bold;<br>
-**it** = font-style: italic;<br>
-**un** = text-decoration: underline;<br>
+**bold** = font-weight: bold;  
+**it** = font-style: italic;  
+**un** = text-decoration: underline;  
 
-**lh** = line-height: 0;<br>
-**lh20** = line-height: 20px;<br>
-**fs** = font-size: 0;<br>
-**fs15** = font-size: 15px;<br>
-**ff-name** = font-family: name;<br>  
+**lh** = line-height: 0;  
+**lh20** = line-height: 20px;  
+**fs** = font-size: 0;  
+**fs15** = font-size: 15px;  
+**ff-name** = font-family: name;    
 
-**o** = opacity: 0;<br>
-**o5** = opacity: 0.5;<br>
-**o10** = opacity: 1;<br>
+**o** = opacity: 0;  
+**o5** = opacity: 0.5;  
+**o10** = opacity: 1;  
 
-**ol** = outline: 0;<br>
-**ol-000** = outline: 1px solid #000;<br>
-**ol-EEE-2** = outline: 2px solid #EEE;<br>
-**ol-EEE-2-dashed** = outline: 2px dashed #EEE;<br>
+**ol** = outline: 0;  
+**ol-000** = outline: 1px solid #000;  
+**ol-EEE-2** = outline: 2px solid #EEE;  
+**ol-EEE-2-dashed** = outline: 2px dashed #EEE;  
 
-**bo** = border: 0;<br>
-**bo-000** = border: 1px solid #000;<br>
-**bo-EEE-2** = border: 2px solid #EEE;<br>
-**bo-EEE-2-dashed** = border: 2px dashed #EEE;<br>
+**bo** = border: 0;  
+**bo-000** = border: 1px solid #000;  
+**bo-EEE-2** = border: 2px solid #EEE;  
+**bo-EEE-2-dashed** = border: 2px dashed #EEE;  
 
-**bol** = border-left: 0;<br>
-**bol-000** = border-left: 1px solid #000;<br>
-**bol-EEE-2** = border-left: 2px solid #EEE;<br>
-**bol-EEE-2-dashed** = border-left: 2px dashed #EEE;<br>
+**bol** = border-left: 0;  
+**bol-000** = border-left: 1px solid #000;  
+**bol-EEE-2** = border-left: 2px solid #EEE;  
+**bol-EEE-2-dashed** = border-left: 2px dashed #EEE;  
 
-**bor** = border-right: 0;<br>
-**bor-000** = border-right: 1px solid #000;<br>
-**bor-EEE-2** = border-right: 2px solid #EEE;<br>
-**bor-EEE-2-dashed** = border-right: 2px dashed #EEE;<br>
+**bor** = border-right: 0;  
+**bor-000** = border-right: 1px solid #000;  
+**bor-EEE-2** = border-right: 2px solid #EEE;  
+**bor-EEE-2-dashed** = border-right: 2px dashed #EEE;  
 
-**bot** = border-top: 0;<br>
-**bot-000** = border-top: 1px solid #000;<br>
-**bot-EEE-2** = border-top: 2px solid #EEE;<br>
-**bot-EEE-2-dashed** = border-top: 2px dashed #EEE;<br>
+**bot** = border-top: 0;  
+**bot-000** = border-top: 1px solid #000;  
+**bot-EEE-2** = border-top: 2px solid #EEE;  
+**bot-EEE-2-dashed** = border-top: 2px dashed #EEE;  
 
-**bob** = border-bottom: 0;<br>
-**bob-000** = border-bottom: 1px solid #000;<br>
-**bob-EEE-2** = border-bottom: 2px solid #EEE;<br>
-**bob-EEE-2-dashed** = border-bottom: 2px dashed #EEE;<br>
+**bob** = border-bottom: 0;  
+**bob-000** = border-bottom: 1px solid #000;  
+**bob-EEE-2** = border-bottom: 2px solid #EEE;  
+**bob-EEE-2-dashed** = border-bottom: 2px dashed #EEE;  
 
-**br** = border-radius: 0;<br>
-**br5** = border-radius: 5px;<br>
-**br50p** = border-radius: 50%;<br>
-**br5-10-10-0** = border-radius: 5px 10px 10px 0;<br>
+**br** = border-radius: 0;  
+**br5** = border-radius: 5px;  
+**br50p** = border-radius: 50%;  
+**br5-10-10-0** = border-radius: 5px 10px 10px 0;  
 
-**bsp** = border-spacing: 0;<br>
+**bsp** = border-spacing: 0;  
 **bsp2** = border-spacing: 2px;
 
-**c-fff** = color: #fff;<br>
-**bc-fff** = background-color: #fff;<br>
-**boc-fff** = border-color: #fff;<br>
+**c-fff** = color: #fff;  
+**bc-fff** = background-color: #fff;  
+**boc-fff** = border-color: #fff;  
 
-**shad** = box-shadow: none;<br>
-**shad-000-10** = box-shadow: 0 0 10px #000;<br>
-**shad-000-10-1-1** = box-shadow: 1px 1px 10px #000;<br>
+**shad** = box-shadow: none;  
+**shad-000-10** = box-shadow: 0 0 10px #000;  
+**shad-000-10-1-1** = box-shadow: 1px 1px 10px #000;  
 
-**tshad** = text-shadow: none;<br>
-**tshad-000-2** = text-shadow: 0 0 2px #000;<br>
-**tshad-000-2-1-1** = text-shadow: 1px 1px 2px #000;<br>
+**tshad** = text-shadow: none;  
+**tshad-000-2** = text-shadow: 0 0 2px #000;  
+**tshad-000-2-1-1** = text-shadow: 1px 1px 2px #000;  
 
-**tra-c-3-bc-3-o-3** = transition: color 0.3s, background-color 0.3s, opacity 0.3s;<br>
-<br>
+**tra-c-3-bc-3-o-3** = transition: color 0.3s, background-color 0.3s, opacity 0.3s;  
+  
