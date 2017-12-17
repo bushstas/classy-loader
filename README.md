@@ -1497,8 +1497,8 @@ can be also with spaces, should end with a semicolon or a new line
   
 ### Background image style shortcuts
 
-You need to define source directories of images with these directives  
-Defined few sources if you need just duplicate lines with different paths to folders (not files)
+You need to define source directories of images with these directives.  
+Define few sources if you need just duplicate lines with different paths to folders (not files)
 
 ```scss
 .with.image.source '../../assets/images/';
