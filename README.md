@@ -956,7 +956,7 @@ className = $classy(number, '..', ['one', 'two']);
 className = $classy(quality, '.', ['good', 'bad']);
 className = $classy(name, '', ['John', 'Rick']);
 ```
-It produces this code:
+Will become:
 ```javascript
 let className = {
   red: 'awesome-example-app-color-red',
@@ -983,7 +983,7 @@ className = {
   Rick: 'Rick'
 }[name];
 ```
-And then an another result for the automatic mode.
+And then the automatic mode will give this result:
 ```javascript
 let className = {
   red: 'color-red',
