@@ -1059,7 +1059,6 @@ let className = classy("awesome-example-app-catalog-item", "item", "awesome-exam
 
 render() {
   let active = true;
-  let className = $classy('.thing');
   return (
     <div class="name $active?active">
       ...
