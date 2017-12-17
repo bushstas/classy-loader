@@ -217,10 +217,10 @@ There are three variants:
 At first the loader will try to find a line with:  
 **export default (class|function) MySuperClassName**    
   
-Then try with:  
+Then tries with:  
 **export default connect(...)(MySuperClassName)**  
   
-Then try with:  
+Then tries with:  
 **class MySuperClassName**    
   
 And at last it will get the first line with:  
