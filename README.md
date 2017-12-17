@@ -1414,11 +1414,6 @@ can be also with spaces, should end with a semicolon or a new line
 **it** = font-style: italic;  
 **un** = text-decoration: underline;  
 
-**norep** = background-repeat: no-repeat;  
-**repx** = background-repeat: repeat-x;  
-**repy** = background-repeat: repeat-y;  
-**cvr** = background-size: cover;  
-
 **lh** = line-height: 0;  
 **lh20** = line-height: 20px;  
 **ls** = letter-spacing: 0;  
@@ -1487,6 +1482,11 @@ can be also with spaces, should end with a semicolon or a new line
 **ell** = text-overflow: ellipsis; overflow: hidden; white-space: nowrap;  
 **nowr** = white-space: nowrap;  
 **hid** = visibility: hidden;  
+
+**norep** = background-repeat: no-repeat;  
+**repx** = background-repeat: repeat-x;  
+**repy** = background-repeat: repeat-y;  
+**cvr** = background-size: cover;  
 
 **bpcen** = background-position: 50% 50%;  
 **bp-20-20** = background-position: 20px 20px;  
