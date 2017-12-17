@@ -908,8 +908,6 @@ export default class Button extends React.Component {
 ```
 will be
 ```javascript
-import classy from 'classy-loader/classy';
-
 export default class Button extends React.Component {
   render() {
     let className = 'active';
