@@ -1270,7 +1270,8 @@ can be also with spaces, should end with a semicolon or a new line
 ### Full list of shorcuts
 
 <details>
-<summary>Click to expand</summary>
+<summary>Click to expand</summary>  
+
 **rubb** = left: 0; right: 0; top: 0; bottom: 0;  
 
 **l** = left: 0;  
