@@ -1172,7 +1172,7 @@ will be
 ```javascript
 render() {
   return (
-    <div className={classy(active ? "active" : "")}>
+    <div className={classy(active ? "active" : "", active ? "local-prefix-active" : "", active ? "global-prefix-active" : "")}>
       ...
     </div>
   )
