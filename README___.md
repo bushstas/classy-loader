@@ -167,7 +167,7 @@ render() {
 }
 ```
 
-will be
+станет 
 
 ```javascript
 render() {
