@@ -1493,4 +1493,5 @@ can be also with spaces, should end with a semicolon or a new line
 **bp-50p-20p** = background-position: 20% 20%;  
 **bp-c-b** = background-position: center bottom;  
 **bp-r-t** = background-position: right top;  
+**bp-l-10** = background-position: left 10px;  
   
