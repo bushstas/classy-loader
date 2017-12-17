@@ -1504,17 +1504,18 @@ Define few sources if you need. Just duplicate lines with different paths to fol
 .with.image.source '../../assets/images/';
 .with.image.source './bg-images';
 .with.image.source './images/gifs';
+.with.image.source '../svgs';
 ```
 And then use code like this:
 
 ```scss
 .item {
   var .png-arrow.jpg-bg.jpeg-line.png2-some-image;
-  var .gif3-preloader;
+  var .gif3-preloader.svg4-icon;
 }
 ```
 So add number 2 (3) if an image is from the second (third) source.  
-Shortcuts are named as image file extentions (png, gif, jpeg, jpg).  
+Shortcuts are named as image file extentions (PNG, GIF, JPG, JPEG, SVG).  
 Second parts are image file names.  
   
 So you will have these styles:
@@ -1526,5 +1527,6 @@ So you will have these styles:
   background-image: url(../../assets/images/line.jpeg);
   background-image: url(./bg-images/some-image.png);
   background-image: url(./images/gifs/preloader.gif;
+  background-image: url(../svgs/icon.svg;
 }
 ```
