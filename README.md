@@ -230,7 +230,7 @@ so "MySuperClassName" will be parsed to "my" + delimiter + "super" + delimiter +
 
 For CSS files the loader will search for JS index file in the same directory  
 and then get local prefix from the file, so JS and CSS will be syncronized.  
-You should put your JS loaders first before CSS loaders, because CSS parser will need cached JS prefixes
+You should put your JS loaders first before CSS loaders, because CSS parser will need cached JS prefixes.
 
 ```javascript
 export default class MySuperButton extends React.Component {
@@ -261,7 +261,7 @@ export default class MySuperButton extends React.Component {
   }
 }
 ```
-This variant only works for js files, so in your css files you still need to define local prefixes with special directives.  
+Also you can define JS/CSS local prefixes with special directives.  
 More about js/css directives see below.
 
   
