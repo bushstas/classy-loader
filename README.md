@@ -297,7 +297,7 @@ render() {
   )
 }
 ```
-to
+will become
 
 ```javascript
 render() {
