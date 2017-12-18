@@ -1443,6 +1443,7 @@ render() {
 **clr** = clear: both;  
 
 **bold** = font-weight: bold;  
+**norm** = font-weight: normal;  
 **it** = font-style: italic;  
 **un** = text-decoration: underline;  
 

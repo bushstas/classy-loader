@@ -162,6 +162,7 @@ const data = {
 	clr: g('clear', 'both'),
 	auto: g('margin', 'auto'),
 	bold: g('font-weight', 'bold'),
+	norm: g('font-weight', 'normal'),
 	it: g('font-style', 'italic'),
 	
 	norep: g('background-repeat', 'no-repeat'),	

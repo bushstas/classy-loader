@@ -1442,6 +1442,7 @@ can be also with spaces, should end with a semicolon or a new line
 **clr** = clear: both;  
 
 **bold** = font-weight: bold;  
+**norm** = font-weight: normal;  
 **it** = font-style: italic;  
 **un** = text-decoration: underline;  
 
