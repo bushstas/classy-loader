@@ -64,7 +64,7 @@ const s = (value, param) => {
 	if (p[0]) {
 		v.push('#' + p[0]);
 	}
-	return g(param, v.join(' '));
+	return g(param, (inset ? 'inset ' : '') + v.join(' '));
 }
 
 const d = (value, param) => {
