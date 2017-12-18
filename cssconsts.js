@@ -40,6 +40,10 @@ const h = (value) => {
 }
 
 const s = (value, param) => {
+	let inset;
+	if (inset = value.match(/^-in/)) {
+		value = value.replace(/^-in/, '');
+	}
 	let p = value.replace(/^-/, '').split('-');
 	let v = [];
 	if (p[2]) {
