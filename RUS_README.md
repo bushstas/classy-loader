@@ -1078,7 +1078,7 @@ render() {
     <div class="$active?$className:disabled">
       ...
     </div>
-    <div class="!$active?disabled $!active?inactive">
+    <div class="$!active?inactive">
       ...
     </div>
   )
@@ -1101,7 +1101,7 @@ render() {
      <div className={classy(active ? className : "disabled")}>
       ...
     </div>
-    <div className={classy(!active ? "disabled" : "", !active ? "inactive" : "")} >
+    <div className={classy(!active ? "inactive" : "")} >
       ...
     </div>
   )
