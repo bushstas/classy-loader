@@ -14,7 +14,7 @@ npm install --save classy-loader
 ```
 
 ### Пример поиграться
-[Link to Github repository](https://github.com/bushstas/classy-loader-example.git)
+[Ссылка на Github репозиторий](https://github.com/bushstas/classy-loader-example.git)
 
 ## Добавление в конфиг Вебпака
 
