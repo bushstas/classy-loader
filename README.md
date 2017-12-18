@@ -1428,7 +1428,7 @@ can be also with spaces, should end with a semicolon or a new line
 **vtop** = vertical-align: top;  
 **vmid** = vertical-align: middle;  
 **vbot** = vertical-align: bottom;  
-**col** = table-collapse: collapse;  
+**col** = border-collapse: collapse;  
 **lfix** = table-layout: fixed;  
 
 **cur** = cursor: default;  

@@ -139,7 +139,7 @@ const m = (value) => {
 
 const data = {
 	lt: g('text-align', 'left'),
-	col: g('table-collapse', 'collapse'),
+	col: g('border-collapse', 'collapse'),
 	lfix: g('table-layout', 'fixed'),
 	lt: g('text-align', 'left'),
 	rt: g('text-align', 'right'),
