@@ -1055,7 +1055,7 @@ import classy from 'classy-loader/classy';
 // ....
 let className = classy("awesome-example-app-catalog-item", "item", "awesome-example-app-some-item", classes);
 ```
-## Условные записи CSS классов
+## Условные (тернарные) записи CSS классов
 
 ### Для начала простые
 ```javascript
