@@ -1,9 +1,9 @@
 # classy-loader [![npm](https://img.shields.io/npm/v/classy-loader.svg?style=flat-square)](https://www.npmjs.com/package/classy-loader)
 
-Classy-loader is a powerful tool for React application to manage your CSS/JS DOM elements class names.  
-This loader connects JS and CSS class names so you can syncronize and obfuscate them.  
-It has a smart built-in mechanism to merge your class names within JS code by using string queries.  
-It has a very flexible organization and perfectly helps to avoid css class name conflicts within complex applications.
+Classy-loader эффективный инструмент для React приложений, чтобы управлять CSS/JS именами классов DOM элементов.  
+Он связывает JS и CSS имена классов, так что они будут синхронизированы, и можно будет их обфусцировать.  
+Загрузчик имеет свой встроенный механизм для "мерджинга" имен классов внутри атрибутов элементов в JS файлах.  
+Имеет очень гибкую организацию и отлично помогает избегать конфликтов в пространстве имён CSS классов, когда ваше приложение очень сложное.
 
 ## Установка
 
