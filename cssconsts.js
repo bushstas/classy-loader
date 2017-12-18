@@ -139,6 +139,9 @@ const m = (value) => {
 
 const data = {
 	lt: g('text-align', 'left'),
+	col: g('table-collapse', 'collapse'),
+	lfix: g('table-layout', 'fixed'),
+	lt: g('text-align', 'left'),
 	rt: g('text-align', 'right'),
 	cen: g('text-align', 'center'),
 	just: g('text-align', 'justify'),
