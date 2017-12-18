@@ -514,148 +514,148 @@ will give the same result
 ### JS directives
 
 <ul>
-  <li>
-    <h3>with prefix 'some-prefix';</h3>
-    Creates a local version of the global prefix that overrides defined in config.  
-    Two points still give common global prefix.
-  </li>
+<li>
+<h3>with prefix 'some-prefix';</h3>
+Creates a local version of the global prefix that overrides defined in config.  
+Two points still give common global prefix.
+</li>
 </ul>
 
-  ```javascript
-    // non-automatic mode
-    // prefixAutoResolving: "content"
-    // ...imports
+```javascript
+// non-automatic mode
+// prefixAutoResolving: "content"
+// ...imports
 
-    with prefix 'crazy-app';
-    
-    export default class Container extends React.Component {
-      render() {
-        return (
-          <div class=".self">
-            <div class=".title ..bigger">
-              ...
-            </div>
-            <div class=".content">
-              ...
-            </div>
-          </div>
-        )
-      }
-    }
-  ```
+with prefix 'crazy-app';
 
-    will be
+export default class Container extends React.Component {
+  render() {
+    return (
+      <div class=".self">
+        <div class=".title ..bigger">
+          ...
+        </div>
+        <div class=".content">
+          ...
+        </div>
+      </div>
+    )
+  }
+}
+```
 
-  ```javascript
-    // ...imports
-   
-    export default class Container extends React.Component {
-      render() {
-        return (
-          <div class="crazy-app-container">
-            <div class="crazy-app-container-title awesome-example-app-bigger">
-              ...
-            </div>
-            <div class="crazy-app-container-title">
-              ...
-            </div>
-          </div>
-        )
-      }
-    }
-  ```
+will be
 
-  the result when **"prefixAutoResolving"** set to false, so we don't have additional local prefix,  
-  just overrided global
+```javascript
+// ...imports
 
-  ```javascript
-    // ...imports
-   
-    export default class Container extends React.Component {
-      render() {
-        return (
-          <div class="crazy-app">
-            <div class="crazy-app-title awesome-example-app-bigger">
-              ...
-            </div>
-            <div class="crazy-app-title">
-              ...
-            </div>
-          </div>
-        )
-      }
-    }
-  ```
+export default class Container extends React.Component {
+  render() {
+    return (
+      <div class="crazy-app-container">
+        <div class="crazy-app-container-title awesome-example-app-bigger">
+          ...
+        </div>
+        <div class="crazy-app-container-title">
+          ...
+        </div>
+      </div>
+    )
+  }
+}
+```
+
+the result when **"prefixAutoResolving"** set to false, so we don't have additional local prefix,  
+just overrided global
+
+```javascript
+// ...imports
+
+export default class Container extends React.Component {
+  render() {
+    return (
+      <div class="crazy-app">
+        <div class="crazy-app-title awesome-example-app-bigger">
+          ...
+        </div>
+        <div class="crazy-app-title">
+          ...
+        </div>
+      </div>
+    )
+  }
+}
+```
 <ul>
-  <li>
-    <h3>with auto prefix 'some-prefix';</h3>
-    Evertrhing the same as in the case above plus gives automatic mode within a file.
-  </li>
-</ul>
-
-<ul>
-  <li>
-    <h3>with addedPrefix 'some-additional-prefix';</h3>
-    Sets an additional prefix for local use.  
-    This directive do the same thing like param **"prefixAutoResolving"** so it will cancel auto detecting.
-  </li>
-</ul>
-
-  ```javascript
-    // non-automatic mode
-    // ...imports
-
-    with addedPrefix 'dialog';
-    
-    export default class Dialog extends React.Component {
-      render() {
-        return (
-          <div class=".self">
-            <div class=".title ..bigger">
-              ...
-            </div>
-            <div class=".content">
-              ...
-            </div>
-          </div>
-        )
-      }
-    }
-  ```
-
-    will be
-
-  ```javascript
-    // ...imports
-   
-    export default class Dialog extends React.Component {
-      render() {
-        return (
-          <div class="awesome-example-app-dialog">
-            <div class="awesome-example-app-dialog-title awesome-example-app-bigger">
-              ...
-            </div>
-            <div class="awesome-example-app-dialog-content">
-              ...
-            </div>
-          </div>
-        )
-      }
-    }
-  ```
-
-<ul>
-  <li>
-    <h3>with auto addedPrefix 'some-additional-prefix';</h3>
-    Evertrhing the same as in the case above plus gives automatic mode within a file.
-  </li>
+<li>
+<h3>with auto prefix 'some-prefix';</h3>
+Evertrhing the same as in the case above plus gives automatic mode within a file.
+</li>
 </ul>
 
 <ul>
-  <li>
-    <h3>with auto prefix;</h3>
-    Gives the automatic mode within a file.
-  </li>
+<li>
+<h3>with addedPrefix 'some-additional-prefix';</h3>
+Sets an additional prefix for local use.  
+This directive do the same thing like param **"prefixAutoResolving"** so it will cancel auto detecting.
+</li>
+</ul>
+
+```javascript
+// non-automatic mode
+// ...imports
+
+with addedPrefix 'dialog';
+
+export default class Dialog extends React.Component {
+  render() {
+    return (
+      <div class=".self">
+        <div class=".title ..bigger">
+          ...
+        </div>
+        <div class=".content">
+          ...
+        </div>
+      </div>
+    )
+  }
+}
+```
+
+will be
+
+```javascript
+// ...imports
+
+export default class Dialog extends React.Component {
+  render() {
+    return (
+      <div class="awesome-example-app-dialog">
+        <div class="awesome-example-app-dialog-title awesome-example-app-bigger">
+          ...
+        </div>
+        <div class="awesome-example-app-dialog-content">
+          ...
+        </div>
+      </div>
+    )
+  }
+}
+```
+
+<ul>
+<li>
+<h3>with auto addedPrefix 'some-additional-prefix';</h3>
+Evertrhing the same as in the case above plus gives automatic mode within a file.
+</li>
+</ul>
+
+<ul>
+<li>
+<h3>with auto prefix;</h3>
+Gives the automatic mode within a file.
+</li>
 </ul>
 
 
@@ -664,25 +664,25 @@ will give the same result
 CSS directives do absolutly the same and look pretty much like JS versions, except the last one
 
 <ul>
-  <li>
-    <h3>.with.prefix.some-prefix;</h3>
-  </li>
-  <li>
-    <h3>.with.auto.prefix.some-prefix;</h3>
-  </li>
-  <li>
-    <h3>.with.addedPrefix.additional-prefix;</h3>
-  </li>
-  <li>
-    <h3>.with.auto.addedPrefix.additional-prefix;</h3>
-  </li>
-  <li>
-    <h3>.with.auto.prefix;</h3>
-  </li>
-  <li>
-    <h3>.with.no.prefix;</h3>
-    Tells the loader not to add any prefixes, so ".." / "..." points will be as "."
-  </li>
+<li>
+<h3>.with.prefix.some-prefix;</h3>
+</li>
+<li>
+<h3>.with.auto.prefix.some-prefix;</h3>
+</li>
+<li>
+<h3>.with.addedPrefix.additional-prefix;</h3>
+</li>
+<li>
+<h3>.with.auto.addedPrefix.additional-prefix;</h3>
+</li>
+<li>
+<h3>.with.auto.prefix;</h3>
+</li>
+<li>
+<h3>.with.no.prefix;</h3>
+Tells the loader not to add any prefixes, so ".." / "..." points will be as "."
+</li>
 </ul>
   
 

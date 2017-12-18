@@ -122,7 +122,7 @@ render() {
 render() {
   return (
     <Button classes=".action-button awesome-button">
-      Do it!
+      Нажми меня!
     </Button>
   )
 }
@@ -328,7 +328,7 @@ render() {
 Вам нужно будет использовать немного другой строковый формат имен классов.  
 По умолчанию этот параметр выключен.  
   
-Например, вот это запись классов для неавтоматического режима:  
+Например, вот это запись CSS классов для неавтопрефиксного режима:  
 (**"prefixAutoResolving"** имеет значение "content")
 
 ```javascript
@@ -360,11 +360,12 @@ export default class Container extends React.Component {
 }
 ```
 
-Here the local prefix is "awesome-example-app-container" (global prefix plus the local prefix auto resolved from class name "Container").  
-So in this mode you need to add point(s) for prefixes: one for the local prefix and two points for global prefix.    
-
-And finally an example of a query for automatic mode (prefixAutoResolving set to "content").  
-In the end we'll get the same result.
+Здесь локальный префикс является "awesome-example-app-container" (глобальный префикс плюс добавленный автоматически от имени класса "Container").  
+Так что в этом режиме вам нужно добавлять точки для префиксов: одна для локального и две для глобального.  
+  
+И наконец пример описания CSS классов для автопрефиксного режима  
+(**"prefixAutoResolving"** имеет значение "content")  
+В результате мы получим то же самое, что и в первом случае.
 
 ```javascript
 export default class Container extends React.Component {
@@ -379,7 +380,7 @@ export default class Container extends React.Component {
   }
 }
 ```
-will be the same
+будет также
 
 ```javascript
 export default class Container extends React.Component {
@@ -394,14 +395,14 @@ export default class Container extends React.Component {
   }
 }
 ```
-
-In this mode you don't need to add a point for local prefix, one point for global one and two for class name without prefix.    
-
-So in css files this principle works the same (you need to add the same points or not to add):    
-None-automatic mode
+В этом режиме не нужно добавлять точку для локального префикса, одну нужно добавить для глобального и две для имен классов без префикса.  
+  
+В CSS файлах все работает по тем же принципам (нужно добавлять такое же число точек, так что получится максимум три точки)  
+  
+Неавтопрефиксный режим:
 
 ```scss
-/* directive that defines our local prefix (adds additional prefix to global one) */
+/* Директива, которая задает наш локальный префикс (добавляет дополнительный префикс к глобальному) */
 .with.addedPrefix.container;
 
 ..self {
@@ -426,7 +427,7 @@ None-automatic mode
 }
 ```
 
-will be
+будет
 
 ```css
 .awesome-example-app-container {
@@ -451,10 +452,10 @@ will be
 }
 ```
 
-And the automatic mode
+И то же самое для автопрефиксного режима:
 
 ```scss
-/* directive that defines our local prefix (adds additional prefix to global one) */
+/* Директива, которая задает наш локальный префикс (добавляет дополнительный префикс к глобальному) */
 .with.addedPrefix.container;
 
 .self {
@@ -479,7 +480,7 @@ And the automatic mode
 }
 ```
 
-will give the same result
+даст тот же самый результат
 
 ```css
 .awesome-example-app-container {
@@ -504,184 +505,188 @@ will give the same result
 }
 ```
 
-## Directives
+## Директивы
 
-### JS directives
+### JS директивы
 
 <ul>
-  <li>
-    <h3>with prefix 'some-prefix';</h3>
-    Creates a local version of the global prefix that overrides defined in config.  
-    Two points still give common global prefix.
-  </li>
+<li>
+<h3>with prefix 'some-prefix';</h3>
+Создает локальную версию глобального префикса, которая переопределяет его в рамках одого файла.  
+Две точки всё так же будут добавлять стандартный глобальный префикс определенный в конфиге.
+</li>
 </ul>
 
-  ```javascript
-    // non-automatic mode
-    // prefixAutoResolving: "content"
-    // ...imports
+```javascript
+// неавтопрефиксный режим
+// prefixAutoResolving: "content"
+// ...imports
 
-    with prefix 'crazy-app';
-    
-    export default class Container extends React.Component {
-      render() {
-        return (
-          <div class=".self">
-            <div class=".title ..bigger">
-              ...
-            </div>
-            <div class=".content">
-              ...
-            </div>
-          </div>
-        )
-      }
-    }
-  ```
+with prefix 'crazy-app';
 
-    will be
+export default class Container extends React.Component {
+  render() {
+    return (
+      <div class=".self">
+        <div class=".title ..bigger">
+          ...
+        </div>
+        <div class=".content">
+          ...
+        </div>
+      </div>
+    )
+  }
+}
+```
 
-  ```javascript
-    // ...imports
-   
-    export default class Container extends React.Component {
-      render() {
-        return (
-          <div class="crazy-app-container">
-            <div class="crazy-app-container-title awesome-example-app-bigger">
-              ...
-            </div>
-            <div class="crazy-app-container-title">
-              ...
-            </div>
-          </div>
-        )
-      }
-    }
-  ```
+станет
 
-  the result when **"prefixAutoResolving"** set to false, so we don't have additional local prefix,  
-  just overrided global
+```javascript
+// ...imports
 
-  ```javascript
-    // ...imports
-   
-    export default class Container extends React.Component {
-      render() {
-        return (
-          <div class="crazy-app">
-            <div class="crazy-app-title awesome-example-app-bigger">
-              ...
-            </div>
-            <div class="crazy-app-title">
-              ...
-            </div>
-          </div>
-        )
-      }
-    }
-  ```
+export default class Container extends React.Component {
+  render() {
+    return (
+      <div class="crazy-app-container">
+        <div class="crazy-app-container-title awesome-example-app-bigger">
+          ...
+        </div>
+        <div class="crazy-app-container-title">
+          ...
+        </div>
+      </div>
+    )
+  }
+}
+```
+
+А теперь результат для случая, когда **"prefixAutoResolving"** установлен в false,  
+так что у нас нет добавленного локального префикса,  
+только переопределенный глобальный
+
+```javascript
+// ...imports
+
+export default class Container extends React.Component {
+  render() {
+    return (
+      <div class="crazy-app">
+        <div class="crazy-app-title awesome-example-app-bigger">
+          ...
+        </div>
+        <div class="crazy-app-title">
+          ...
+        </div>
+      </div>
+    )
+  }
+}
+```
 <ul>
-  <li>
-    <h3>with auto prefix 'some-prefix';</h3>
-    Evertrhing the same as in the case above plus gives automatic mode within a file.
-  </li>
-</ul>
-
-<ul>
-  <li>
-    <h3>with addedPrefix 'some-additional-prefix';</h3>
-    Sets an additional prefix for local use.  
-    This directive do the same thing like param **"prefixAutoResolving"** so it will cancel auto detecting.
-  </li>
-</ul>
-
-  ```javascript
-    // non-automatic mode
-    // ...imports
-
-    with addedPrefix 'dialog';
-    
-    export default class Dialog extends React.Component {
-      render() {
-        return (
-          <div class=".self">
-            <div class=".title ..bigger">
-              ...
-            </div>
-            <div class=".content">
-              ...
-            </div>
-          </div>
-        )
-      }
-    }
-  ```
-
-    will be
-
-  ```javascript
-    // ...imports
-   
-    export default class Dialog extends React.Component {
-      render() {
-        return (
-          <div class="awesome-example-app-dialog">
-            <div class="awesome-example-app-dialog-title awesome-example-app-bigger">
-              ...
-            </div>
-            <div class="awesome-example-app-dialog-content">
-              ...
-            </div>
-          </div>
-        )
-      }
-    }
-  ```
-
-<ul>
-  <li>
-    <h3>with auto addedPrefix 'some-additional-prefix';</h3>
-    Evertrhing the same as in the case above plus gives automatic mode within a file.
-  </li>
+<li>
+<h3>with auto prefix 'some-prefix';</h3>
+Всё то же самое, как и с директивой выше, плюс устанавливает автопрефиксный режим в пределах данного файла.
+</li>
 </ul>
 
 <ul>
-  <li>
-    <h3>with auto prefix;</h3>
-    Gives the automatic mode within a file.
-  </li>
+<li>
+<h3>with addedPrefix 'some-additional-prefix';</h3>
+Задает добавленный префикс для локального использования.  
+Эта директива делает что-то вроде параметра **"prefixAutoResolving"**, так что найдя ее лоадер  
+не будет определять префикс автоматически.
+</li>
+</ul>
+
+```javascript
+// неавтопрефиксный режим
+// ...imports
+
+with addedPrefix 'dialog';
+
+export default class Dialog extends React.Component {
+  render() {
+    return (
+      <div class=".self">
+        <div class=".title ..bigger">
+          ...
+        </div>
+        <div class=".content">
+          ...
+        </div>
+      </div>
+    )
+  }
+}
+```
+
+будет
+
+```javascript
+// ...imports
+
+export default class Dialog extends React.Component {
+  render() {
+    return (
+      <div class="awesome-example-app-dialog">
+        <div class="awesome-example-app-dialog-title awesome-example-app-bigger">
+          ...
+        </div>
+        <div class="awesome-example-app-dialog-content">
+          ...
+        </div>
+      </div>
+    )
+  }
+}
+```
+
+<ul>
+<li>
+<h3>with auto addedPrefix 'some-additional-prefix';</h3>
+Всё то же самое, как для директивы выше, плюс устанавливает автопрефиксный режим в пределах данного файла.
+</li>
+</ul>
+
+<ul>
+<li>
+<h3>with auto prefix;</h3>
+Устанавливает автопрефиксный режим в пределах данного файла.
+</li>
 </ul>
 
 
-### CSS directives
+### CSS директивы
 
-CSS directives do absolutly the same and look pretty much like JS versions, except the last one
+CSS директивы делают абсолютно то же самое и выглядят весьма схоже с JS версиями,  
+отличие только в последней директиве, которой нет для JS файлов
 
 <ul>
-  <li>
-    <h3>.with.prefix.some-prefix;</h3>
-  </li>
-  <li>
-    <h3>.with.auto.prefix.some-prefix;</h3>
-  </li>
-  <li>
-    <h3>.with.addedPrefix.additional-prefix;</h3>
-  </li>
-  <li>
-    <h3>.with.auto.addedPrefix.additional-prefix;</h3>
-  </li>
-  <li>
-    <h3>.with.auto.prefix;</h3>
-  </li>
-  <li>
-    <h3>.with.no.prefix;</h3>
-    Tells the loader not to add any prefixes, so ".." / "..." points will be as "."
-  </li>
+<li>
+<h3>.with.prefix.some-prefix;</h3>
+</li>
+<li>
+<h3>.with.auto.prefix.some-prefix;</h3>
+</li>
+<li>
+<h3>.with.addedPrefix.additional-prefix;</h3>
+</li>
+<li>
+<h3>.with.auto.addedPrefix.additional-prefix;</h3>
+</li>
+<li>
+<h3>.with.auto.prefix;</h3>
+</li>
+<li>
+<h3>.with.no.prefix;</h3>
+Предписывает лоадеру не добавлять ни каких префиксов, даже если есть ".." / "..."  
+Две или три точки будут восприниматься как одна.
+</li>
 </ul>
   
 
-## String queries syntax
+## Синтаксис строковых обозначений CSS классов
 
 ```javascript
 render() {
@@ -693,8 +698,8 @@ render() {
 }
 ```
 ### name
-Gives class name without prefixes in non-automatic mode.  
-Gives class name with a local prefix in automatic mode.
+Обозначает имя класса без префиксов в неавтопрефиксном режиме.  
+Обозначает имя класса с локальным префиксом в автопрефиксном режиме.
 ```javascript
 render() {
   return (
@@ -711,8 +716,8 @@ render() {
 }
 ```
 ### .name
-Gives class name with a local prefix in non-automatic mode.  
-Gives class name with a global prefix in automatic mode.
+Обозначает имя класса с локальным префиксом в неавтопрефиксном режиме.  
+Обозначает имя класса с глобальным префиксом в автопрефиксном режиме.
 ```javascript
 render() {
   return (
@@ -729,8 +734,8 @@ render() {
 }
 ```
 ### ..name
-Gives class name with a global prefix in non-automatic mode.  
-Gives class name without prefixes in automatic mode.
+Обозначает имя класса с глобальным префиксом в неавтопрефиксном режиме.  
+Обозначает имя класса без префиксов в автопрефиксном режиме.
 ```javascript
 render() {
   return (
@@ -748,9 +753,9 @@ render() {
 ```
 
 ### $name
-Merges a class name or an array of class names from a variable.  
-The loader automatically adds import of required module for class name merging.  
-The variable should already contain classes with prefixes or be already obfuscated.
+"Мерджит" имя класса или массив имен из переменной.  
+Лоадер автоматически добавит "импорт" нужного для "мерджинга" модуля.  
+Переменная уже должна содержать имя/имена классов с префиксами или быть обфусцирована.
 ```javascript
 render() {
   return (
@@ -760,9 +765,9 @@ render() {
   )
 }
 ```
-an example how to make it work:  
-
-in a parent using **extraAttributeName: "classes"**    
+Пример того, как это в принципе работает:  
+  
+В родительском компоненте используем **extraAttributeName: "classes"**
 ```javascript
 render() {
   return (
@@ -772,7 +777,7 @@ render() {
   )
 }
 ```
-in the Icon
+в дочернем (с именем Icon)
 ```javascript
 with addedPrefix 'icon';
 
@@ -784,10 +789,9 @@ export default function Icon({classes, children}) {
   )
 }
 ```
-
-so we will have 
-
-in a parent
+так что в итоге получим  
+  
+в родителе:
 ```javascript
 render() {
   return (
@@ -797,7 +801,7 @@ render() {
   )
 }
 ```
-in the Icon "import" will be automatically added
+в компоненте Icon "import" автоматически добавлен
 ```javascript
 import classy from 'classy-loader/classy';
 
@@ -809,8 +813,7 @@ export default function Icon({classes, children}) {
   )
 }
 ```
-
-so this is how the code will look like in a bundle
+А так код будет выглядеть в собранном "бандле":
 ```javascript
 return _react2.default.createElement(
   'i',
@@ -821,8 +824,8 @@ return _react2.default.createElement(
 );
 ```
 ### $$name
-The same as **$name** but tells the loader that this variable is a valid string and not an array or undefined,  
-so don't need to use merge function
+То же самое, что и с переменной выше, но говорит лоадеру, что переменная является строкой, а не массивом или "undefined",  
+чтобы лоадер не использовал функцию мерджинга, однако если есть другие переменные вида $name, функция все равно будет использована
 ```javascript
 render() {
   return (
@@ -834,7 +837,7 @@ render() {
   )
 }
 ```
-will be
+станет
 ```javascript
 render() {
   return (
@@ -848,10 +851,8 @@ render() {
 ```
 
 ### prefix::name
-Adds needed addiotinal prefix to class name.  
-See the example with the Icon above.  
-Let's modify this a little bit.  
-Added prefix is a local prefix in relation to the Icon.
+Добавляет локальный (по отношению к дочернему компоненту) префикс к имени класса.  
+Возьмем пример с Icon выше и немного изменим его.
 ```javascript
 render() {
   return (
@@ -863,7 +864,8 @@ render() {
   )
 }
 ```
-also you can use just code like this for the same purpose, but first variant adds delimiter by itself
+В принципе можно просто использовать запись вида ".icon-thing",  
+но первый вариант соединит их нужным разделителем.
 ```javascript
 render() {
   return (
@@ -875,7 +877,7 @@ render() {
   )
 }
 ```
-so we will have this html
+Так что у нас будет такой HTML
 ```html
 <i className="awesome-example-app-icon awesome-example-app-large green material-icons">
   <span class="awesome-example-app-icon-thing">
@@ -885,8 +887,8 @@ so we will have this html
 ```
 
 ### .$name
-Dynamical class name, local prefix plus value of a given variable.  
-It's always local prefix regardless whether the mode automatic or not.
+Динамическое имя класса, локальный префикс плюс значение переменной.  
+Это всегда локальный префикс независимо от режима.
 ```javascript
 with addedPrefix 'tab';
 
@@ -901,7 +903,7 @@ export default function Tab({classes, children, isActive}) {
   }
 }
 ```
-will be
+будет
 ```javascript
 import classy from 'classy-loader/classy';
 
@@ -918,8 +920,8 @@ export default function Tab({classes, children, isActive}) {
 ```
 
 ### ..$name
-Dynamical class name, global prefix plus value of a given variable.  
-It's always global prefix regardless whether the mode automatic or not.
+Динамическое имя класса, глобальный префикс плюс значение переменной.  
+Это всегда глобальный префикс независимо от режима.
 ```javascript
 with addedPrefix 'button';
 
@@ -934,7 +936,7 @@ export default class Button extends React.Component {
   }
 }
 ```
-will be
+будет
 ```javascript
 export default class Button extends React.Component {
   render() {
@@ -948,9 +950,11 @@ export default class Button extends React.Component {
 }
 ```
 
-It's impossible to obfuscate dynamical class names so there are special fake **$classy** functions to make roadmaps for obfuscation.  
-
-This ia an example:  
+Невозможно (или просто х.з. как) обфусцировать такой динамический класс,  
+но для таких целей внедрена специальная "фейковая" функция **$classy**.  
+Она создают "карту" имен классов для обфускатора.  
+  
+Вот пример:
 ```javascript
 let className = $classy(color, '..color-', ['red', 'green']);
 className = $classy(number, '.color-', ['blue', 'yellow']);
@@ -958,7 +962,7 @@ className = $classy(number, '..', ['one', 'two']);
 className = $classy(quality, '.', ['good', 'bad']);
 className = $classy(name, '', ['John', 'Rick']);
 ```
-Here is the result for the non-automatic mode:
+В неавтопрефиксном режиме будет преобразовано в:
 ```javascript
 let className = {
   red: 'awesome-example-app-color-red',
@@ -985,7 +989,7 @@ className = {
   Rick: 'Rick'
 }[name];
 ```
-And then the automatic mode will give this result:
+И в автопрефиксном режиме будет:
 ```javascript
 let className = {
   red: 'color-red',
@@ -1012,7 +1016,7 @@ className = {
   Rick: 'awesome-example-app-button-Rick'
 }[name];
 ```
-So variable "className" will have a real class name value and it can be obfuscated:
+Так что переменная "className" будет реальным именем класса, которое можно обфусцировать и иметь вид:
 ```javascript
 let className = {
   red: 'hby457r',
@@ -1023,7 +1027,7 @@ let className = {
   ...
 }[color];
 ```
-Another way to make a roadmap with different class name patterns.
+Другой способ для этих нужд, но уже c различными "паттернами":
 ```javascript
 let className = $classy(colorValue, {
   red: "..red item::reddish",
@@ -1031,7 +1035,7 @@ let className = $classy(colorValue, {
   ...
 });
 ```
-It produces this code:
+Даст код:
 ```javascript
 let className = {
   red: 'awesome-example-app-red awesome-example-app-item-reddish',
@@ -1039,25 +1043,25 @@ let className = {
   ...
 }[colorValue];
 ```
-Also there is the third way to use **$classy**:
+Ну и последнее как можно использовать **$classy**:
 ```javascript
 with addedPrefix 'catalog';
 // ....
 let className = $classy(".item item ..some-item $classes");
 ```
-It produces this code:
+станет
 ```javascript
 import classy from 'classy-loader/classy';
 // ....
 let className = classy("awesome-example-app-catalog-item", "item", "awesome-example-app-some-item", classes);
 ```
-## Conditional queries
+## Условные записи CSS классов
 
-### Simple at first
+### Для начала простые
 ```javascript
-// all with globalPrefix = 'app'
-// all with autoPrefixMode = false
-// all with addedPrefix = 'item'
+// все примеры с globalPrefix = 'app'
+// все примеры с autoPrefixMode = false
+// все примеры когда addedPrefix = 'item'
 
 render() {
   let active = true;
@@ -1080,7 +1084,7 @@ render() {
   )
 }
 ```
-will become
+станет
 ```javascript
 render() {
   let active = true;
@@ -1103,7 +1107,7 @@ render() {
   )
 }
 ```
-You can have spaces next to symbols "?" and ":" like
+Можно добавлять пробелы между символами "?" и ":" 
 ```javascript
 render() {
   return (
@@ -1113,7 +1117,7 @@ render() {
   )
 }
 ```
-But not in conditional parts
+Но вот в условии пробелы недопустимы:
 ```javascript
 render() {
   return (
@@ -1123,7 +1127,7 @@ render() {
   )
 }
 ```
-This query will produce incorrect class name something like
+Такая запись будет преобразована в некорректное имя класса вида
 ```javascript
 render() {
   return (
@@ -1133,7 +1137,7 @@ render() {
   )
 }
 ```
-If you want to have spaces in conditions use parentheses
+Если так хочется добавить пробелы, оберните условие в круглые скобки
 ```javascript
 render() {
   return (
@@ -1143,7 +1147,7 @@ render() {
   )
 }
 ```
-You can have only one variable sign "$" in your condition, it should be first of course
+Можно добавить только один знак "$" в начале условия, для остальных переменных условия можно не добавлять:
 ```javascript
 render() {
   return (
@@ -1160,7 +1164,7 @@ render() {
 }
 ```
 
-## And finally super short cherry on the cake querries
+## И наконец вишенка на торте
 ```javascript
 render() {
   return (
@@ -1170,7 +1174,7 @@ render() {
   )
 }
 ```
-will be
+будет
 ```javascript
 render() {
   return (
@@ -1180,15 +1184,15 @@ render() {
   )
 }
 ```
-Points work the same as usual
+Точки работают по таким же принципам, как и всегда, в зависимости от режима.
 
-## CSS syntax
+## CSS синтаксис
 
-### Non-automatic prefix mode
-One point for real class name without prefix.  
-Two points for class names with local prefix.  
-Three points for class names with global prefix.  
-**"Self"** is a keywords that means local prefix itself or global if local one not defined
+### Для неавтопрефиксного режима
+Одна точка для реальных имён классов без префиксов.  
+Две точки для имён с локальным префиксом.  
+Три точки для имён с глобальным префиксом.  
+**"Self"** - ключевое слово обозначающее локальный или глобальный префикс, если таковые определены, иначе имя класса будет просто self
 
 ```scss
 ..self {
@@ -1207,10 +1211,10 @@ Three points for class names with global prefix.
 }
 ```
 
-### Automatic prefix mode
-One point for class names with local prefix.  
-Two points for class names with global prefix.  
-Three points for real class name without prefix.  
+### Для автопрефиксного режима
+Одна точка для имён классов с локальным префиксом.  
+Две точки для имён с глобальным префиксом.  
+Три точки для реальных имён классов без префиксов.
 
 ```scss
 .self {
@@ -1229,17 +1233,17 @@ Three points for real class name without prefix.
 }
 ```
 
-If a local prefix not defined global one will be added instead
+Если локальный префикс не определен, будет использован глобальный.
 
-## CSS shorcutty special syntax
+## А теперь немного CSS сахара
 
-Here's an example
+Пример сахарного синтаксиса:
 ```scss
 .container {
   var .abs.w100.h200.bc-000.c-fff.fs15;
 }
 ```
-will be
+будет преобразовано в:
 ```scss
 .container {
   position: absolute;
@@ -1250,14 +1254,13 @@ will be
   font-size: 15px;
 }
 ```
-can be also with spaces, should end with a semicolon or a new line
+Можно также с пробелами:
 ```scss
 .container {
   var .fix .l .r .t .b .z999 .o3;
 }
 ```
-will be
-can be also with spaces, should end with a semicolon or a new line
+станет
 ```scss
 .container {
   position: fixed;
@@ -1269,10 +1272,12 @@ can be also with spaces, should end with a semicolon or a new line
   opacity: 0.3;
 }
 ```
-### Full list of shorcuts
+Выражение должно начинаться с ключегово слова **"var"** и заканчиваться точкой с запятой или переносом строки.
+
+### Полный список доступных сокращений
 
 <details>
-<summary>Click to expand</summary>  
+<summary>Кликни меня</summary>  
   
 **rubb** = left: 0; right: 0; top: 0; bottom: 0;  
 **l** = left: 0;  
@@ -1500,10 +1505,11 @@ can be also with spaces, should end with a semicolon or a new line
 **bp-l-10** = background-position: left 10px;  
 </details>
 
-### Background image style shortcuts
+### Сокращения для фоновых изображений
 
-You need to define source directories of images with these directives.  
-Define few sources if you need. Just duplicate lines with different paths to folders (not files)
+Тут все посложнее, и для начала нужно определить источник(и) файлов.  
+Для этих нужд имеются директивы, их может быть несколько, если файлы располагаются в разных директориях.  
+Путь конечно же к директория:
 
 ```scss
 .with.image.source '../../assets/images/';
@@ -1511,19 +1517,19 @@ Define few sources if you need. Just duplicate lines with different paths to fol
 .with.image.source './images/gifs';
 .with.image.source '../svgs';
 ```
-And then use code like this:
-
+А сокращения выглядяь так:
 ```scss
 .item {
   var .png-arrow.jpg-bg.jpeg-line.png2-some-image;
   var .gif3-preloader.svg4-icon;
 }
 ```
-So add number 2 (3) if an image is from the second (third) source.  
-Shortcuts are named as image file extentions (PNG, GIF, JPG, JPEG, SVG).  
-Second parts are image file names.  
-  
-So you will have these styles:
+Итак сокращение состоит из:  
+1. Расширение  
+2. Номер источника начиная с единицы (если это первый источник, цифру можно опустить)  
+3. Имя файла  
+    
+Так что на выходе вы получите такую запись:
 
 ```scss
 .item {
@@ -1535,10 +1541,12 @@ So you will have these styles:
   background-image: url(../svgs/icon.svg);
 }
 ```
-So shortcuts look like this:  
+Дальше уже дело за лоадерами картинок, пути указfys для них.  
+  
+Итак список сокращений:  
 
 <details>
-<summary>Click to expand</summary>  
+<summary>Меня кликни</summary>  
 
 **png-png-filename** = background-image: url(../some/path/png-filename.png);  
 **jpg-jpg_filename** = background-image: url(../some/path/jpg_filename.jpg);  
@@ -1546,12 +1554,12 @@ So shortcuts look like this:
 **gif-giffy** = background-image: url(../some/path/giffy.gif);  
 **svg-blabla** = background-image: url(../some/path/blabla.svg);  
   
-Of cource you can add number of source folder  
+Конечно же можно добавить номер источника:  
   
 **png2-a** = background-image: url(../path/to/second/source/a.png);  
 **gif33-d** = background-image: url(../path/to/33-th/source/d.gif);  
   
-This two lines do the same  
+Эти две строки идентичны:  
   
 **jpg-e** = background-image: url(../path/to/first/source/e.jpg);  
 **jpg1-e** = background-image: url(../path/to/first/source/e.jpg);  
