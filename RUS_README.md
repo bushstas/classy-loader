@@ -1185,29 +1185,27 @@ render() {
   )
 }
 ```
+» с отрицанием
+```javascript
+render() {
+  return (
+    <div class="!$?active !$?.active !$?..active">
+      ...
+    </div>
+  )
+}
+```
+будет
+```javascript
+render() {
+  return (
+    <div className={classy(!active ? "active" : "", !active ? "local-prefix-active" : "", !active ? "global-prefix-active" : "")}>
+      ...
+    </div>
+  )
+}
+```
 “очки работают по таким же принципам, как и всегда, в зависимости от режима.
-ќтрицание здесь не работает, так как будет странно с точки зрени€ логики:  
-  
-ƒанный код работать не будет:
-```javascript
-render() {
-  return (
-    <div class="$?!active">
-      ...
-    </div>
-  )
-}
-```
-Ѕудет странно если:
-```javascript
-render() {
-  return (
-    <div className={classy(!active ? "active" : "")}>
-      ...
-    </div>
-  )
-}
-```
 
 ## CSS синтаксис
 

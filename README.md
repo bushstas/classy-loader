@@ -1185,6 +1185,26 @@ render() {
   )
 }
 ```
+And with negative sign
+```javascript
+render() {
+  return (
+    <div class="!$?active !$?.active !$?..active">
+      ...
+    </div>
+  )
+}
+```
+will be
+```javascript
+render() {
+  return (
+    <div className={classy(!active ? "active" : "", !active ? "local-prefix-active" : "", !active ? "global-prefix-active" : "")}>
+      ...
+    </div>
+  )
+}
+```
 Points work the same as usual
 
 ## CSS syntax
