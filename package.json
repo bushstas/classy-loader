@@ -5,7 +5,7 @@
     "email": "bushstas@mail.ru"
   },
   "main": "lib/index.js",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "bugs": {
     "url": "https://github.com/bushstas/classy-loader/issues"
   },
