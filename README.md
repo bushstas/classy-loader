@@ -1503,6 +1503,8 @@ can be also with spaces, should end with a semicolon or a new line
 **shad** = box-shadow: none;  
 **shad-000-10** = box-shadow: 0 0 10px #000;  
 **shad-000-10-1-1** = box-shadow: 1px 1px 10px #000;  
+**shad-in-000-10** = box-shadow: inset 0 0 10px #000;  
+**shad-in-000-10-1-1** = box-shadow: inset 1px 1px 10px #000;  
 
 **tshad** = text-shadow: none;  
 **tshad-000-2** = text-shadow: 0 0 2px #000;  
