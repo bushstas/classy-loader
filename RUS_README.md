@@ -115,7 +115,6 @@ render() {
 ### extraAttributeName
 
 Название атрибута для React элементов, которое будет парситься таким же образом, но не менять своего названия.  
-Оно также может использоваться для названий переменных и ключей объектов, которые нужно распарсить.  
 По умолчанию оно равно "classes".
 
 ```javascript
@@ -126,12 +125,6 @@ render() {
     </Button>
   )
 }
-
-let classes = ".some-class";
-
-let object = {
-  classes: ".some-other-class"
-};
 ```
 На выходе мы получим всё тот же атрибут "classes": 
 
@@ -143,13 +136,16 @@ render() {
     </Button>
   )
 }
-
-let classes = "awesome-example-app-some-class";
-
-let object = {
-  classes: "awesome-example-app-some-other-class"
-};
-
+```
+Если вам нужно распарсить просто строку в коде в валидные имена классов, используйте **$classy**:
+```javascript
+let className = $classy(".item item $classes");
+```
+Это даст такой код:
+```javascript
+import classy from 'classy-loader/classy';
+// ....
+let className = classy("awesome-example-app-item", "item", classes);
 ```
 ### globalPrefix
 

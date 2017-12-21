@@ -115,8 +115,7 @@ In this case we don't have a local prefix, so it will be our globalPrefix from t
 ### extraAttributeName
 
 An attribute name of React elements, that will be parsed by loader.  
-This also can be used like variable names or object keys.  
-And be whatever word you like but not will be changed.  
+It be whatever word you like but not will be changed.  
 By default, it has value "classes".
 
 ```javascript
@@ -127,12 +126,6 @@ render() {
     </Button>
   )
 }
-
-let classes = ".some-class";
-
-let object = {
-  classes: ".some-other-class"
-};
 ```
 
 And after processing we'll get the same attribute "classes" but parsed:
@@ -145,14 +138,18 @@ render() {
     </Button>
   )
 }
-
-let classes = "awesome-example-app-some-class";
-
-let object = {
-  classes: "awesome-example-app-some-other-class"
-};
-
 ```
+If you need to parse a string to valid class names use **$classy**:
+```javascript
+let className = $classy(".item item $classes");
+```
+It produces this code:
+```javascript
+import classy from 'classy-loader/classy';
+// ....
+let className = classy("awesome-example-app-item", "item", classes);
+```
+
 ### globalPrefix
 
 A prefix that will be added to your element class names.  
