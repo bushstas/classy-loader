@@ -143,6 +143,7 @@ const m = (value) => {
 
 const data = {
 	trans: g('background-color', 'transparent'),
+	nosel: g('user-select', 'none'),
 
 	lt: g('text-align', 'left'),
 	col: g('border-collapse', 'collapse'),
