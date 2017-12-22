@@ -142,6 +142,8 @@ const m = (value) => {
 }
 
 const data = {
+	trans: g('background-color', 'transparent'),
+
 	lt: g('text-align', 'left'),
 	col: g('border-collapse', 'collapse'),
 	lfix: g('table-layout', 'fixed'),
