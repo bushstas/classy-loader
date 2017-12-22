@@ -1443,6 +1443,7 @@ render() {
 **pntr** = cursor: pointer;  
 **cnt** = content: "";  
 **nor** = resize: none;  
+**nosel** = user-select: none;  
 
 **fl** = float: left;  
 **fr** = float: right;  
@@ -1503,6 +1504,7 @@ render() {
 **bsp** = border-spacing: 0;  
 **bsp2** = border-spacing: 2px;
 
+**trans** = background-color: transparent; 
 **c-fff** = color: #fff;  
 **bc-fff** = background-color: #fff;  
 **boc-fff** = border-color: #fff;  
