@@ -30,7 +30,8 @@ classy.init({
     obfuscation: false,
     obfuscatedLength: 4,
     autoPrefixMode: false,
-    prefixAutoResolving: false
+    prefixAutoResolving: false,
+    cssAutoImport: true
 });
 
 
@@ -500,6 +501,15 @@ export default class Container extends React.Component {
   }
 }
 ```
+### cssAutoImport
+
+Лоадер будет автоматически добавлять импорты CSS файлов из той же директории.  
+Если значение "true", лоадер будет пытаться найти файлы с именем "index".  
+Если значение строка, лоадер будет пытаться найти файлы с данным именем.  
+Если значение массив, лоадер будет пытаться найти файлы с именем равным каждому элементу этого массива ("true" равно "index").  
+Лоадер будет искать файлы с разными расширениями: "css", "scss", "less", "sass".  
+В сборку будут включены все найденные файлы.  
+По умолчанию значенгие установлено в false.
 
 ## Директивы
 

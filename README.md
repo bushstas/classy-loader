@@ -30,7 +30,8 @@ classy.init({
     obfuscation: false,
     obfuscatedLength: 4,
     autoPrefixMode: false,
-    prefixAutoResolving: false
+    prefixAutoResolving: false,
+    cssAutoImport: true
 });
 
 
@@ -505,6 +506,15 @@ will give the same result
   }
 }
 ```
+### cssAutoImport
+
+Loader will automatically add imports of CSS files from the same directory.  
+If value is true, loader will try to find files with name "index".  
+If value is a string, loader will try to find files with names equal to this string.  
+If value is an array, loader will try to find files with names equal to each item which is string or true (index).  
+It will try to find files with different extensions: "css", "scss", "less", "sass".  
+All found files will added to the bundle.  
+By default, it is false.   
 
 ## Directives
 
