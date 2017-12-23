@@ -143,7 +143,7 @@ const m = (value) => {
 
 const data = {
 	trans: g('background-color', 'transparent'),
-	nosel: g('user-select', 'none'),
+	nosel: g('user-select', 'none', '-moz-user-select', 'none', '-webkit-user-select', 'none'),
 
 	lt: g('text-align', 'left'),
 	col: g('border-collapse', 'collapse'),
@@ -184,13 +184,15 @@ const data = {
 	flex: g('display', 'flex'),
 	bl: g('display', 'block'),
 	inb: g('display', 'inline-block'),
+	none: g('display', 'none'),
+	inl: g('display', 'inline'),
 	
 	flcen: g('align-items', 'center', 'justify-content', 'center'),
 	box: g('box-sizing', 'border-box'),
 
 	ova: g('overflow', 'auto'),
-	ovh: g('overflow', 'hidden'),	
-	ovs: g('overflow', 'scroll'),	
+	ovh: g('overflow', 'hidden'),
+	ovs: g('overflow', 'scroll'),
 
 	boc: value => g('border-color', c(value)),
 	bc: value => g('background-color', c(value)),

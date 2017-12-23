@@ -1417,6 +1417,8 @@ render() {
 **flcen** = align-item: center; justify-content: center;  
 **bl** = display: block;  
 **inb** = display: inline-block;  
+**none** = display: none;  
+**inl** = display: inline;  
 
 **fix** = position: fixed;  
 **abs** = position: absolute;  
@@ -1443,7 +1445,7 @@ render() {
 **pntr** = cursor: pointer;  
 **cnt** = content: "";  
 **nor** = resize: none;  
-**nosel** = user-select: none;  
+**nosel** = user-select: none; -moz-user-select: none; -webkit-user-select: none;  
 
 **fl** = float: left;  
 **fr** = float: right;  
