@@ -902,7 +902,7 @@ render() {
       classes="~name"
       menu={(
         <SomeMenu
-          classes="~cool-menu">
+          classes="~cool-menu"/>
       )}>
       ...content
     </SomeComponent>
