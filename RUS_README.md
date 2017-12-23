@@ -892,6 +892,39 @@ render() {
 </i>
 ```
 
+### ~name
+Составляет добавленный префикс из имени тега, в котором attributeName расположен.
+
+```javascript
+render() {
+  return (
+    <SomeComponent 
+      classes="~name"
+      menu={(
+        <SomeMenu
+          classes="~cool-menu">
+      )}>
+      ...content
+    </SomeComponent>
+  )
+}
+```
+станет
+```javascript
+render() {
+  return (
+    <SomeComponent 
+      classes="awesome-example-app-some-component-name"
+      menu={(
+        <SomeMenu
+          classes="awesome-example-app-some-menu-cool-menu"/>
+      )}>
+      ...content
+    </SomeComponent>
+  )
+}
+```
+
 ### .$name
 Динамическое имя класса, локальный префикс плюс значение переменной.  
 Это всегда локальный префикс независимо от режима.

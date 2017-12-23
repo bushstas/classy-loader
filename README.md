@@ -698,7 +698,7 @@ Tells the loader not to add any prefixes, so ".." / "..." points will be as "."
 ```javascript
 render() {
   return (
-    <div class="name .name ..name $name $$name prefix::name .$name ..$name">
+    <div class="name .name ..name $name $$name prefix::name ~name .$name ..$name">
       ...
     </div>
   )
@@ -894,6 +894,39 @@ so we will have this html
     resize
   </span>
 </i>
+```
+
+### ~name
+Make added prefix from tag name in which attributeName located.  
+
+```javascript
+render() {
+  return (
+    <SomeComponent 
+      classes="~name"
+      menu={(
+        <SomeMenu
+          classes="~cool-menu">
+      )}>
+      ...content
+    </SomeComponent>
+  )
+}
+```
+will be
+```javascript
+render() {
+  return (
+    <SomeComponent 
+      classes="awesome-example-app-some-component-name"
+      menu={(
+        <SomeMenu
+          classes="awesome-example-app-some-menu-cool-menu"/>
+      )}>
+      ...content
+    </SomeComponent>
+  )
+}
 ```
 
 ### .$name
