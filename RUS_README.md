@@ -1341,6 +1341,7 @@ render() {
   
 **rubb** = left: 0; right: 0; top: 0; bottom: 0;  
 **l** = left: 0;  
+**lau** = left: 'auto';  
 **l10** = left: 10px;  
 **l-10** = left: -10px;  
 **l50p** = left: 50%;  
@@ -1348,17 +1349,20 @@ render() {
 
 **r** = right: 0;  
 **r10** = right: 10px;  
+**rau** = right: 'auto';  
 **r-10** = right: -10px;  
 **r50p** = right: 50%;  
 **r-50p** = right: -50%;  
 
 **t** = top: 0;  
+**tau** = top: 'auto';  
 **t10** = top: 10px;  
 **t-10** = top: -10px;  
 **t50p** = top: 50%;  
 **t-50p** = top: -50%;  
 
 **b** = bottom: 0;  
+**bau** = bottom: 'auto';  
 **b10** = bottom: 10px;  
 **b-10** = bottom: -10px;  
 **b50p** = bottom: 50%;  
