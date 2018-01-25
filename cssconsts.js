@@ -222,7 +222,7 @@ const data = {
 	_r: value => g('right', a(value)),
 	_t: value => g('top', a(value)),
 	_b: value => g('bottom', a(value)),
-	_o: value => g('opacity', '0.' + value),
+	_o: value => g('opacity', value.length > 1 ? 1 : '0.' + value),
 	rubb: g('left', 0, 'right', 0, 'top', 0, 'bottom', 0),
 	
 	_bsp: value => g('border-spacing', a(value)),
