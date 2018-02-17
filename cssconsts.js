@@ -192,6 +192,7 @@ const data = {
 
 	ova: g('overflow', 'auto'),
 	ovh: g('overflow', 'hidden'),
+	ovv: g('overflow', 'visible'),
 	ovs: g('overflow', 'scroll'),
 
 	boc: value => g('border-color', c(value)),
@@ -207,6 +208,8 @@ const data = {
 	wh: g('width', '100%', 'height', '100%'),
 	w: g('width', '100%'),
 	h: g('height', '100%'),
+	wa: g('width', 'auto'),
+	ha: g('height', 'auto'),
 	l: g('left', 0),
 	r: g('right', 0),
 	t: g('top', 0),
@@ -222,7 +225,7 @@ const data = {
 	_r: value => g('right', a(value)),
 	_t: value => g('top', a(value)),
 	_b: value => g('bottom', a(value)),
-	_o: value => g('opacity', '0.' + value),
+	_o: value => g('opacity', value.length > 1 ? 1 : '0.' + value),
 	rubb: g('left', 0, 'right', 0, 'top', 0, 'bottom', 0),
 	
 	_bsp: value => g('border-spacing', a(value)),

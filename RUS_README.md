@@ -1370,10 +1370,12 @@ render() {
 
 **z10** = z-index: 10;  
 
+**wa** = width: auto;  
 **w** = width: 100%;  
 **w100** = width: 100px;  
 **w50p** = width: 50%;  
 
+**ha** = height: auto;  
 **h** = height: 100%;  
 **h150** = height: 150px;  
 **h20p** = height: 20%;  
@@ -1464,6 +1466,7 @@ render() {
 
 **ova** = overflow: auto;  
 **ovh** = overflow: hidden;  
+**ovv** = overflow: visible;  
 **ovs** = overflow: scroll;  
 
 **lt** = text-align: left;  
